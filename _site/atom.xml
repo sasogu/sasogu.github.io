@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>sasogu</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2017-04-27T22:28:20+02:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>sasogu</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Canviar fons de pantalla d'inici en Lliurex</title>
+   <link href="http://localhost:4000/2017/04/24/lightmd.html"/>
+   <updated>2017-04-24T09:15:26+02:00</updated>
+   <id>http://localhost:4000/2017/04/24/lightmd</id>
+   <content type="html">&lt;p&gt;Per canviar el fons de pantalla del login de Lliurex cal editar l’arxiu de configuració que es troba en 99_lliurex.conf&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo pluma /etc/lightdm/lightdm-gtk-greeter.conf.d/99_lliurex.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;i canviem la línia &lt;strong&gt;background=&lt;/strong&gt; per la ruta de la imatge que desitgem.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pluma&lt;/strong&gt; és l’editor gràfic per defecte en Lliurex, per descomptat també podeu utilitzar &lt;strong&gt;nano&lt;/strong&gt; des de la terminal.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Augmentar velocitat de LibreOffice</title>
+   <link href="http://localhost:4000/2017/04/20/libreoffice.html"/>
+   <updated>2017-04-20T15:19:12+02:00</updated>
+   <id>http://localhost:4000/2017/04/20/libreoffice</id>
+   <content type="html">&lt;p&gt;Per augmentar la velocitat de LibreOffice anem a Eines/Opcions. I després LibreOffice/Memòria:&lt;/p&gt;
+
+&lt;p&gt;Memòria imatges: 128 MB&lt;/p&gt;
+
+&lt;p&gt;Memòria per objecte: 20 MB&lt;/p&gt;
+
+&lt;p&gt;Suprimeix de la memòria després de 00:10 segons&lt;/p&gt;
+
+&lt;p&gt;Nombre d’Objectes: 20&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Limitar l'ús de la CPU</title>
+   <link href="http://localhost:4000/2017/04/19/cpu.html"/>
+   <updated>2017-04-19T12:19:12+02:00</updated>
+   <id>http://localhost:4000/2017/04/19/cpu</id>
+   <content type="html">&lt;p&gt;Si necessitem saber quins processos estan fent ús del nostre sistema:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;o&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ps -eo pid,comm,%cpu | sort -rk 3 | head
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Per limitar el consum de CPU d’un procés concret:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo cpulimit -l 10 -e dropbox
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Aquesta ordre limita l’ús del processador per a dropbox al 10%&lt;/p&gt;
+
+&lt;p&gt;Per a instal·lar l’aplicació:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo apt-get install cpulimit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Com crear una ISO d'arranc en un USB</title>
+   <link href="http://localhost:4000/2017/04/18/usb.html"/>
+   <updated>2017-04-18T10:17:12+02:00</updated>
+   <id>http://localhost:4000/2017/04/18/usb</id>
+   <content type="html">&lt;p&gt;Per a crear unitats USB d’arrancada des de Terminal cal seguir els següents passos.
+Necessitem saber exactament on s’allotja el nostre USB, només hem de teclejar el comandament:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo fdisk -l
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Després caldrà utilitzar el comandament dd per escriure en l’USB:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo dd if=/home/USUARI/NOM_DE_LA_ISO.iso of=/dev/sdx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Analitzem aquesta línia, &lt;strong&gt;if&lt;/strong&gt; representa la ubicació on es troba la nostra ISO, &lt;strong&gt;of&lt;/strong&gt; la unitat USB on es gravarà (l’obtindrem fàcilment amb fdisk -l). El temps de demora dependrà de la mida de la imatge ISO i de l’estat i propietats de la nostra clau USB.&lt;/p&gt;
+
+&lt;p&gt;Quan finalitzem, només cal configurar la BIOS de l’equip on arrancarem amb l’USB i ja podrem utilitzar el nostre pendrive com una unitat d’inici.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Desactivar Plymouth i fons del Grub</title>
+   <link href="http://localhost:4000/2017/04/17/plymouth.html"/>
+   <updated>2017-04-17T08:12:12+02:00</updated>
+   <id>http://localhost:4000/2017/04/17/plymouth</id>
+   <content type="html">&lt;p&gt;Una de les primeres coses que faig quan instal·le qualsevol sistema operatiu GNU/Linux és eliminar el Plymouth, és a dir, el logo del sistema que apareix en iniciar i finalitzar l’ordinador. Personalment m’agrada vorer passar les línies per consola que indiquen com es carreguen tots els servicis i aplicacions.&lt;/p&gt;
+
+&lt;p&gt;Per fer-ho sols cal editar el fitxer /etc/default/grub&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo nano /etc/default/grub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;En Lliurex la ruta és diferent:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo nano /etc/default/grub.d/06-lliurex-cmdline.cfg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Editem la següent línia:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;GRUB_CMDLINE_LINUX_DEFAULT=”quiet splash&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sols hem d’esborrar &lt;strong&gt;quiet splash&lt;/strong&gt;, deixant les cometes, així:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;GRUB_CMDLINE_LINUX_DEFAULT=&quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Si també voleu eliminar la imatge de fons del grub en Liurex fem:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nano /etc/default/grub.d/05-lliurex-background.cfg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;sols cal editar i deixar així:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;GRUB_BACKGROUND=&quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A continuació hem &lt;strong&gt;d’actualitzar el grub&lt;/strong&gt; amb el següent comandament:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo update-grub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;D’aquesta manera deixem només el log del sistema i podrem vorer si tot carrega correctament a més de quedar més friki ;)&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Canvia l'ordre d'arrancada en Lliurex</title>
+   <link href="http://localhost:4000/2017/04/16/grub.html"/>
+   <updated>2017-04-16T11:12:12+02:00</updated>
+   <id>http://localhost:4000/2017/04/16/grub</id>
+   <content type="html">&lt;p&gt;Si volem canviar l’ordre d’arranc del nostre ordinador amb GNU/Linux el primer que hem de fer és anar a  Aplicacions/Accessoris/Terminal i teclejar:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo nano /boot/grub/grub.cfg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;o&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo gedit /boot/grub/grub.cfg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;La primera opció ens obrirà a la mateixa terminal un editor de text senzill, la segona un editor visual més senzill encara.&lt;/p&gt;
+
+&lt;p&gt;Coses que podem fer són canviar el temps d’espera per a seleccionar un SO. Movent-nos amb el cursor del teclat busquem la línia que diga:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recordfail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;then&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fi&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;### END /etc/grub.d/00_header ###&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;On diu  &lt;strong&gt;set timeout = 10&lt;/strong&gt;  podeu canviar aquest número per la quantitat de segons que desitgem que ens done per triar un SO.&lt;/p&gt;
+
+&lt;p&gt;Per finalitzar només pressionem en Nano: Control + O (per guardar), Enter, Control + X (per eixir de l’editor).&lt;/p&gt;
+
+&lt;p&gt;Si el que volem és canviar el SO. per defecte movent-nos amb el cursor del teclat busquem la línia que diga set default=”0”:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;    &lt;span class=&quot;c&quot;&gt;### BEGIN /etc/grub.d/00_header ###&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grub&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grubenv&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;then&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;have_grubenv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;load_env&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fi&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;### BEGIN /etc/grub.d/00_header ###if [ -s /boot/grub/grubenv ]; then  have_grubenv=true  load_envfiset default=&quot;0&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;On diu &lt;strong&gt;set default = “0”&lt;/strong&gt; canviem el  0  pel nombre de línia en la qual es troba el SO que desitgem siga el predeterminat, això ho podem saber comptant les línies que apareixen en el grub quan vam iniciar l’equip ( començant des de 0, 1, 2, … i comptant la línia que diu &lt;em&gt;Other OS&lt;/em&gt;). Un cop sapiguem el nombre en la qual aquesta la línia, només vam canviar el  0  per aquest número i llest.&lt;/p&gt;
+
+&lt;p&gt;En el cas que no desitgem reiniciar per veure i explicar les línies de grub hem de buscar i comptar cada línia que diga  menuentry  (novament comptant des de 0 (zero)) i fer el mateix esmentat anteriorment.&lt;/p&gt;
+
+&lt;p&gt;Per finalitzar només pressionem  Control + O, Enter, Control + X  (en aquest ordre).&lt;/p&gt;
+
+&lt;p&gt;Espere que això  vos siga d’utilitat a l’hora de modificar el vostre grub2, qualsevol dubte no dubteu a consultar.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Tablets, Chromebooks i portàtils a les aules, perquè i per a què?</title>
+   <link href="http://localhost:4000/2017/04/15/tablets.html"/>
+   <updated>2017-04-15T11:12:12+02:00</updated>
+   <id>http://localhost:4000/2017/04/15/tablets</id>
+   <content type="html">&lt;p&gt;De tant en tant, quan parle amb companys sobre la introducció de dispositius electrònics a l’aula, ni hi ha alguns que defensen la seua utilització en classe però no tenen clar com el faran servir després. Sembla que en els últims temps siga obligatori innovar i que innovar és igual a ficar maquinari de qualsevol tipus en les aules. Fa no tant, un virus col·lectiu ens va fer posar milers de pissarres digitals, la majoria de les quals actualment es fan servir només com a projectors. Això no és que estiga mal del tot, un projector a l’aula amb connexió a Internet sempre m’ha paregut una eina molt important a l’abast del professorat. Però una pissarra digital és prou més cara que un projector, ens ho podrien haver estalviat.&lt;/p&gt;
+
+&lt;p&gt;Ara arriba la “moda” de les tablets, tot el món vol tindre al seu centre i darrere venen els Chromebooks, si no aprenem d’experiències passades, tornarem a caure en els mateixos errors. Opine que el més important abans de ficar-nos en fer grans inversions és clarificar per a què utilitzarem aquest maquinari. Ens servirà per a substituir el llibre de text? Si el substituïm, serà per la plataforma digital que ofereixen les mateixes editorials? Per materials d’elaboració pròpia? O tal vegada ens servirà com a eina de suport dels materials que ja utilitzem a l’aula? Llavors farem servir activitats en línia? App’s? Programari que només funciona en un determinat sistema operatiu?&lt;/p&gt;
+
+&lt;p&gt;Clarificar al màxim aquestes qüestions ens serà útil per prendre decisions sobre si necessitem a la nostra aula, tablets, Chromebooks o portàtils i com no, quin sistema operatiu executaran (Windows, LLiurex, Android o iOS). Triar una plataforma o altra té implicacions importants, tant econòmiques, com pedagògiques i ètiques.&lt;/p&gt;
+
+&lt;p&gt;Aclarir la finalitat també ens ajudarà a triar un model d’implantació. Els dos que conec són, o bé que les famílies compren els dispositius o que siga el centre el que faça la despesa econòmica adquirint material que siga d’ús compartit, normalment utilitzant carros on guardar les tablets o portàtils. Cada opció té els seus pros i contres.&lt;/p&gt;
+
+&lt;p&gt;Després hem de planificar altres aspectes importants, una bona infraestructura de comunicacions: WIFI professional que permeta molts dispositius interactuar al mateix temps i connexió ràpida a Internet. Sense oblidar la formació de mestres i alumnes, ja que moltes vegades pensem que bé de sèrie. La implicació de l’equip directiu és fonamental. Informar a les famílies de com serà el procés d’implantació i com afectarà els estudis dels seus fills. Molts detalls que cal tindre presents per a planificar una experiència la més satisfactòria possible.&lt;/p&gt;
+
+&lt;p&gt;Per finalitzar us deixe un vídeo que he visualitzat mestres escrivia aquest post, Google aposta fort per l’educació i haurem de començar a prendre decisions malgrat que sembla que les multinacionals ja les estan prenent per nosaltres… haurem d’espavilar ;)&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vg2vih5Tgtk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Experiències amb un Chromebook i GalliumOS</title>
+   <link href="http://localhost:4000/2017/04/10/chromebook.html"/>
+   <updated>2017-04-10T14:12:12+02:00</updated>
+   <id>http://localhost:4000/2017/04/10/chromebook</id>
+   <content type="html">&lt;p&gt;Fa uns mesos que sóc el feliç propietari d’un &lt;a href=&quot;https://www.acer.com/ac/es/ES/content/professional-series/acerchromebookr11c738t&quot;&gt;Acer Chromebook R 11&lt;/a&gt;, pels que no conegueu aquest tipus de maquinari, bàsicament es tracta d’un portàtil que executa Linux i el navegador Chrome, però només aquest és «visible». Quan executes el sistema disposes  del navegador i un explorador d’arxius (el local i el del núvol).&lt;/p&gt;
+
+&lt;p&gt;En les últimes versions a més es poden instal·lar aplicacions d’Android, gran jugada de Google sens dubte per donar valor als Chromebooks. Com que ja tinc dispositius que executen aplicacions Android no necessite aquesta funcionalitat.&lt;/p&gt;
+
+&lt;p&gt;Personalment el que més m’agrada és el hardware, necessitava una màquina lleugera i barata per tal de portar-la sempre a la motxilla. Chromebook sobre el paper complia aquestes premisses, vaig aconseguir una molt bona oferta a meitat de preu i no m’ho vaig pensar. Des del principi em va sorprendre la fluïdesa amb la qual funcionava tot, arrancant molt ràpidament i sobretot l’autonomia que em permetia poder estar en reunions de treball sense patir per si aguantarà la càrrega de bateria o no. També em va enamorar el fet que siga completament silenciós i no es calfe. Altres detalls com la pantalla tàctil i que es plegue completament les aprofiten millor els meus fills.&lt;/p&gt;
+
+&lt;p&gt;Com que sóc usuari de GNU/Linux des de fa anys trobava a faltar de vegades programari i funcions necessaris per a desenvolupar les tasques diàries que realitze. Ho vaig resoldre instal·lant &lt;a href=&quot;http://www.muycomputer.com/2014/12/29/ubuntu-debian-chromebook-crouton/&quot;&gt;Crouton&lt;/a&gt;, amb una combinació de tecles senzilla tenia al meu abast Xubuntu 14.04… però el sistema ja no anava tan fluid i això feia que només utilitzara aquesta solució en cas d’emergència.&lt;/p&gt;
+
+&lt;p&gt;Vaig tornar a cercar alternatives i afortunadament vaig aconseguir una distribució lliure compatible amb aquest maquinari &lt;a href=&quot;https://galliumos.org/&quot;&gt;GalliumOS&lt;/a&gt;. La primera vegada que la vaig instal·lar va ser decepcionant, ja que no funcionava el touchpad. Vaig insistir i vaig provar sort amb la versió beta i… va funcionar… tot menys el so (amb uns auriculars Bluetooth puc sentir qualsevol àudio). Això ja ho sabia perquè en la pàgina de &lt;a href=&quot;https://wiki.galliumos.org/Hardware_Compatibility&quot;&gt;hardware compatible&lt;/a&gt; ja ho anunciava.&lt;/p&gt;
+
+&lt;p&gt;De l’alegria que em va donar vaig fer una &lt;a href=&quot;https://galliumos.org/donate&quot;&gt;donació&lt;/a&gt; (pràctica molt recomanable) al projecte GalliumOs per tal d’agrair que projectes com aquest continuen endavant. La sorpresa va ser que al parell de setmanes vaig rebre a casa una carta de Boston agraint la meua donació i regalant-me un parell d’adhesius que vaig aprofitar per a tapar el logo de fàbrica del Chromebook xDD&lt;/p&gt;
+
+&lt;p&gt;Màxima satisfacció per vorer de prop com funciona la comunitat de programari lliure, amb aquest simple detall m’han guanyat per complet…&lt;/p&gt;
+
+&lt;p&gt;Avantatges que he trobat a l’utilitzar GalliumOS que és Xubuntu adaptat per aquest maquinari. Per descomptat tot el que ja tenia amb ChromeOS, ja que incloïa &lt;a href=&quot;https://es.wikipedia.org/wiki/Chromium_%28navegador%29&quot;&gt;Chromium&lt;/a&gt; per defecte i totes les funcionalitats d’un sistema operatiu complet amb els milers de programes que tinc a la meua disposició en cas de necessitat. La fluïdesa del sistema encara és millor i la duració de la bateria encara és molt llarga.&lt;/p&gt;
+
+&lt;p&gt;Un altre avantatja és que el hardware no incloïa port ethernet i de vegades necessite aquesta funcionalitat. Amb Ubuntu sí que em detecta un adaptador USB ethernet per poder-lo utilitzar quan ho necessite, una utilitat que amb ChromeOS no podia utilitzar i de vegades ho necessite.&lt;/p&gt;
+
+&lt;p&gt;I per últim i no menys important m’encanta quan la meua filla em demana el dispositiu per a fer dibuixos amb el &lt;a href=&quot;http://tuxpaint.org/?lang=es_ES&quot;&gt;TuxPaint&lt;/a&gt; amb els seus dits aprofitant molt més que jo la seua pantalla tàctil, una meravella, aquesta imatge és un d’elles.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/01tuxpaint.png&quot; alt=&quot;tuxpaint&quot; title=&quot;tuxpaint&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tot això em fa pensar, seria possible una adaptació de Lliurex amb maquinari d’aquestes característiques en un armari mòbil preparat per a qualsevol aula en tot moment?&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Idees per a un portal educatiu</title>
+   <link href="http://localhost:4000/2017/02/10/portal.html"/>
+   <updated>2017-02-10T13:12:12+01:00</updated>
+   <id>http://localhost:4000/2017/02/10/portal</id>
+   <content type="html">&lt;p&gt;Aquestes són unes reflexions al voltant del que podria contenir un portal educatiu que fóra atractiu, funcional i útil per a una comunitat educativa. És un llistat provisional que vaig adaptant segons se’m van ocorrent idees, si voleu acompanyar-me, podeu comentar aquest post.&lt;/p&gt;
+
+&lt;h1 id=&quot;en-general&quot;&gt;En general:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ha de ser visualment modern i responsive desing.&lt;/li&gt;
+  &lt;li&gt;Els continguts han d’actualitzar-se amb regularitat i fer neteges periòdiques per
+ eliminar el que ja no estiga vigent.&lt;/li&gt;
+  &lt;li&gt;Usuari i contrasenya única per accedir a tots els servicis.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;per-als-centres&quot;&gt;Per als centres:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Web de centres amb WordPress Multisite.&lt;/li&gt;
+  &lt;li&gt;Arxius. Nextcloud + LibreOffice&lt;/li&gt;
+  &lt;li&gt;PMB centralitzat on les biblioteques de tots els centres puguen consultar el catàleg de llibres de qualsevol col·legi públic… També es podria habilitar un fòrum on els centres compartisquen experiències de com dinamitzen les biblioteques amb els seus alumnes, dubtes amb el programari, la catalogació i d’altres qüestions relacionades.&lt;/li&gt;
+  &lt;li&gt;Comunitats. Ídem que les webs de centres. Amb renovació de continguts periòdica…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;per-a-professorat&quot;&gt;Per a professorat:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Aula virtual Moodle&lt;/li&gt;
+  &lt;li&gt;Una xarxa social pròpia. BuddyPress es pot integrar amb WordPress Multisite, incorpora fòrums i permet crear agrupacions (que podrien servir per als grups). On es puga compartir i debatre.&lt;/li&gt;
+  &lt;li&gt;Grups. Que els mestres puguen reunir-se virtualment per grups d’interessos. Que siga molt senzill crear/sol·licitar. Preferiblement oberts per a compartir coneixement.&lt;/li&gt;
+  &lt;li&gt;El repositori de material deu ser molt operatiu i senzill, la interfície que fora tipus Pinterest, Symbaloo… moderna i funcional. A més que els mestres es puguen subscriure per a rebre novetats dels apartats que els interesse. Pàgines de referència https://github.com/ , http://agrega.educacion.es  i  https://procomun.educalab.es/&lt;/li&gt;
+  &lt;li&gt;Una idea que em sembla interessant seria crear un marketplace de recursos, on els mestres puguen afegir al seu compte recursos compartits per altres mestres i crear itineraris d’aprenentatge propis. Com incentivar perquè els mestres compartisquen les seues creacions…?, tal volta un sistema de punts, de premis, de…&lt;/li&gt;
+  &lt;li&gt;El blog del professorat amb WordPress però amb possibilitat d’importar entrades de l’actual per  mantenir el treball realitzat fins ara.&lt;/li&gt;
+  &lt;li&gt;Respecte al correu dels mestres, el portal hauria de incorporar una eina funcional i atractiva. Propose Rainloop que a més es pot integrar amb owncloud o nextcloud, és senzilla i atractiva, si la integrem en el portal, podria ajudar a fer que els mestres començaren a utilitzar el correu corporatiu.&lt;/li&gt;
+  &lt;li&gt;Fòrums. Es podrien posar els de totes les Comunitats al mateix lloc diferenciat per seccions, amb espais per a diferents perfils, per exemple un subfòrum per a Secretaris, altre per a les diferents figures de Coordinadors que n’hi ha als centres…, etc.  Una espècie d’àgora on tots els docents puguem compartir dubtes i idees. Amb possibilitat de subscripció per rebre els missatges en el correu com en els de Moodle.&lt;/li&gt;
+  &lt;li&gt;Suggeriment. Donar accés amb registre a qualsevol persona interessada a determinades seccions. Estic pensant en centres concertats que vulguen implantar Lliurex i/o d’altres comunitats i països…
+Documentació. Una wiki com la de lliurex estaria molt bé per arreplegar documentació actualitzada i ordenada, on els usuaris puguen fer aportacions. Tindre tots els manuals/documents en wiki’s facilitaria el manteniment, evitant materials obsolets.&lt;/li&gt;
+  &lt;li&gt;Un sistema d’ajuda com el que fa servir Google, per exemple.&lt;/li&gt;
+  &lt;li&gt;Arxius. Nextcloud + LibreOffice. Nextcloud ofereix també altres ferramentes en línia molt interessant com són un calendari col·laboratiu, organitzador de tasques… i més;)&lt;/li&gt;
+  &lt;li&gt;Vídeo, facilitar als mestres organitzar flippedclassroom&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;per-als-alumnes&quot;&gt;Per als alumnes:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Blogs d’aula i personals&lt;/li&gt;
+  &lt;li&gt;Xarxa social privada i supervisada…&lt;/li&gt;
+  &lt;li&gt;Per al correu pense que el ideal és que fóra intern perquè no es pogueren registrar en servicis externs, però sí que poguera servir per a comunicació interna amb els mestres i altres alumnes.&lt;/li&gt;
+  &lt;li&gt;Zona de recursos seleccionats per edats per a utilitzar en línia.&lt;/li&gt;
+  &lt;li&gt;Canal de vídeo educatiu&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;per-a-les-famlies&quot;&gt;Per a les famílies:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Web Família 2.0&lt;/li&gt;
+  &lt;li&gt;Un espai on puguen informar-se de novetats, subscripció llista de correu, RSS, xarxes socials i Telegram&lt;/li&gt;
+  &lt;li&gt;Fer suggeriments i preguntar dubtes de Lliurex, Web Família…, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Molt important, tot això acompanyat d’una bona campanya de formació i difusió…&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Newsletter i RSS és fonamental facilitar l’accés a les notícies que generem.&lt;/li&gt;
+  &lt;li&gt;Presencia en xarxes socials (Twitter i Telegram).&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Sobre la Coordinació TIC</title>
+   <link href="http://localhost:4000/2017/01/10/ctic.html"/>
+   <updated>2017-01-10T13:12:12+01:00</updated>
+   <id>http://localhost:4000/2017/01/10/ctic</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;Ja està disponible en obert el &lt;a href=&quot;http://cefire.edu.gva.es/course/view.php?id=15363&quot;&gt;“Curso inicial Coordinación TIC 2016-2017“&lt;/a&gt;. En el seu moment (novembre 2016) va suposar tot un repte tutoritzar un curs en què estaven convocats tots els Coordinadors Tic de la Comunitat Valenciana. Els fòrums tiraven fum… les idees, queixes, agraïments i propostes de tot tipus van ser moltíssimes i al meu cap també bullien les idees, escriure-les va ajudar a donar-li eixida, en eixe moment no vaig publicar per considerar-lo incomplet. En quant em descuide sóc prou exigent amb mi mateixa, així que ara es publiquen els continguts del curs en obert aprofite per a compartir aquesta visió sobre la Coordinació TIC inconclusa que va sorgir en eixe moment tan intens.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Llevo prácticamente un mes disfrutando del curso inicial para Coordinadores TIC 2016-2017. Está siendo una experiencia muy enriquecedora compartir reflexiones sobre las TICs con tantos compañeros, personalmente me ha suscitado muchas y variadas cavilaciones que he intentado plasmar en este post. Se queda corto pero necesitaba pasar a limpio algunos de los muchos pensamientos que bullen sin parar en mi cabeza.&lt;/p&gt;
+
+&lt;p&gt;Es un hecho que la figura de coordinador TIC no ha conseguido pasar de desempeñar la función de técnico de guardia. Hay que reconocer que es muy difícil que una sola persona reúna todo lo que se le pide. Lo ideal es que esa figura sea un poco de todo (¿a qué otro coordinador se le pide tanto?) que sea un técnico informático, con capacidad de liderazgo, capaz de motivar a los compañeros, dinamizador, empático y un largo etcétera de cualidades que raramente encontraremos reunidas en la proporción adecuada en un sólo ser humano. Una de las posibles soluciones podría ser conformar un equipo que reúna esos aspectos. Tal vez en el formato de una comisión bajo la dirección del coordinador TIC cuyo objetivo fundamental sería llevar a buen puerto una planificación que atienda a las necesidades específicas del centro.&lt;/p&gt;
+
+&lt;p&gt;Contar con un equipo que elabore un plan a corto, medio y largo plazo sería ideal. La fuerza de crear una planificación en pequeño grupo ayudaría a implicar de entrada a los miembros que lo conforman y este empuje podría ser el germen que consiga movilizar a todo el claustro. Siempre partiendo de las directrices y del apoyo comprometido del equipo directivo. Pero dado que cada centro tiene su propia idiosincrasia incluso la creación de esta comisión la supeditaría a un plan previo en el que las líneas básicas estén muy claras.  Es ahí donde la figura del coordinador TIC es fundamental, su misión sería concebir un borrador que involucre a toda la comunidad educativa, que parta de sus necesidades reales y que sea de aplicación inmediata en la labor docente diaria.&lt;/p&gt;
+
+&lt;p&gt;No creo en que un plan completo y cerrado deba partir del equipo directivo, sí unas líneas de actuación generales y muy motivadoras, pero empezar la casa por el tejado, de arriba hacia abajo no suele ser precisamente un aliciente para el profesorado. Un equipo dinamizador de las TICs, con unos objetivos claros, permitiría llegar a todos los rincones del centro. Esto no es incompatible con que el coordinador TIC ejerza un liderazgo que encauce adecuadamente las metas fijadas. Para ello precisa una formación acorde a sus responsabilidades que incluya no sólo contenidos informáticos sino también de relaciones interpersonales, liderazgo, organización y en definitiva todas las herramientas que le permitan desempeñar su función como un reto aportándole satisfacción en su que hacer diario.&lt;/p&gt;
+
+&lt;p&gt;Reclamar que la Administración, los CEFIRES y el SAI cumplan su función adecuadamente o que los compañeros se formen y capaciten en el uso básico de las TICs es muy importante y necesario. Pero también tenemos que poner en marcha las mejoras que están en nuestras manos y que no dependen de otras instancias ya que tenemos un amplio margen de autonomía que nos puede permitir desarrollar los planes que nos propongamos. Tengo la suerte de ser testigo de cómo con el apoyo del Claustro y del Equipo directivo se pueden hacer muchas y gratificantes acciones en el ámbito de las TIC.&lt;/p&gt;
+
+&lt;p&gt;Finalmente considero que hay que tener cuidado con las generalizaciones ya que no hay un modelo único que sirva y se pueda aplicar a toda la casuística de todos los centros educativos, no hay una receta mágica, pero si no construimos un proyecto educativo compartido por toda la comunidad escolar, no iremos muy lejos. En resumen, tiempo, planificación y recursos…
+El tema es amplio y complejo pero al menos ya he conseguido dar forma a algunas ideas que me venían rondando últimamente.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Sobre el material informàtic als centres educatius</title>
+   <link href="http://localhost:4000/2016/11/10/material.html"/>
+   <updated>2016-11-10T13:12:12+01:00</updated>
+   <id>http://localhost:4000/2016/11/10/material</id>
+   <content type="html">&lt;p&gt;L’última aventura en la qual estic embarcat (juntament amb cinc companys més) és tutoritzar un curs a l’espai de formació en xarxa del Servici de Formació del Professorat de la Comunitat Valenciana per a més de 1700 Coordinadors TIC’s. Com podeu imaginar la quantitat d’intervencions als fòrums és molt alta, he pensat copiar ací algunes de les reflexions que comparteix amb els companys perquè no es perden entre tants missatges… Us deixe la que termine de fer ara mateix respecte a com gestionar el hardware en els centres educatius:&lt;/p&gt;
+
+&lt;p&gt;Et conte el que fem nosaltres per si pots agafar idees, tenim un “plan renove” anual, tenim establert en el pressupost una assignació d’uns mil euros per curs  per comprar maquinari nou. Com que utilitzem Lliurex des de fa anys el maquinari és molt més barat i ens dóna per adquirir unes cinc màquines per any. A voltes amb la sort de trobar bones ofertes i poder comprar inclús més. Quan arriba la dotació de Conselleria ja és una festa… l’any passat van aprofitar per a muntar una segona aula d’informàtica al centre.
+Els ordinadors nous sempre van on més ús se l’hi dóna. I els vells van a passant a llocs menys importants, amb menys ús. Així, normalment l’aula d’informàtica i les pissarres digitals tenen el maquinari més actualitzat i els racons d’aula dels alumnes els més antics…&lt;/p&gt;
+
+&lt;p&gt;Som un centre de primària i els alumnes en els seus racons no necessiten molts requisits de maquinari. Amb clients semi lleugers de Lliurex funcionen autònomament molt bé. A més com pengen del servidor directament el manteniment d’aquestes màquines és molt senzill, quan es trenca una la canvien per una altra ràpidament.&lt;/p&gt;
+
+&lt;p&gt;Bàsicament eixa és la manera de funcionar que tenim. Aprofitem el material obsolet i al mateix temps anem renovant-lo contínuament.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>

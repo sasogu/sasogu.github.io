@@ -1,0 +1,54 @@
+---
+layout: post
+title: "Canvia l'ordre d'arrancada en Lliurex"
+date:   2017-04-16 09:12:12
+description: Edita Grub2 manualment
+permalink: /:year/:month/:day/:title.html
+coments: true
+category: tips
+tags: [lliurex 16, grub]
+---
+Si volem canviar l'ordre d'arranc del nostre ordinador amb GNU/Linux el primer que hem de fer és anar a  Aplicacions/Accessoris/Terminal i teclejar:
+
+
+    $ sudo nano /boot/grub/grub.cfg
+
+o
+
+    $ sudo gedit /boot/grub/grub.cfg
+
+La primera opció ens obrirà a la mateixa terminal un editor de text senzill, la segona un editor visual més senzill encara.
+
+Coses que podem fer són canviar el temps d'espera per a seleccionar un SO. Movent-nos amb el cursor del teclat busquem la línia que diga:  
+{% highlight python %}
+    if [ ${recordfail} = 1 ]; then
+    set timeout=-1
+    else
+    set timeout=10
+    fi
+    ### END /etc/grub.d/00_header ###
+{% endhighlight %}
+
+On diu  **set timeout = 10**  podeu canviar aquest número per la quantitat de segons que desitgem que ens done per triar un SO.
+
+Per finalitzar només pressionem en Nano: Control + O (per guardar), Enter, Control + X (per eixir de l’editor).
+
+Si el que volem és canviar el SO. per defecte movent-nos amb el cursor del teclat busquem la línia que diga set default="0":
+
+{% highlight python %}
+    ### BEGIN /etc/grub.d/00_header ###
+    if [ -s /boot/grub/grubenv ]; then
+    have_grubenv=true
+    load_env
+    fi
+    set default="0"
+    ### BEGIN /etc/grub.d/00_header ###if [ -s /boot/grub/grubenv ]; then  have_grubenv=true  load_envfiset default="0"
+{% endhighlight %}
+
+On diu **set default = "0"** canviem el  0  pel nombre de línia en la qual es troba el SO que desitgem siga el predeterminat, això ho podem saber comptant les línies que apareixen en el grub quan vam iniciar l'equip ( començant des de 0, 1, 2, ... i comptant la línia que diu *Other OS*). Un cop sapiguem el nombre en la qual aquesta la línia, només vam canviar el  0  per aquest número i llest.
+
+En el cas que no desitgem reiniciar per veure i explicar les línies de grub hem de buscar i comptar cada línia que diga  menuentry  (novament comptant des de 0 (zero)) i fer el mateix esmentat anteriorment.
+
+Per finalitzar només pressionem  Control + O, Enter, Control + X  (en aquest ordre).
+
+Espere que això  vos siga d'utilitat a l'hora de modificar el vostre grub2, qualsevol dubte no dubteu a consultar.

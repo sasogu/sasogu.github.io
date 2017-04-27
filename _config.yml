@@ -1,0 +1,66 @@
+# Site Info
+title: sasogu
+tagline: ' TotTicTac: un espai personal per a compartir'
+description: 'Un espai personal per comparTIC'
+baseurl: ""
+url: http://sasogu.github.io
+logo: '/img/drac.png'
+
+# Site configurations
+gems:
+  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- més -->"
+sass:
+  style: compressed
+  sass_dir: _scss
+paginate: 5
+paginate_path: '/page:num'
+permalink: pretty
+
+version: 0.3
+
+# About/contact
+author:
+  name: sasogu
+  description: Apasionat de les TIC i d'aprendre compartint.
+  gravatar: a90923fdcd1390792902804edddec90b # md5 hash of your email address
+  contact:
+    linkedin:  https://www.linkedin.com/in/sasogu
+    github:    https://github.com/sasogu
+    # facebook:  <hide>
+    twitter:   https://twitter.com/sasogu
+    email:     http://www.google.com/recaptcha/mailhide/d?k=01I3lZFiZYng9N3QxYEtsDaQ==&c=31wAnZkuKqcG0ATAqJN8Z3ln5kkYLA9TwkGc-IbygpM=
+    telegram:  https://telegram.me/sasogu
+# Navigation (2nd level links supported)
+nav:
+  Inici:
+    - '/'
+    - { Categories: '/blog/categories/' }
+    - { Tags: '/blog/tags/' }
+    - { Buscar: '/search/' }
+  Enllaços:
+    - '/links/'
+  Feed:
+    - '/atom.xml'
+  Qui sóc:
+    - '/about/'
+  Github Project:
+    - 'https://github.com/sasogu/sasogu.github.io'
+
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
+
+# Coleccions
+collections:
+  links:
+    output: true
+    permalink: /links/:path/
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: '' # leave blank if you don't want google analytics
+disqus_short_name: 'tottictac' # leave blank if you don't want disqus

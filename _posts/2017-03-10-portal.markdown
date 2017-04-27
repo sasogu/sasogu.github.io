@@ -1,0 +1,67 @@
+---
+layout: post
+title: "Idees per a un portal educatiu"
+date:   2017-02-10 12:12:12
+description: Per demanar que no siga
+permalink: /:year/:month/:day/:title.html
+category: articles
+tags: [ctic]
+---
+
+Aquestes són unes reflexions al voltant del que podria contenir un portal educatiu que fóra atractiu, funcional i útil per a una comunitat educativa. És un llistat provisional que vaig adaptant segons se'm van ocorrent idees, si voleu acompanyar-me, podeu comentar aquest post.
+
+En general:
+=========
+
+
+ - Ha de ser visualment modern i responsive desing.
+ - Els continguts han d’actualitzar-se amb regularitat i fer neteges periòdiques per
+ eliminar el que ja no estiga vigent.
+ - Usuari i contrasenya única per accedir a tots els servicis.
+
+Per als centres:
+=============
+
+- Web de centres amb WordPress Multisite.
+- Arxius. Nextcloud + LibreOffice
+- PMB centralitzat on les biblioteques de tots els centres puguen consultar el catàleg de llibres de qualsevol col·legi públic… També es podria habilitar un fòrum on els centres compartisquen experiències de com dinamitzen les biblioteques amb els seus alumnes, dubtes amb el programari, la catalogació i d’altres qüestions relacionades.
+- Comunitats. Ídem que les webs de centres. Amb renovació de continguts periòdica…
+
+Per a professorat:
+=============
+
+- Aula virtual Moodle
+- Una xarxa social pròpia. BuddyPress es pot integrar amb WordPress Multisite, incorpora fòrums i permet crear agrupacions (que podrien servir per als grups). On es puga compartir i debatre.
+- Grups. Que els mestres puguen reunir-se virtualment per grups d’interessos. Que siga molt senzill crear/sol·licitar. Preferiblement oberts per a compartir coneixement.
+- El repositori de material deu ser molt operatiu i senzill, la interfície que fora tipus Pinterest, Symbaloo… moderna i funcional. A més que els mestres es puguen subscriure per a rebre novetats dels apartats que els interesse. Pàgines de referència https://github.com/ , http://agrega.educacion.es  i  https://procomun.educalab.es/
+- Una idea que em sembla interessant seria crear un marketplace de recursos, on els mestres puguen afegir al seu compte recursos compartits per altres mestres i crear itineraris d’aprenentatge propis. Com incentivar perquè els mestres compartisquen les seues creacions…?, tal volta un sistema de punts, de premis, de…
+- El blog del professorat amb WordPress però amb possibilitat d’importar entrades de l’actual per  mantenir el treball realitzat fins ara.
+- Respecte al correu dels mestres, el portal hauria de incorporar una eina funcional i atractiva. Propose Rainloop que a més es pot integrar amb owncloud o nextcloud, és senzilla i atractiva, si la integrem en el portal, podria ajudar a fer que els mestres començaren a utilitzar el correu corporatiu.
+- Fòrums. Es podrien posar els de totes les Comunitats al mateix lloc diferenciat per seccions, amb espais per a diferents perfils, per exemple un subfòrum per a Secretaris, altre per a les diferents figures de Coordinadors que n’hi ha als centres…, etc.  Una espècie d’àgora on tots els docents puguem compartir dubtes i idees. Amb possibilitat de subscripció per rebre els missatges en el correu com en els de Moodle.
+ - Suggeriment. Donar accés amb registre a qualsevol persona interessada a determinades seccions. Estic pensant en centres concertats que vulguen implantar Lliurex i/o d’altres comunitats i països…
+Documentació. Una wiki com la de lliurex estaria molt bé per arreplegar documentació actualitzada i ordenada, on els usuaris puguen fer aportacions. Tindre tots els manuals/documents en wiki’s facilitaria el manteniment, evitant materials obsolets.
+- Un sistema d’ajuda com el que fa servir Google, per exemple.
+- Arxius. Nextcloud + LibreOffice. Nextcloud ofereix també altres ferramentes en línia molt interessant com són un calendari col·laboratiu, organitzador de tasques… i més;)
+- Vídeo, facilitar als mestres organitzar flippedclassroom
+
+Per als alumnes:
+=============
+
+- Blogs d’aula i personals
+- Xarxa social privada i supervisada…
+- Per al correu pense que el ideal és que fóra intern perquè no es pogueren registrar en servicis externs, però sí que poguera servir per a comunicació interna amb els mestres i altres alumnes.
+- Zona de recursos seleccionats per edats per a utilitzar en línia.
+- Canal de vídeo educatiu
+
+Per a les famílies:
+=============
+
+- Web Família 2.0
+- Un espai on puguen informar-se de novetats, subscripció llista de correu, RSS, xarxes socials i Telegram
+- Fer suggeriments i preguntar dubtes de Lliurex, Web Família…, etc.
+
+
+**Molt important, tot això acompanyat d’una bona campanya de formació i difusió…**
+
+- Newsletter i RSS és fonamental facilitar l’accés a les notícies que generem.
+- Presencia en xarxes socials (Twitter i Telegram).

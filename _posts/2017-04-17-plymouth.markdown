@@ -1,0 +1,40 @@
+---
+layout: post
+title: "Desactivar Plymouth i fons del Grub"
+date:   2017-04-17 06:12:12
+description:
+permalink: /:year/:month/:day/:title.html
+category: tips
+tags: [plymouth, lliurex 16]
+---
+Una de les primeres coses que faig quan instal·le qualsevol sistema operatiu GNU/Linux és eliminar el Plymouth, és a dir, el logo del sistema que apareix en iniciar i finalitzar l'ordinador. Personalment m'agrada vorer passar les línies per consola que indiquen com es carreguen tots els servicis i aplicacions.
+
+Per fer-ho sols cal editar el fitxer /etc/default/grub
+
+    $ sudo nano /etc/default/grub
+
+En Lliurex la ruta és diferent:
+
+    $ sudo nano /etc/default/grub.d/06-lliurex-cmdline.cfg
+
+Editem la següent línia:
+
+    GRUB_CMDLINE_LINUX_DEFAULT=”quiet splash"
+
+Sols hem d'esborrar **quiet splash**, deixant les cometes, així:
+
+    GRUB_CMDLINE_LINUX_DEFAULT=""
+
+Si també voleu eliminar la imatge de fons del grub en Liurex fem:
+
+    sudo nano /etc/default/grub.d/05-lliurex-background.cfg
+
+sols cal editar i deixar així:
+
+    GRUB_BACKGROUND=""
+
+A continuació hem **d'actualitzar el grub** amb el següent comandament:
+
+    $ sudo update-grub
+
+D'aquesta manera deixem només el log del sistema i podrem vorer si tot carrega correctament a més de quedar més friki ;)

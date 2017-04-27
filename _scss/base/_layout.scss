@@ -1,0 +1,140 @@
+/*
+ * Wrapper
+ *
+ * The wrapper is used to position site content when the sidebar is toggled. We
+ * use an outter wrap to position the sidebar without interferring with the
+ * regular page content.
+ */
+
+.wrap {
+  position: relative;
+  width: 100%;
+}
+
+
+/*
+ * Container
+ *
+ * Center the page content.
+ */
+
+.container {
+  max-width: 28rem;
+  a {
+    @if $theme-color != $default { color: $theme-color; }
+  }
+}
+@media (min-width: 38em) {
+  .container {
+    max-width: 32rem;
+    &.content {
+      padding-top: 6.5rem;
+    }
+  }
+}
+@media (min-width: 56em) {
+  .container {
+    max-width: 38rem;
+  }
+}
+
+/* portfolio tinkering */
+$img_spacing: 5px;
+$img_height: 275px;
+$caption_font_size: 7px;
+$caption_color: #aaa;
+$grey-color-light: #fff;  /* navigation bar border */
+/**
+ * Portfolio grid **********************************************************
+*/
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+content: " ";
+display: table;
+}
+.clearfix:after {
+clear: both;
+}
+.project {
+width: 33.33%;
+height: 250px;
+float: left;
+vertical-align: middle;
+box-sizing: border-box;
+padding: 9px;
+}
+.thumbnail{
+width: 100%;
+height: 230px;
+overflow: hidden;
+}
+.thumbnail img{
+width: 500px;
+height: auto;
+position: relative;
+left: 0%;
+top: 0%;
+}
+.thumbnail a{
+float: left;
+position: relative;
+width: 100%;
+height: 230px;
+}
+.thumbnail a span {
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background: rgba(0,0,0,0.4);
+color: $grey-color-light;;
+padding: 10px;
+text-align: center;
+}
+.thumbnail a:hover span {
+display: block;
+}
+/**
+ * Portfolio pages **********************************************************
+*/
+.blankbox{
+background: $theme-color;
+}
+.img_row{
+height: $img_height;
+width: 100%;
+overflow: hidden;
+box-sizing:border-box;
+padding: $img_spacing;
+}
+.col{
+width: 100%;
+height: 100%;
+float: left;
+object-fit: cover;
+box-sizing:border-box;
+padding: $img_spacing;
+}
+.right{
+float: right;
+}
+.one {
+width:33.33%;
+}
+.two {
+width: 66.66%;
+}
+.three{
+width: 100%;
+}
+.caption{
+height: 100%;
+color: $caption_color;
+text-align: center;
+vertical-align: middle;
+font-size: $caption_font_size;
+}

@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Limitar l'ús de la CPU"
+date:   2017-04-19 10:19:12
+description:
+permalink: /:year/:month/:day/:title.html
+category: tips
+tags: [cpu]
+---
+Si necessitem saber quins processos estan fent ús del nostre sistema:
+
+    $ ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
+
+o
+
+    $ ps -eo pid,comm,%cpu | sort -rk 3 | head
+
+Per limitar el consum de CPU d'un procés concret:
+
+    $ sudo cpulimit -l 10 -e dropbox
+
+Aquesta ordre limita l'ús del processador per a dropbox al 10%
+
+Per a instal·lar l'aplicació:
+
+    $ sudo apt-get install cpulimit

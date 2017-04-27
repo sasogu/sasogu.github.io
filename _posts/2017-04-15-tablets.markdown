@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Tablets, Chromebooks i portàtils a les aules, perquè i per a què?"
+date:   2017-04-15 09:12:12
+description: Aspectes a tindre presents
+permalink: /:year/:month/:day/:title.html
+coments: true
+category: articles
+tags: [hardware, chromebook, tablets]
+---
+De tant en tant, quan parle amb companys sobre la introducció de dispositius electrònics a l'aula, ni hi ha alguns que defensen la seua utilització en classe però no tenen clar com el faran servir després. Sembla que en els últims temps siga obligatori innovar i que innovar és igual a ficar maquinari de qualsevol tipus en les aules. Fa no tant, un virus col·lectiu ens va fer posar milers de pissarres digitals, la majoria de les quals actualment es fan servir només com a projectors. Això no és que estiga mal del tot, un projector a l'aula amb connexió a Internet sempre m'ha paregut una eina molt important a l'abast del professorat. Però una pissarra digital és prou més cara que un projector, ens ho podrien haver estalviat.
+
+Ara arriba la "moda" de les tablets, tot el món vol tindre al seu centre i darrere venen els Chromebooks, si no aprenem d'experiències passades, tornarem a caure en els mateixos errors. Opine que el més important abans de ficar-nos en fer grans inversions és clarificar per a què utilitzarem aquest maquinari. Ens servirà per a substituir el llibre de text? Si el substituïm, serà per la plataforma digital que ofereixen les mateixes editorials? Per materials d'elaboració pròpia? O tal vegada ens servirà com a eina de suport dels materials que ja utilitzem a l'aula? Llavors farem servir activitats en línia? App's? Programari que només funciona en un determinat sistema operatiu?
+
+Clarificar al màxim aquestes qüestions ens serà útil per prendre decisions sobre si necessitem a la nostra aula, tablets, Chromebooks o portàtils i com no, quin sistema operatiu executaran (Windows, LLiurex, Android o iOS). Triar una plataforma o altra té implicacions importants, tant econòmiques, com pedagògiques i ètiques.
+
+Aclarir la finalitat també ens ajudarà a triar un model d'implantació. Els dos que conec són, o bé que les famílies compren els dispositius o que siga el centre el que faça la despesa econòmica adquirint material que siga d’ús compartit, normalment utilitzant carros on guardar les tablets o portàtils. Cada opció té els seus pros i contres.
+
+Després hem de planificar altres aspectes importants, una bona infraestructura de comunicacions: WIFI professional que permeta molts dispositius interactuar al mateix temps i connexió ràpida a Internet. Sense oblidar la formació de mestres i alumnes, ja que moltes vegades pensem que bé de sèrie. La implicació de l'equip directiu és fonamental. Informar a les famílies de com serà el procés d'implantació i com afectarà els estudis dels seus fills. Molts detalls que cal tindre presents per a planificar una experiència la més satisfactòria possible.
+
+Per finalitzar us deixe un vídeo que he visualitzat mestres escrivia aquest post, Google aposta fort per l'educació i haurem de començar a prendre decisions malgrat que sembla que les multinacionals ja les estan prenent per nosaltres… haurem d'espavilar ;)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vg2vih5Tgtk" frameborder="0" allowfullscreen></iframe>
