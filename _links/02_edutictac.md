@@ -2,6 +2,7 @@
 layout: post
 title: Edutictac
 description: Comunitat on compartir dubtes i experiències
+date:   2017-01-10 12:12:12
 img: ..//img/edutictac.png
 redirec: http://edutictac.es/
 ---
