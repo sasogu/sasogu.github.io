@@ -8,11 +8,11 @@ module DateEsFilter
 
         month = case month.to_i
         when 1
-            "enero"
+            "gener"
         when 2
-            "febrero"
+            "febrer"
         when 3
-            "marzo"
+            "març"
         when 4
             "abril"
         when 5
