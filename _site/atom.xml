@@ -4,13 +4,313 @@
  <title>sasogu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-04-28T23:43:38+02:00</updated>
+ <updated>2017-04-29T22:54:33+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>sasogu</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>GIT - Princials comandaments</title>
+   <link href="http://localhost:4000/2017/04/29/github.html"/>
+   <updated>2017-04-29T12:15:26+02:00</updated>
+   <id>http://localhost:4000/2017/04/29/github</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;Els apunts originals són &lt;a href=&quot;https://github.com/inclusa/inclusa.github.io/blob/master/_posts/2016-03-30-GIT-Principals-comandaments-que-utilitze.md&quot;&gt;d’@inclusa&lt;/a&gt;, aniré modificant i actualitzant al gust amb el que vaja aprenent de GITHub… Gràcies!!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;iniciar-un-repositori-git&quot;&gt;1. Iniciar un repositori git&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;configurar-lo&quot;&gt;2. Configurar-lo&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config --global user.name &quot;John Doe&quot; &amp;lt;br /&amp;gt;
+$ git config --global user.email johndoe@example.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;afegir-arxius-de-rastreig&quot;&gt;3. Afegir arxius de rastreig&lt;/h2&gt;
+
+&lt;p&gt;Cada vegada que modifiquem alguna cosa cal dir-li a GIT que ho tinga en compte.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git add .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;crear-branca&quot;&gt;4. Crear branca&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout -b gh-pages
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;canviar-de-branca&quot;&gt;5. Canviar de branca&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;mirar-en-quina-branca-estem&quot;&gt;6. Mirar en quina branca estem&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git branch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;desfer-ltim-commit&quot;&gt;7. Desfer últim commit&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git reset --hard HEAD~1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;desfer-fins-arribar-a-5-commits-abans&quot;&gt;8. Desfer fins arribar a 5 commits abans&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git reset --hard HEAD~5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://git-scm.com/book/es/v1/Fundamentos-de-Git-Deshaciendo-cosas&quot;&gt;Consulta la font&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;editant-lltim-commit-lltima-confirmaci&quot;&gt;9 Editant l’últim commit l’última confirmació&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git commit --amend
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;La instantània és la mateixa, sols pots canviar el que has posat com a missatge del commit&lt;/p&gt;
+
+&lt;h2 id=&quot;desfer-el-que-tenim-al-git-local-i-baixar-el-que-hi-ha-al-server&quot;&gt;10. Desfer el que tenim al GIT local i baixar el que hi ha al server&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git fetch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;clonar-repositori-remot&quot;&gt;11. Clonar repositori remot&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/inclusa/inclusa
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;sincronitzar-des-del-repositori-remot-al-local&quot;&gt;12. Sincronitzar des del repositori remot al local&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git pull
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;sincronitzar-des-del-repositori-local-al-remot&quot;&gt;13. Sincronitzar des del repositori local al remot&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;evitar-que-git-demane-usuari-i-contrasenya&quot;&gt;14. Evitar que GIT demane usuari i contrasenya&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config --global credential.helper. store
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;La contrasenya del repositori remot queda magatzemada al fitxer &lt;code class=&quot;highlighter-rouge&quot;&gt;.git-credentials&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;no-guardar-la-contrasenya-en-disc&quot;&gt;15. No guardar la contrasenya en disc&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config --global credential.helper 'cache --timeout=3600'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Transcorreguda un hora tornarà a demanar la contrasenya.&lt;/p&gt;
+
+&lt;h2 id=&quot;borrar-branca-i-borrar-la-del-server&quot;&gt;16. Borrar branca i borrar-la del server&lt;/h2&gt;
+
+&lt;p&gt;Objectiu: volem borrar la branca gh-pages&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git branch -d gh-pages           ##  elimina branca local
+
+$ git push origin :gh-pages        ##  elimina branca remota
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;iniciar-repositori-en-github-des-de-terminal-amb-el-protocol-https&quot;&gt;17. Iniciar repositori en GITHub des de terminal amb el protocol &lt;code class=&quot;highlighter-rouge&quot;&gt;https://&lt;/code&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo &quot;##  repositori&quot; &amp;gt;    README.md&amp;lt;br /&amp;gt;
+git init&amp;lt;br /&amp;gt;
+git add README.md&amp;lt;br /&amp;gt;
+git commit -m &quot;comentari&quot;&amp;lt;br /&amp;gt;
+git remote add origin https://github.com/usuari/repositori.git&amp;lt;br /&amp;gt;
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;explicaci&quot;&gt;18. Explicació&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;echo&lt;/code&gt;: Afegix la informació al fitxer, si no existeix el crea&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt;: Inicia el repositori creant els arxius de rastreig a .git&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add README.md&lt;/code&gt;: Afegig l’arxiu README.md per tal que es rastrege&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m &quot;comentari&quot;&lt;/code&gt;: Crea el punt d’emmagatzemmament del contigut actual, emmgatzema el contingut de del projecte establint fixant un punt, també afegeix un comentar&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add remote add origin https://&lt;/code&gt;: Afegeig repositori remot&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push -u origin master&lt;/code&gt;: publica el repositori local a la branca &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; remota&lt;/p&gt;
+
+&lt;h2 id=&quot;publicar-a-un-repositori-existent-a-github-des-de-la-lnia-de-comandamentsamb-el-protocol-https&quot;&gt;19. Publicar a un repositori existent a GITHub des de la línia de comandamentsamb el protocol &lt;code class=&quot;highlighter-rouge&quot;&gt;https://&lt;/code&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add origin https://github.com/usuari/repositori.git
+
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;iniciar-repositori-en-github-des-de-terminal-amb-el-protocol-ssh&quot;&gt;20. Iniciar repositori en GITHub des de terminal amb el protocol &lt;code class=&quot;highlighter-rouge&quot;&gt;ssh&lt;/code&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo &quot;##  repositori&quot; &amp;gt;    README.md&amp;lt;br /&amp;gt;
+git init&amp;lt;br /&amp;gt;
+git add README.md&amp;lt;br /&amp;gt;
+git commit -m &quot;comentari&quot;&amp;lt;br /&amp;gt;
+git remote add origin git@github.com:usuari/repositori.git&amp;lt;br /&amp;gt;
+git push -u origin master&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;publicar-a-un-repositori-existent-a-github-des-de-la-lnia-de-comandamentsamb-el-protocol-ssh&quot;&gt;21. Publicar a un repositori existent a GITHub des de la línia de comandamentsamb el protocol &lt;code class=&quot;highlighter-rouge&quot;&gt;ssh&lt;/code&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add origin git@github.com:usuari/repositori.git
+
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;branques-en-git&quot;&gt;22. Branques en GIT&lt;/h2&gt;
+
+&lt;p&gt;Tots els projectes, per defecte, tenen la branca MASTER on, al final, acaben totls els desenvolupaments que fem.&lt;/p&gt;
+
+&lt;p&gt;Podem definir altra branca, per exemple, DEVELOP on anar fent tots els xicotets canvis que necessitem fer.&lt;/p&gt;
+
+&lt;p&gt;Per canviar de branca, per situar-nos a una altra branca&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout -b develop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;checkout&lt;/code&gt; → canvia de branca
+&lt;code class=&quot;highlighter-rouge&quot;&gt;-b&lt;/code&gt; → crea la branca&lt;/p&gt;
+
+&lt;p&gt;Quan arribem a un punt on tots els canvis que hem anat fent son estables i ens interessa que apareguen en la branca MASTER farem un &lt;strong&gt;merge&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Primer ens situem en la branca MASTER&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ara li diguem que porte els canvis que hem fet a DEVELOP&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git merge develop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ara tindrem una nova versió a la branca MASTER&lt;/p&gt;
+
+&lt;p&gt;Pot passar que hi hagen problemes al fer el &lt;code class=&quot;highlighter-rouge&quot;&gt;merge&lt;/code&gt;, en cas que GIT no sàpiga distingir quinies són les líies bones ens ho preguntarà.&lt;/p&gt;
+
+&lt;h2 id=&quot;etiquetes-en-git&quot;&gt;23. Etiquetes en GIT&lt;/h2&gt;
+
+&lt;p&gt;Podem definir etiquetes per a gestionar versions del nostre codi o punts importants de desenvolupament, de forma que després ens siga fàcil identificar les fases de desenvolupament&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git tag -a v1.0 -m 'Versió 1.0'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;banques-en-git&quot;&gt;24. Banques en GIT&lt;/h2&gt;
+
+&lt;p&gt;Les branques són línies de treball que tenen un objectiu. Posem un exemple de diferents branques amb diferents objectius de fases del treball.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MASTER&lt;/code&gt;: branca principal on aniran tots els canvis finals, així que, en aquest cas podriem etiquetar diverses versions explicitant les fases V0.1, v0.2, v0.3, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;DEVELOP&lt;/code&gt;: branca on es realitzen canvis més xicotets, però també es proven. Pot tenir diverses subbranques.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RELEASE&lt;/code&gt;: branca on podem agrupar certs pasos endaavnt, quan está provada podrem incorporar-ho a MASTER.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;MASTER		RELEASE		DEVELOP
+X
+|
+|\
+| \ __→__→__→__→__→__→__→__→__→__→__ X
+|                                    ↓
+|                                    |
+|                                    |
+|                 X __←__←__←__←__ ← X
+|                /
+|               /
+|__←__←__←__←_ X
+X               
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;si-fallem-podem-tronar-enrere&quot;&gt;25. Si fallem podem tronar enrere&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout --fitxer
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Inclús podem dir “tot el que hem fet pins ara no val per a res”&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git fetch origin &amp;amp;&amp;amp; git reset --hard origin/master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;canviar-tot-el-contingut-duna-branca&quot;&gt;26. Canviar tot el contingut d’una branca&lt;/h2&gt;
+
+&lt;p&gt;Sobreescrivim una branca a altra:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git branch -m master old-master
+git branch -m gh-pages master
+git push -f origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-m&lt;/code&gt; renomena
+` -f` força&lt;/p&gt;
+
+&lt;h2 id=&quot;customitzar-els-colors&quot;&gt;27 Customitzar els colors&lt;/h2&gt;
+
+&lt;p&gt;Configurem un alias.&lt;/p&gt;
+
+&lt;p&gt;Ara el cridarem &lt;code class=&quot;highlighter-rouge&quot;&gt;git lg&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global alias.lg &lt;span class=&quot;s2&quot;&gt;&quot;log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset' --abbrev-commit&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;github&quot;&gt;28. GITHub&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/#platform-linux&quot;&gt;Iniciar repositori&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;fonts&quot;&gt;29. Fonts&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://rogerdudler.github.io/git-guide/index.es.html&quot;&gt;git - la guia sencilla&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.atlassian.com/git/tutorials/&quot;&gt;Become a git guru&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://git-scm.com/book/es/v1&quot;&gt;Pro Git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cheat.errtheblog.com/s/git&quot;&gt;Cheat Sheets&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.tutorialspoint.com/git/&quot;&gt;GIT - Tutorials Point&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://git-scm.com/doc&quot;&gt;Documentació base&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://git-scm.com/book/es&quot;&gt;Documentació base en espanyol&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.flx.cat/desenvolupament/2013/11/11/guia-rapida-git.html&quot;&gt;Guia ràpida de GIT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/es/&quot;&gt;GIT Màgic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;video&quot;&gt;30. Video&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://vimeo.com/39829002&quot;&gt;GITHub en Camon - Murcia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ZDR433b0HJY&quot;&gt;Introduction to GIT with Scott Chacon of GITHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Canviar fons de pantalla d'inici en Lliurex</title>

@@ -8,32 +8,32 @@ module DateEsFilter
 
         month = case month.to_i
         when 1
-            "gener"
+            "de gener"
         when 2
-            "febrer"
+            "de febrer"
         when 3
-            "març"
+            "de març"
         when 4
-            "abril"
+            "d'abril"
         when 5
-            "mayo"
+            "de maig"
         when 6
-            "junio"
+            "de juny"
         when 7
-            "julio"
+            "de juliol"
         when 8
-            "agosto"
+            "d'agost"
         when 9
-            "septiembre"
+            "de setembre"
         when 10
-            "octubre"
+            "d'octubre"
         when 11
-            "noviembre"
+            "de novembre"
         when 12
-            "diciembre"
+            "de decembre"
         end
 
-        "<time datetime=\"#{input}\">#{day} de #{month} del #{year}</time>"
+        "<time datetime=\"#{input}\">#{day} #{month} del #{year}</time>"
     end
 end
 

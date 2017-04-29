@@ -10,25 +10,21 @@ tags: [ctic]
 
 Aquestes són unes reflexions al voltant del que podria contenir un portal educatiu que fóra atractiu, funcional i útil per a una comunitat educativa. És un llistat provisional que vaig adaptant segons se'm van ocorrent idees, si voleu acompanyar-me, podeu comentar aquest post.
 
-En general:
-=========
-
+# En general:
 
  - Ha de ser visualment modern i responsive desing.
  - Els continguts han d’actualitzar-se amb regularitat i fer neteges periòdiques per
  eliminar el que ja no estiga vigent.
  - Usuari i contrasenya única per accedir a tots els servicis.
 
-Per als centres:
-=============
+# Per als centres:
 
 - Web de centres amb WordPress Multisite.
 - Arxius. Nextcloud + LibreOffice
 - PMB centralitzat on les biblioteques de tots els centres puguen consultar el catàleg de llibres de qualsevol col·legi públic… També es podria habilitar un fòrum on els centres compartisquen experiències de com dinamitzen les biblioteques amb els seus alumnes, dubtes amb el programari, la catalogació i d’altres qüestions relacionades.
 - Comunitats. Ídem que les webs de centres. Amb renovació de continguts periòdica…
 
-Per a professorat:
-=============
+# Per a professorat:
 
 - Aula virtual Moodle
 - Una xarxa social pròpia. BuddyPress es pot integrar amb WordPress Multisite, incorpora fòrums i permet crear agrupacions (que podrien servir per als grups). On es puga compartir i debatre.
@@ -44,8 +40,7 @@ Documentació. Una wiki com la de lliurex estaria molt bé per arreplegar docume
 - Arxius. Nextcloud + LibreOffice. Nextcloud ofereix també altres ferramentes en línia molt interessant com són un calendari col·laboratiu, organitzador de tasques… i més;)
 - Vídeo, facilitar als mestres organitzar flippedclassroom
 
-Per als alumnes:
-=============
+# Per als alumnes:
 
 - Blogs d’aula i personals
 - Xarxa social privada i supervisada…
@@ -53,8 +48,7 @@ Per als alumnes:
 - Zona de recursos seleccionats per edats per a utilitzar en línia.
 - Canal de vídeo educatiu
 
-Per a les famílies:
-=============
+# Per a les famílies:
 
 - Web Família 2.0
 - Un espai on puguen informar-se de novetats, subscripció llista de correu, RSS, xarxes socials i Telegram
