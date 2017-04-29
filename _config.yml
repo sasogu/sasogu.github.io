@@ -20,7 +20,7 @@ paginate: 5
 paginate_path: '/page:num'
 permalink: pretty
 
-version: 0.3
+version: 0.4
 
 # About/contact
 author:
@@ -48,7 +48,7 @@ nav:
   Qui sóc:
     - '/about/'
   Github Project:
-    - 'https://github.com/sasogu/sasogu.github.io'
+    - 'https://github.com/sasogu/tottictac'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
