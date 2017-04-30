@@ -1,0 +1,115 @@
+---
+layout: post
+title: "Gestionar usuaris des de terminal"
+date:   2017-04-30 10:16:26
+description: Descripció de comandaments de GIT
+permalink: /:year/:month/:day/:title.html
+category: apunts
+tags: [lliurex, desktop, terminal]
+---
+## Afegir usuaris
+
+**Comandament:** `useradd`
+
+**Sintaxis:** `useradd [modificadors] login`
+
+**Modificadors:**
+
+-c: afegeix un comentari (camp 5 de passwd)
+
+-d: estableix el directori home de l'usuari que per defecte és /home/login (camp 6)
+
+-e: data expiració del compte, amb format AAAA-MM-DD (camp 8 de shadow)
+
+-g: nom del grup principal (ha d'existir el grup)
+
+-G: noms dels altres grups als que pot pertanyer, separats per ","
+
+-s: shell per defecte. Si no s'especifica serà bash.
+
+-m: crea el directori home si no existeix copia els fitxers del directori /etc/skel al directori home. Per defecte no el crea ni copia els fitxers. Es complementa amb -k.
+
+-k: copia els fitxers del directori especificat en el directori home de l'usuari. Solament és vàlida junt amb -m.
+
+### Valors per defecte:
+
+El programa **useradd** utilitza una colecció de valors per defecte emmagatzemats en /etc/default/useradd.
+
+Es poden veure els valors per defecte executant:  
+
+    $ useradd -D
+
+Es pot observar que falta l'intèrpret de comandaments per defecte. Per afegir-lo hem de fer:
+
+    $useradd -D -s /bin/bash
+
+També es pot editar el fitxer i afegir o ajustar els valors al nostre gust.
+
+### Combinacions:
+
+`$sudo useradd login` -> crea un usuari sense directori home.
+
+`$sudo useradd -m login` -> crea un usuari amb directori home i li còpia els fitxers ubicats en /etc/skel.
+
+`$sudo useradd -m -d /home/nom_usuari login` -> crea un usuari amb directori home diferent al que se li otorga per defecte, es a dir, diferent a /home/login i li còpia els fitxers ubicats en /etc/skel.
+
+`$sudo useradd -m -k /etc/skel/usuaris login` -> crea un usuari amb directori home per defecte i li còpia els fitxers ubicats en /etc/skel/usuaris.
+
+## Modificar usuaris
+
+**Comandament:** `usermod`
+
+**Sintaxis:** `usermod [modificadors] login`
+
+### Modificadors:
+
+-c: afegeix o modifica el comentari
+
+-d: modifica el directori home
+
+-e: canvia o estableix la data d'expiració del compte
+
+-g: canvia el grup principal
+
+-G: estableix altres grups per l'usuari
+
+-l: canvia el login (camp 1 de passwd i 5 de shadow)
+
+-L: bloqueja el compte de l'usuari no permetent ingressar al sistema
+
+-s: canvia el shell per defecte
+
+-u: canvia el UID de l'usuari
+
+-U: desbloqueja un compte bloquejat amb -L
+
+## Eliminar usuaris
+**Comandament:** `userdel`
+
+**Notes:** No es pot eliminar un usuari si ha ingressat al sistema. Elimina el compte de /etc/passwd i /etc/shadow però no elimina el directori de treball.
+
+**Sintaxis:** `userdel [modificadors] login`
+
+**Modificadors:**
+
+-r: elimina el compte i, a més a més, el seu directori de treball amb el seu contingut i la bústia de correu.
+
+-f: igual que -r però sense importar si l'usuari ha ingressat al sistema.
+
+## Assignar o modificar contrassenyes
+
+**Comandament:** `passwd`
+
+**Notes:** Només pot canviar les contrassenyes el propi usuari i el root. Disposa d'un sistema de validació que ens informarà de si la contrasenya és "coneguda". Si no s'especifica el login canvia el password del compte actual.
+
+**Sintaxis:** `passwd [modificadors] login`
+
+### Modificadors:
+
+-S: informa de la política del compte de l'usuari (estat del compte: L bloquejada, NP sense clau i P amb clau), data del darrer canvi de clau, temps de canvi de clau, temps d'avís i temps de desactivació)
+
+-u: desbloqueja un compte bloquejat amb -L
+
+-l: bloqueja el compte de l'usuari no permetent ingressar al sistema
+
+-g: canvia o assigna la password a un grup

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GIT - Princials comandaments"
+title: "GIT - Principals comandaments"
 date:   2017-04-29 10:15:26
 description: Descripció de comandaments de GIT
 permalink: /:year/:month/:day/:title.html

@@ -4,7 +4,7 @@
  <title>sasogu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-04-30T07:29:36+02:00</updated>
+ <updated>2017-04-30T22:13:27+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>sasogu</name>
@@ -13,7 +13,119 @@
 
  
  <entry>
-   <title>GIT - Princials comandaments</title>
+   <title>Gestionar usuaris des de terminal</title>
+   <link href="http://localhost:4000/2017/04/30/useradd.html"/>
+   <updated>2017-04-30T12:16:26+02:00</updated>
+   <id>http://localhost:4000/2017/04/30/useradd</id>
+   <content type="html">&lt;h2 id=&quot;afegir-usuaris&quot;&gt;Afegir usuaris&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Comandament:&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;useradd&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sintaxis:&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;useradd [modificadors] login&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Modificadors:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;-c: afegeix un comentari (camp 5 de passwd)&lt;/p&gt;
+
+&lt;p&gt;-d: estableix el directori home de l’usuari que per defecte és /home/login (camp 6)&lt;/p&gt;
+
+&lt;p&gt;-e: data expiració del compte, amb format AAAA-MM-DD (camp 8 de shadow)&lt;/p&gt;
+
+&lt;p&gt;-g: nom del grup principal (ha d’existir el grup)&lt;/p&gt;
+
+&lt;p&gt;-G: noms dels altres grups als que pot pertanyer, separats per “,”&lt;/p&gt;
+
+&lt;p&gt;-s: shell per defecte. Si no s’especifica serà bash.&lt;/p&gt;
+
+&lt;p&gt;-m: crea el directori home si no existeix copia els fitxers del directori /etc/skel al directori home. Per defecte no el crea ni copia els fitxers. Es complementa amb -k.&lt;/p&gt;
+
+&lt;p&gt;-k: copia els fitxers del directori especificat en el directori home de l’usuari. Solament és vàlida junt amb -m.&lt;/p&gt;
+
+&lt;h3 id=&quot;valors-per-defecte&quot;&gt;Valors per defecte:&lt;/h3&gt;
+
+&lt;p&gt;El programa &lt;strong&gt;useradd&lt;/strong&gt; utilitza una colecció de valors per defecte emmagatzemats en /etc/default/useradd.&lt;/p&gt;
+
+&lt;p&gt;Es poden veure els valors per defecte executant:    &lt;br /&gt;
+  &amp;gt; $ useradd -D&lt;/p&gt;
+
+&lt;p&gt;Es pot observar que falta l’intèrpret de comandaments per defecte. Per afegir-lo hem de fer:
+&amp;gt; $useradd -D -s /bin/bash&lt;/p&gt;
+
+&lt;p&gt;També es pot editar el fitxer i afegir o ajustar els valors al nostre gust.&lt;/p&gt;
+
+&lt;h3 id=&quot;combinacions&quot;&gt;Combinacions:&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$sudo useradd login&lt;/code&gt; -&amp;gt; crea un usuari sense directori home.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$sudo useradd -m login&lt;/code&gt; -&amp;gt; crea un usuari amb directori home i li còpia els fitxers ubicats en /etc/skel.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$sudo useradd -m -d /home/nom_usuari login&lt;/code&gt; -&amp;gt; crea un usuari amb directori home diferent al que se li otorga per defecte, es a dir, diferent a /home/login i li còpia els fitxers ubicats en /etc/skel.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$sudo useradd -m -k /etc/skel/usuaris login&lt;/code&gt; -&amp;gt; crea un usuari amb directori home per defecte i li còpia els fitxers ubicats en /etc/skel/usuaris.&lt;/p&gt;
+
+&lt;h2 id=&quot;modificar-usuaris&quot;&gt;Modificar usuaris&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Comandament:&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;usermod&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sintaxis:&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;usermod [modificadors] login&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;modificadors&quot;&gt;Modificadors:&lt;/h3&gt;
+
+&lt;p&gt;-c: afegeix o modifica el comentari&lt;/p&gt;
+
+&lt;p&gt;-d: modifica el directori home&lt;/p&gt;
+
+&lt;p&gt;-e: canvia o estableix la data d’expiració del compte&lt;/p&gt;
+
+&lt;p&gt;-g: canvia el grup principal&lt;/p&gt;
+
+&lt;p&gt;-G: estableix altres grups per l’usuari&lt;/p&gt;
+
+&lt;p&gt;-l: canvia el login (camp 1 de passwd i 5 de shadow)&lt;/p&gt;
+
+&lt;p&gt;-L: bloqueja el compte de l’usuari no permetent ingressar al sistema&lt;/p&gt;
+
+&lt;p&gt;-s: canvia el shell per defecte&lt;/p&gt;
+
+&lt;p&gt;-u: canvia el UID de l’usuari&lt;/p&gt;
+
+&lt;p&gt;-U: desbloqueja un compte bloquejat amb -L&lt;/p&gt;
+
+&lt;h2 id=&quot;eliminar-usuaris&quot;&gt;Eliminar usuaris&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Comandament:&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;userdel&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt; No es pot eliminar un usuari si ha ingressat al sistema. Elimina el compte de /etc/passwd i /etc/shadow però no elimina el directori de treball.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sintaxis:&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;userdel [modificadors] login&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Modificadors:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;-r: elimina el compte i, a més a més, el seu directori de treball amb el seu contingut i la bústia de correu.&lt;/p&gt;
+
+&lt;p&gt;-f: igual que -r però sense importar si l’usuari ha ingressat al sistema.&lt;/p&gt;
+
+&lt;h2 id=&quot;assignar-o-modificar-contrassenyes&quot;&gt;Assignar o modificar contrassenyes&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Comandament:&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;passwd&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt; Només pot canviar les contrassenyes el propi usuari i el root. Disposa d’un sistema de validació que ens informarà de si la contrasenya és “coneguda”. Si no s’especifica el login canvia el password del compte actual.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sintaxis:&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;passwd [modificadors] login&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;modificadors-1&quot;&gt;Modificadors:&lt;/h3&gt;
+
+&lt;p&gt;-S: informa de la política del compte de l’usuari (estat del compte: L bloquejada, NP sense clau i P amb clau), data del darrer canvi de clau, temps de canvi de clau, temps d’avís i temps de desactivació)&lt;/p&gt;
+
+&lt;p&gt;-u: desbloqueja un compte bloquejat amb -L&lt;/p&gt;
+
+&lt;p&gt;-l: bloqueja el compte de l’usuari no permetent ingressar al sistema&lt;/p&gt;
+
+&lt;p&gt;-g: canvia o assigna la password a un grup&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>GIT - Principals comandaments</title>
    <link href="http://localhost:4000/2017/04/29/github.html"/>
    <updated>2017-04-29T12:15:26+02:00</updated>
    <id>http://localhost:4000/2017/04/29/github</id>
@@ -132,11 +244,11 @@ $ git push origin :gh-pages        ##  elimina branca remota
 
 &lt;h2 id=&quot;iniciar-repositori-en-github-des-de-terminal-amb-el-protocol-https&quot;&gt;17. Iniciar repositori en GITHub des de terminal amb el protocol &lt;code class=&quot;highlighter-rouge&quot;&gt;https://&lt;/code&gt;&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo &quot;##  repositori&quot; &amp;gt;    README.md&amp;lt;br /&amp;gt;
-git init&amp;lt;br /&amp;gt;
-git add README.md&amp;lt;br /&amp;gt;
-git commit -m &quot;comentari&quot;&amp;lt;br /&amp;gt;
-git remote add origin https://github.com/usuari/repositori.git&amp;lt;br /&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo &quot;##  repositori&quot;    README.md
+git init
+git add README.md
+git commit -m &quot;comentari&quot;
+git remote add origin https://github.com/usuari/repositori.git
 git push -u origin master
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
