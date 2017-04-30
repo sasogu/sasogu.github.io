@@ -20,7 +20,7 @@ paginate: 5
 paginate_path: '/page:num'
 permalink: pretty
 
-version: 0.4
+version: 0.5
 
 # About/contact
 author:
