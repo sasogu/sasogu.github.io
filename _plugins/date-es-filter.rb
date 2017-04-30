@@ -30,7 +30,7 @@ module DateEsFilter
         when 11
             "de novembre"
         when 12
-            "de decembre"
+            "de desembre"
         end
 
         "<time datetime=\"#{input}\">#{day} #{month} del #{year}</time>"

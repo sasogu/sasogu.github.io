@@ -4,8 +4,8 @@ title: "GIT - Princials comandaments"
 date:   2017-04-29 10:15:26
 description: Descripció de comandaments de GIT
 permalink: /:year/:month/:day/:title.html
-category: tips
-tags: [lightdm, lliurex 16]
+category: apunts
+tags: [git, github]
 ---
 
 *Els apunts originals són [d'@inclusa](http://inclusa.github.io/2016/03/30/GIT-Principals-comandaments-que-utilitze.html), aniré modificant i actualitzant al gust amb el que vaja aprenent de GITHub... Gràcies!!*
@@ -61,7 +61,7 @@ La instantània és la mateixa, sols pots canviar el que has posat com a missatg
 
 ##  11. Clonar repositori remot
 
-    $ git clone https://github.com/inclusa/inclusa
+    $ git clone https://github.com/sasogu/sasogu
 
 ##  12. Sincronitzar des del repositori remot al local
 
@@ -73,7 +73,7 @@ La instantània és la mateixa, sols pots canviar el que has posat com a missatg
 
 ##  14. Evitar que GIT demane usuari i contrasenya
 
-    $ git config --global credential.helper. store
+    $ git config --global credential.helper store
 
 La contrasenya del repositori remot queda magatzemada al fitxer `.git-credentials`
 
@@ -93,11 +93,11 @@ Objectiu: volem borrar la branca gh-pages
 
 ##  17. Iniciar repositori en GITHub des de terminal amb el protocol `https://`
 
-    echo "##  repositori" >    README.md<br />
-    git init<br />
-    git add README.md<br />
-    git commit -m "comentari"<br />
-    git remote add origin https://github.com/usuari/repositori.git<br />
+    echo "##  repositori"    README.md
+    git init
+    git add README.md
+    git commit -m "comentari"
+    git remote add origin https://github.com/usuari/repositori.git
     git push -u origin master
 
 ##  18. Explicació

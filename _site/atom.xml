@@ -4,7 +4,7 @@
  <title>sasogu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-04-29T22:54:33+02:00</updated>
+ <updated>2017-04-30T07:29:36+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>sasogu</name>
@@ -17,7 +17,7 @@
    <link href="http://localhost:4000/2017/04/29/github.html"/>
    <updated>2017-04-29T12:15:26+02:00</updated>
    <id>http://localhost:4000/2017/04/29/github</id>
-   <content type="html">&lt;p&gt;&lt;em&gt;Els apunts originals són &lt;a href=&quot;https://github.com/inclusa/inclusa.github.io/blob/master/_posts/2016-03-30-GIT-Principals-comandaments-que-utilitze.md&quot;&gt;d’@inclusa&lt;/a&gt;, aniré modificant i actualitzant al gust amb el que vaja aprenent de GITHub… Gràcies!!&lt;/em&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;em&gt;Els apunts originals són &lt;a href=&quot;http://inclusa.github.io/2016/03/30/GIT-Principals-comandaments-que-utilitze.html&quot;&gt;d’@inclusa&lt;/a&gt;, aniré modificant i actualitzant al gust amb el que vaja aprenent de GITHub… Gràcies!!&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;iniciar-un-repositori-git&quot;&gt;1. Iniciar un repositori git&lt;/h2&gt;
 
@@ -88,7 +88,7 @@ $ git config --global user.email johndoe@example.com
 
 &lt;h2 id=&quot;clonar-repositori-remot&quot;&gt;11. Clonar repositori remot&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/inclusa/inclusa
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/sasogu/sasogu
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -106,7 +106,7 @@ $ git config --global user.email johndoe@example.com
 
 &lt;h2 id=&quot;evitar-que-git-demane-usuari-i-contrasenya&quot;&gt;14. Evitar que GIT demane usuari i contrasenya&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config --global credential.helper. store
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config --global credential.helper store
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
