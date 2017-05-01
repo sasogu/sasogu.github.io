@@ -139,6 +139,10 @@ Inclús podem dir "tot el que hem fet fins ara no val per a res"
 
     $ git checkout -b gh-pages
 
+`checkout` → canvia de branca
+
+`-b` → crea la branca
+
 ##  Canviar de branca
 
     $ git checkout master
@@ -172,14 +176,6 @@ Objectiu: volem borrar la branca gh-pages
 Tots els projectes, per defecte, tenen la branca MASTER on, al final, acaben tots els desenvolupaments que fem.
 
 Podem definir altra branca, per exemple, DEVELOP on anar fent tots els xicotets canvis que necessitem fer.
-
-Per canviar de branca, per situar-nos a una altra branca
-
-    $ git checkout -b develop
-
-`checkout` → canvia de branca
-
-`-b` → crea la branca
 
 Quan arribem a un punt on tots els canvis que hem anat fent son estables i ens interessa que apareguen en la branca MASTER farem un **merge**.
 
