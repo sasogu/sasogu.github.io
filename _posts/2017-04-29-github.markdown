@@ -56,7 +56,7 @@ tags: [git, github]
 
   -[Línies de treball amb branques](#linies-de-treball-amb-branques)
 
--[Altres comandaments](#altres-comandaments)
+- ### [Altres comandaments](#altres-comandaments)
 
 
 
@@ -169,7 +169,7 @@ Objectiu: volem borrar la branca gh-pages
 
 ##  Branques en GIT
 
-Tots els projectes, per defecte, tenen la branca MASTER on, al final, acaben totls els desenvolupaments que fem.
+Tots els projectes, per defecte, tenen la branca MASTER on, al final, acaben tots els desenvolupaments que fem.
 
 Podem definir altra branca, per exemple, DEVELOP on anar fent tots els xicotets canvis que necessitem fer.
 
