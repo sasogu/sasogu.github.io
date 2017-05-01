@@ -10,80 +10,155 @@ tags: [git, github]
 
 *Els apunts originals són [d'@inclusa](http://inclusa.github.io/2016/03/30/GIT-Principals-comandaments-que-utilitze.html), aniré modificant i actualitzant al gust amb el que vaja aprenent de GITHub... Gràcies!!*
 
-##  1. Iniciar un repositori git
+- ### [Comandaments fonamentals](#comandaments-fonamentals).
+
+  -[Iniciar un repositori git](#iniciar-un-repositori-git)
+
+  -[Configurar-lo](#configurar-lo)
+
+  -[Evitar que GIT demane usuari i contrasenya](#evitar-que-git-demane-usuari-i-contrasenya)
+
+  -[Seguir els canvis](#seguir-els-canvis)
+
+  -[Afegir arxius de rastreig](#afegir-arxius-de-rastreig)
+
+  -[Clonar repositori remot](#clonar-repositori-remot)
+
+  -[Sincronitzar des del repositori remot al local](#sincronitzar-des-del-repositori-remot-al-local)
+
+  -[Sincronitzar des del repositori local al remot](#sincronitzar-des-del-repositori-local-al-remot)
+
+- ### [Si entrem en pànic](#si-entrem-en-panic)
+
+  -[Desfer últim commit](#desfer-ultim-commit)
+
+  -[Desfer fins arribar a 5 commits abans](#desfer-fins-arribar-a-5-commits-abans)
+
+  -[Editant l'últim commit i l'última confirmació](#editant-l'ultim-commit-i-l'ultima-confirmacio)
+
+  -[Desfer el que tenim al GIT local i baixar el que hi ha al server](#desfer-el-que-tenim-al-git-local-i-baixar-el-que-hi-ha-al-server)
+
+  -[Si fallem podem tornar enrere](#si-fallem-podem-tornar-enrere)
+
+- ### [Treballant amb branques](#treballant-amb-branques)
+
+  -[Crear branca](#crear-branca)
+
+  -[Canviar de branca](#canviar-de-branca)
+
+  -[Mirar en quina branca estem](#mirar-en-quina-branca-estem)
+
+  -[Canviar tot el contingut d'una branca](#canviar-tot-el-contingut-d'una-branca)
+
+  -[Borrar branca i borrar-la del server](#borrar-branca-i-borrar-la-del-server)
+
+  -[Branques en GIT](#branques-en-git)
+
+  -[Línies de treball amb branques](#linies-de-treball-amb-branques)
+
+-[Altres comandaments](#altres-comandaments)
+
+
+
+
+# Comandaments fonamentals
+
+##  Iniciar un repositori git
 
     $ git init
 
-##  2. Configurar-lo
+##  Configurar-lo
 
     $ git config --global user.name "John Doe" <br />
     $ git config --global user.email johndoe@example.com
 
-##  3. Afegir arxius de rastreig
-
-Cada vegada que modifiquem alguna cosa cal dir-li a GIT que ho tinga en compte.
-
-    $ git add .
-
-##  4. Crear branca
-
-    $ git checkout -b gh-pages
-
-
-##  5. Canviar de branca
-
-    $ git checkout master
-
-
-##  6. Mirar en quina branca estem
-
-    $ git branch
-
-##  7. Desfer últim commit
-
-    $ git reset --hard HEAD~1
-
-##  8. Desfer fins arribar a 5 commits abans
-
-    $ git reset --hard HEAD~5
-
-[Consulta la font](https://git-scm.com/book/es/v1/Fundamentos-de-Git-Deshaciendo-cosas)
-
-##  9 Editant l'últim commit l'última confirmació
-
-    $ git commit --amend
-
-La instantània és la mateixa, sols pots canviar el que has posat com a missatge del commit
-
-##  10. Desfer el que tenim al GIT local i baixar el que hi ha al server
-
-    $ git fetch
-
-##  11. Clonar repositori remot
-
-    $ git clone https://github.com/sasogu/sasogu
-
-##  12. Sincronitzar des del repositori remot al local
-
-    $ git pull
-
-##  13. Sincronitzar des del repositori local al remot
-
-    $ git push
-
-##  14. Evitar que GIT demane usuari i contrasenya
+##  Evitar que GIT demane usuari i contrasenya
 
     $ git config --global credential.helper store
 
 La contrasenya del repositori remot queda magatzemada al fitxer `.git-credentials`
 
-##  15. No guardar la contrasenya en disc
+##  Seguir els canvis
 
-    $ git config --global credential.helper 'cache --timeout=3600'
+    $ git status
 
-Transcorreguda un hora tornarà a demanar la contrasenya.
+##  Afegir arxius de rastreig
 
-##  16. Borrar branca i borrar-la del server
+Cada vegada que modifiquem alguna cosa cal dir-li a GIT que ho tinga en compte.
+
+    $ git add .
+
+##  Clonar repositori remot
+
+    $ git clone https://github.com/sasogu/sasogu
+
+##  Sincronitzar des del repositori remot al local
+
+    $ git pull
+
+##  Sincronitzar des del repositori local al remot
+
+    $ git push
+
+Opcional afegir la ruta `htpps` per apuntar a un repositori concret.
+
+# Si entrem en pànic
+
+##  Desfer últim commit
+
+    $ git reset --hard HEAD~1
+
+##  Desfer fins arribar a 5 commits abans
+
+    $ git reset --hard HEAD~5
+
+[Consulta la font](https://git-scm.com/book/es/v1/Fundamentos-de-Git-Deshaciendo-cosas)
+
+##  Editant l'últim commit i l'última confirmació
+
+    $ git commit --amend
+
+La instantània és la mateixa, sols pots canviar el que has posat com a missatge del commit
+
+##  Desfer el que tenim al GIT local i baixar el que hi ha al server
+
+    $ git fetch
+
+##  Si fallem podem tornar enrere
+
+    $ git checkout --fitxer
+
+Inclús podem dir "tot el que hem fet fins ara no val per a res"
+
+    $ git fetch origin && git reset --hard origin/master
+
+# Treballant amb branques
+
+##  Crear branca
+
+    $ git checkout -b gh-pages
+
+##  Canviar de branca
+
+    $ git checkout master
+
+##  Mirar en quina branca estem
+
+    $ git branch
+
+##  Canviar tot el contingut d'una branca
+
+Sobreescrivim una branca a altra:
+
+      git branch -m master old-master
+      git branch -m gh-pages master
+      git push -f origin master
+
+`-m` renomena
+
+`-f` força
+
+##  Borrar branca i borrar-la del server
 
 Objectiu: volem borrar la branca gh-pages
 
@@ -91,52 +166,7 @@ Objectiu: volem borrar la branca gh-pages
 
     $ git push origin :gh-pages        ##  elimina branca remota
 
-##  17. Iniciar repositori en GITHub des de terminal amb el protocol `https://`
-
-    echo "##  repositori"    README.md
-    git init
-    git add README.md
-    git commit -m "comentari"
-    git remote add origin https://github.com/usuari/repositori.git
-    git push -u origin master
-
-##  18. Explicació
-
-`echo`: Afegix la informació al fitxer, si no existeix el crea
-
-`git init`: Inicia el repositori creant els arxius de rastreig a .git
-
-`git add README.md`: Afegig l'arxiu README.md per tal que es rastrege
-
-`git commit -m "comentari"`: Crea el punt d'emmagatzemmament del contigut actual, emmgatzema el contingut de del projecte establint fixant un punt, també afegeix un comentar
-
-`git add remote add origin https://`: Afegeig repositori remot
-
-`git push -u origin master`: publica el repositori local a la branca `master` remota
-
-##  19. Publicar a un repositori existent a GITHub des de la línia de comandamentsamb el protocol `https://`
-
-    git remote add origin https://github.com/usuari/repositori.git
-
-    git push -u origin master
-
-##  20. Iniciar repositori en GITHub des de terminal amb el protocol `ssh`
-
-    echo "##  repositori" >    README.md<br />
-    git init<br />
-    git add README.md<br />
-    git commit -m "comentari"<br />
-    git remote add origin git@github.com:usuari/repositori.git<br />
-    git push -u origin master<br />
-
-##  21. Publicar a un repositori existent a GITHub des de la línia de comandamentsamb el protocol `ssh`
-
-    git remote add origin git@github.com:usuari/repositori.git
-
-    git push -u origin master
-
-
-##  22. Branques en GIT
+##  Branques en GIT
 
 Tots els projectes, per defecte, tenen la branca MASTER on, al final, acaben totls els desenvolupaments que fem.
 
@@ -147,8 +177,8 @@ Per canviar de branca, per situar-nos a una altra branca
     $ git checkout -b develop
 
 `checkout` → canvia de branca
-`-b` → crea la branca
 
+`-b` → crea la branca
 
 Quan arribem a un punt on tots els canvis que hem anat fent son estables i ens interessa que apareguen en la branca MASTER farem un **merge**.
 
@@ -165,14 +195,7 @@ Ara tindrem una nova versió a la branca MASTER
 Pot passar que hi hagen problemes al fer el `merge`, en cas que GIT no sàpiga distingir quinies són les líies bones ens ho preguntarà.
 
 
-##  23. Etiquetes en GIT
-
-Podem definir etiquetes per a gestionar versions del nostre codi o punts importants de desenvolupament, de forma que després ens siga fàcil identificar les fases de desenvolupament
-
-    $ git tag -a v1.0 -m 'Versió 1.0'
-
-
-##  24. Banques en GIT
+##  Línies de treball amb branques
 
 Les branques són línies de treball que tenen un objectiu. Posem un exemple de diferents branques amb diferents objectius de fases del treball.
 
@@ -182,42 +205,57 @@ Les branques són línies de treball que tenen un objectiu. Posem un exemple de 
 
 `RELEASE`: branca on podem agrupar certs pasos endaavnt, quan está provada podrem incorporar-ho a MASTER.
 
-	MASTER		RELEASE		DEVELOP
-	X
-	|
-	|\
-	| \ __→__→__→__→__→__→__→__→__→__→__ X
-	|                                    ↓
-	|                                    |
-	|                                    |
-	|                 X __←__←__←__←__ ← X
-	|                /
-	|               /
-	|__←__←__←__←_ X
-	X               
+    	MASTER		RELEASE		DEVELOP
+    	X
+    	|
+    	|\
+    	| \ __→__→__→__→__→__→__→__→__→__→__ X
+    	|                                    ↓
+    	|                                    |
+    	|                                    |
+    	|                 X __←__←__←__←__ ← X
+    	|                /
+    	|               /
+    	|__←__←__←__←_ X
+    	X          
 
-##  25. Si fallem podem tronar enrere
+# Altres comandaments
+##  Iniciar repositori en GITHub des de terminal amb el protocol `https://`
 
-    $ git checkout --fitxer
+    echo "##  repositori"    README.md
+    git init
+    git add README.md
+    git commit -m "comentari"
+    git remote add origin https://github.com/usuari/repositori.git
+    git push -u origin master
 
-Inclús podem dir "tot el que hem fet pins ara no val per a res"
+###  Explicació
 
-    $ git fetch origin && git reset --hard origin/master
+`echo`: Afegix la informació al fitxer, si no existeix el crea
 
-##  26. Canviar tot el contingut d'una branca
+`git init`: Inicia el repositori creant els arxius de rastreig a .git
 
-Sobreescrivim una branca a altra:
+`git add README.md`: Afegig l'arxiu README.md per tal que es rastrege
 
-```bash
-git branch -m master old-master
-git branch -m gh-pages master
-git push -f origin master
-```
+`git commit -m "comentari"`: Crea el punt d'emmagatzemmament del contigut actual, emmgatzema el contingut de del projecte establint fixant un punt, també afegeix un comentar
 
-`-m` renomena
-` -f` força
+`git add remote add origin https://`: Afegeig repositori remot
 
-##  27 Customitzar els colors
+`git push -u origin master`: publica el repositori local a la branca `master` remota
+
+##  Publicar a un repositori existent a GITHub des de la línia de comandaments amb el protocol `https://`
+
+    git remote add origin https://github.com/usuari/repositori.git
+
+    git push -u origin master
+
+##  Etiquetes en GIT
+
+  Podem definir etiquetes per a gestionar versions del nostre codi o punts importants de desenvolupament, de forma que després ens siga fàcil identificar les fases de desenvolupament
+
+      $ git tag -a v1.0 -m 'Versió 1.0'     
+
+##  Customitzar els colors
 
 Configurem un alias.
 
@@ -227,12 +265,18 @@ Ara el cridarem `git lg`
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
+##  No guardar la contrasenya en disc
 
-##  28. GITHub
+    $ git config --global credential.helper 'cache --timeout=3600'
+
+Transcorreguda un hora tornarà a demanar la contrasenya.
+
+
+##  GITHub
 
 - [Iniciar repositori](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/#platform-linux)
 
-##  29. Fonts
+##  Fonts
 
 - [git - la guia sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
 - [Become a git guru](https://www.atlassian.com/git/tutorials/)
@@ -244,6 +288,6 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 - [Guia ràpida de GIT](http://www.flx.cat/desenvolupament/2013/11/11/guia-rapida-git.html)
 - [GIT Màgic](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/es/)
 
-##  30. Video
+##  Video
 * [GITHub en Camon - Murcia](https://vimeo.com/39829002)
 * [Introduction to GIT with Scott Chacon of GITHub](https://www.youtube.com/watch?v=ZDR433b0HJY)
