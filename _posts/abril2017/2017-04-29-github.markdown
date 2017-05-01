@@ -36,8 +36,6 @@ tags: [git, github]
 
   -[Editant l'últim commit i l'última confirmació](#editant-l'ultim-commit-i-l'ultima-confirmacio)
 
-  -[Desfer el que tenim al GIT local i baixar el que hi ha al server](#desfer-el-que-tenim-al-git-local-i-baixar-el-que-hi-ha-al-server)
-
   -[Si fallem podem tornar enrere](#si-fallem-podem-tornar-enrere)
 
 - ### [Treballant amb branques](#treballant-amb-branques)
@@ -118,10 +116,6 @@ Opcional afegir la ruta `htpps` per apuntar a un repositori concret.
     $ git commit --amend
 
 La instantània és la mateixa, sols pots canviar el que has posat com a missatge del commit
-
-##  Desfer el que tenim al GIT local i baixar el que hi ha al server
-
-    $ git fetch
 
 ##  Si fallem podem tornar enrere
 
