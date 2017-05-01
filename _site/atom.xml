@@ -4,7 +4,7 @@
  <title>sasogu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-01T20:19:12+02:00</updated>
+ <updated>2017-05-01T21:35:57+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>sasogu</name>
@@ -187,9 +187,10 @@
 
     &lt;p&gt;-&lt;a href=&quot;#linies-de-treball-amb-branques&quot;&gt;Línies de treball amb branques&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;altres-comandamentsaltres-comandaments&quot;&gt;&lt;a href=&quot;#altres-comandaments&quot;&gt;Altres comandaments&lt;/a&gt;&lt;/h3&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;-&lt;a href=&quot;#altres-comandaments&quot;&gt;Altres comandaments&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;comandaments-fonamentals&quot;&gt;Comandaments fonamentals&lt;/h1&gt;
 
@@ -299,6 +300,10 @@ $ git config --global user.email johndoe@example.com
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;checkout&lt;/code&gt; → canvia de branca&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-b&lt;/code&gt; → crea la branca&lt;/p&gt;
+
 &lt;h2 id=&quot;canviar-de-branca&quot;&gt;Canviar de branca&lt;/h2&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout master
@@ -337,19 +342,9 @@ $ git push origin :gh-pages        ##  elimina branca remota
 
 &lt;h2 id=&quot;branques-en-git&quot;&gt;Branques en GIT&lt;/h2&gt;
 
-&lt;p&gt;Tots els projectes, per defecte, tenen la branca MASTER on, al final, acaben totls els desenvolupaments que fem.&lt;/p&gt;
+&lt;p&gt;Tots els projectes, per defecte, tenen la branca MASTER on, al final, acaben tots els desenvolupaments que fem.&lt;/p&gt;
 
 &lt;p&gt;Podem definir altra branca, per exemple, DEVELOP on anar fent tots els xicotets canvis que necessitem fer.&lt;/p&gt;
-
-&lt;p&gt;Per canviar de branca, per situar-nos a una altra branca&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout -b develop
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;checkout&lt;/code&gt; → canvia de branca&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-b&lt;/code&gt; → crea la branca&lt;/p&gt;
 
 &lt;p&gt;Quan arribem a un punt on tots els canvis que hem anat fent son estables i ens interessa que apareguen en la branca MASTER farem un &lt;strong&gt;merge&lt;/strong&gt;.&lt;/p&gt;
 
