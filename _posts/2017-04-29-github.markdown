@@ -69,7 +69,8 @@ tags: [git, github]
 
 ##  Configurar-lo
 
-    $ git config --global user.name "John Doe" <br />
+    $ git config --global user.name "John Doe"
+
     $ git config --global user.email johndoe@example.com
 
 ##  Evitar que GIT demane usuari i contrasenya
@@ -192,18 +193,18 @@ Ara li diguem que porte els canvis que hem fet a DEVELOP
 
 Ara tindrem una nova versió a la branca MASTER
 
-Pot passar que hi hagen problemes al fer el `merge`, en cas que GIT no sàpiga distingir quinies són les líies bones ens ho preguntarà.
+Pot passar que hi hagen problemes al fer el `merge`, en cas que GIT no sàpiga distingir quines són les línies bones ens ho preguntarà.
 
 
 ##  Línies de treball amb branques
 
 Les branques són línies de treball que tenen un objectiu. Posem un exemple de diferents branques amb diferents objectius de fases del treball.
 
-`MASTER`: branca principal on aniran tots els canvis finals, així que, en aquest cas podriem etiquetar diverses versions explicitant les fases V0.1, v0.2, v0.3, etc.
+`MASTER`: branca principal on aniran tots els canvis finals, així que, en aquest cas podríem etiquetar diverses versions explicitant les fases V0.1, v0.2, v0.3, etc.
 
 `DEVELOP`: branca on es realitzen canvis més xicotets, però també es proven. Pot tenir diverses subbranques.
 
-`RELEASE`: branca on podem agrupar certs pasos endaavnt, quan está provada podrem incorporar-ho a MASTER.
+`RELEASE`: branca on podem agrupar certs passos endavant, quan está provada podrem incorporar-ho a MASTER.
 
     	MASTER		RELEASE		DEVELOP
     	X
@@ -220,28 +221,6 @@ Les branques són línies de treball que tenen un objectiu. Posem un exemple de 
     	X          
 
 # Altres comandaments
-##  Iniciar repositori en GITHub des de terminal amb el protocol `https://`
-
-    echo "##  repositori"    README.md
-    git init
-    git add README.md
-    git commit -m "comentari"
-    git remote add origin https://github.com/usuari/repositori.git
-    git push -u origin master
-
-###  Explicació
-
-`echo`: Afegix la informació al fitxer, si no existeix el crea
-
-`git init`: Inicia el repositori creant els arxius de rastreig a .git
-
-`git add README.md`: Afegig l'arxiu README.md per tal que es rastrege
-
-`git commit -m "comentari"`: Crea el punt d'emmagatzemmament del contigut actual, emmgatzema el contingut de del projecte establint fixant un punt, també afegeix un comentar
-
-`git add remote add origin https://`: Afegeig repositori remot
-
-`git push -u origin master`: publica el repositori local a la branca `master` remota
 
 ##  Publicar a un repositori existent a GITHub des de la línia de comandaments amb el protocol `https://`
 
