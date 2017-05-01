@@ -4,7 +4,7 @@
  <title>sasogu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-01T21:35:57+02:00</updated>
+ <updated>2017-05-01T22:31:10+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>sasogu</name>
@@ -139,7 +139,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;h3 id=&quot;comandaments-fonamentalscomandaments-fonamentals&quot;&gt;&lt;a href=&quot;#comandaments-fonamentals&quot;&gt;Comandaments fonamentals&lt;/a&gt;.&lt;/h3&gt;
+    &lt;h3 id=&quot;comandaments-fonamentals&quot;&gt;&lt;a href=&quot;#comandaments-fonamentals&quot;&gt;Comandaments fonamentals&lt;/a&gt;.&lt;/h3&gt;
 
     &lt;p&gt;-&lt;a href=&quot;#iniciar-un-repositori-git&quot;&gt;Iniciar un repositori git&lt;/a&gt;&lt;/p&gt;
 
@@ -158,7 +158,7 @@
     &lt;p&gt;-&lt;a href=&quot;#sincronitzar-des-del-repositori-local-al-remot&quot;&gt;Sincronitzar des del repositori local al remot&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;h3 id=&quot;si-entrem-en-pnicsi-entrem-en-panic&quot;&gt;&lt;a href=&quot;#si-entrem-en-panic&quot;&gt;Si entrem en pànic&lt;/a&gt;&lt;/h3&gt;
+    &lt;h3 id=&quot;si-entrem-en-pànic&quot;&gt;&lt;a href=&quot;#si-entrem-en-panic&quot;&gt;Si entrem en pànic&lt;/a&gt;&lt;/h3&gt;
 
     &lt;p&gt;-&lt;a href=&quot;#desfer-ultim-commit&quot;&gt;Desfer últim commit&lt;/a&gt;&lt;/p&gt;
 
@@ -171,7 +171,7 @@
     &lt;p&gt;-&lt;a href=&quot;#si-fallem-podem-tornar-enrere&quot;&gt;Si fallem podem tornar enrere&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;h3 id=&quot;treballant-amb-branquestreballant-amb-branques&quot;&gt;&lt;a href=&quot;#treballant-amb-branques&quot;&gt;Treballant amb branques&lt;/a&gt;&lt;/h3&gt;
+    &lt;h3 id=&quot;treballant-amb-branques&quot;&gt;&lt;a href=&quot;#treballant-amb-branques&quot;&gt;Treballant amb branques&lt;/a&gt;&lt;/h3&gt;
 
     &lt;p&gt;-&lt;a href=&quot;#crear-branca&quot;&gt;Crear branca&lt;/a&gt;&lt;/p&gt;
 
@@ -188,11 +188,11 @@
     &lt;p&gt;-&lt;a href=&quot;#linies-de-treball-amb-branques&quot;&gt;Línies de treball amb branques&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;h3 id=&quot;altres-comandamentsaltres-comandaments&quot;&gt;&lt;a href=&quot;#altres-comandaments&quot;&gt;Altres comandaments&lt;/a&gt;&lt;/h3&gt;
+    &lt;h3 id=&quot;altres-comandaments&quot;&gt;&lt;a href=&quot;#altres-comandaments&quot;&gt;Altres comandaments&lt;/a&gt;&lt;/h3&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;comandaments-fonamentals&quot;&gt;Comandaments fonamentals&lt;/h1&gt;
+&lt;h1 id=&quot;comandaments-fonamentals-1&quot;&gt;Comandaments fonamentals&lt;/h1&gt;
 
 &lt;h2 id=&quot;iniciar-un-repositori-git&quot;&gt;Iniciar un repositori git&lt;/h2&gt;
 
@@ -250,9 +250,9 @@ $ git config --global user.email johndoe@example.com
 
 &lt;p&gt;Opcional afegir la ruta &lt;code class=&quot;highlighter-rouge&quot;&gt;htpps&lt;/code&gt; per apuntar a un repositori concret.&lt;/p&gt;
 
-&lt;h1 id=&quot;si-entrem-en-pnic&quot;&gt;Si entrem en pànic&lt;/h1&gt;
+&lt;h1 id=&quot;si-entrem-en-pànic-1&quot;&gt;Si entrem en pànic&lt;/h1&gt;
 
-&lt;h2 id=&quot;desfer-ltim-commit&quot;&gt;Desfer últim commit&lt;/h2&gt;
+&lt;h2 id=&quot;desfer-últim-commit&quot;&gt;Desfer últim commit&lt;/h2&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git reset --hard HEAD~1
 &lt;/code&gt;&lt;/pre&gt;
@@ -266,7 +266,7 @@ $ git config --global user.email johndoe@example.com
 
 &lt;p&gt;&lt;a href=&quot;https://git-scm.com/book/es/v1/Fundamentos-de-Git-Deshaciendo-cosas&quot;&gt;Consulta la font&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;editant-lltim-commit-i-lltima-confirmaci&quot;&gt;Editant l’últim commit i l’última confirmació&lt;/h2&gt;
+&lt;h2 id=&quot;editant-lúltim-commit-i-lúltima-confirmació&quot;&gt;Editant l’últim commit i l’última confirmació&lt;/h2&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git commit --amend
 &lt;/code&gt;&lt;/pre&gt;
@@ -292,7 +292,7 @@ $ git config --global user.email johndoe@example.com
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h1 id=&quot;treballant-amb-branques&quot;&gt;Treballant amb branques&lt;/h1&gt;
+&lt;h1 id=&quot;treballant-amb-branques-1&quot;&gt;Treballant amb branques&lt;/h1&gt;
 
 &lt;h2 id=&quot;crear-branca&quot;&gt;Crear branca&lt;/h2&gt;
 
@@ -364,7 +364,7 @@ $ git push origin :gh-pages        ##  elimina branca remota
 
 &lt;p&gt;Pot passar que hi hagen problemes al fer el &lt;code class=&quot;highlighter-rouge&quot;&gt;merge&lt;/code&gt;, en cas que GIT no sàpiga distingir quines són les línies bones ens ho preguntarà.&lt;/p&gt;
 
-&lt;h2 id=&quot;lnies-de-treball-amb-branques&quot;&gt;Línies de treball amb branques&lt;/h2&gt;
+&lt;h2 id=&quot;línies-de-treball-amb-branques&quot;&gt;Línies de treball amb branques&lt;/h2&gt;
 
 &lt;p&gt;Les branques són línies de treball que tenen un objectiu. Posem un exemple de diferents branques amb diferents objectius de fases del treball.&lt;/p&gt;
 
@@ -390,9 +390,9 @@ $ git push origin :gh-pages        ##  elimina branca remota
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h1 id=&quot;altres-comandaments&quot;&gt;Altres comandaments&lt;/h1&gt;
+&lt;h1 id=&quot;altres-comandaments-1&quot;&gt;Altres comandaments&lt;/h1&gt;
 
-&lt;h2 id=&quot;publicar-a-un-repositori-existent-a-github-des-de-la-lnia-de-comandaments-amb-el-protocol-https&quot;&gt;Publicar a un repositori existent a GITHub des de la línia de comandaments amb el protocol &lt;code class=&quot;highlighter-rouge&quot;&gt;https://&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;publicar-a-un-repositori-existent-a-github-des-de-la-línia-de-comandaments-amb-el-protocol-https&quot;&gt;Publicar a un repositori existent a GITHub des de la línia de comandaments amb el protocol &lt;code class=&quot;highlighter-rouge&quot;&gt;https://&lt;/code&gt;&lt;/h2&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add origin https://github.com/usuari/repositori.git
 
@@ -755,7 +755,7 @@ Documentació. Una wiki com la de lliurex estaria molt bé per arreplegar docume
   &lt;li&gt;Canal de vídeo educatiu&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;per-a-les-famlies&quot;&gt;Per a les famílies:&lt;/h1&gt;
+&lt;h1 id=&quot;per-a-les-famílies&quot;&gt;Per a les famílies:&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Web Família 2.0&lt;/li&gt;
