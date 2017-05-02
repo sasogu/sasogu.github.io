@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Markdown"
+title: "Apunts ràpids sobre Markdown"
 date: 2017.05.02 07:15:26
 description:
 enllaç permanent: /:year/:month/:day/:title.html

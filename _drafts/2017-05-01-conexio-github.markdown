@@ -1,70 +1,70 @@
 ---
 layout: post
-title: "Markdown"
+title: "Connexió amb GitHub"
 date:   2017-05-01 07:15:26
 description:
 permalink: /:year/:month/:day/:title.html
-category: tips
-tags: [apunts]
+category: apunts
+tags: [git, github]
 ---
 
-# 01 Generar claves SSH #
+# 01 Generar claus SSH #
 
-Comprueba si tienes alguna **clave SSH** generada:
+Comprova si tens alguna *clau SSH** generada:
 
 ```
 ls -l ~/.ssh
 ```
 
-Las claves SSH se guardan en pares (una clave privada y una pública). Las dos deben tener el mismo nombre, solo que la pública debe acabar en `.pub`.
+Les claus SSH es guarden en parells (una clau privada i una pública). Les dues han de tenir el mateix nom, solament que la pública ha d'acabar en `.pub`.
 
-Si al ejecutar el comando anterior compruebas que ya tienes una clave creada, puedes saltarte lo que queda de esta sección y pasar a añadir dicha clave a tu cuenta de Github.
+Si en executar el comando anterior comproves que ja tens una clau creada, pots saltar-te el que queda d'aquesta secció i passar a afegir aquesta clau al teu compte de Github.
 
-Si no tienes alguna clave creada puedes crear una ejecutando este comando:
+Si no tens alguna clau creada pots crear una executant aquest comando:
 
 ```
 ssh-keygen
 ```
 
-En este momento te pedirá una serie de datos, que puedes omitir para que tome unos valores por defecto si pulsas `enter` en cada pregunta.
+En aquest moment et demanarà una sèrie de dades, que pots ometre perquè prenga uns valors per defecte si prems `enter` en cada pregunta.
 
-Para comprobar que las claves se han generado correctamente vuele a ejecutar:
+Per a comprovar que les claus s'han generat correctament pots executar:
 
 ```
 ls -l ~/.ssh
 ```
 
-o si has guardado las claves en otro directorio:
+o si has guardat les claus en un altre directori:
 
 ```
-ls -l /path/directorio/claves
+ls -l /path/directori/claus
 ```
 
-y podrás ver los dos ficheros de las claves.
+i podràs veure els dos fitxers de les claus.
 
 
-# 02 Asignar las claves SSH a tu cuenta de Github #
+# 02 Assignar les claus SSH al teu compte de Github #
 
-Accede a tu cuenta de Github y entra en la configuracción (settings)
+Accedeix al teu compte de Github i entra en la configuracción (settings)
 
-En el menú de la izquierda, entra en `SSH and GPG keys`
+En el menú de l'esquerra, entra en `SSH and GPG keys`
 
-Ahora pulsa sobre `New SSH key`
+Ara prem sobre `New SSH key`
 
-En el formulario que se te ha abierto, escribe un título para la clave, y en el apartado `key` tienes que pegar el contenido del fichero `.pub` que generaste en el apartado anterior. Para ello puedes abrir el fichero con cualquier editor de texto y copiar el contenido.
+En el formulari que se t'ha obert, escriu un títol per a la clau, i en l'apartat `key` has de pegar el contingut del fitxer `.pub` que vas generar en l'apartat anterior. Per a açò pots obrir el fitxer amb qualsevol editor de text i copiar el contingut.
 
-Pulsa sobre `Add SSH key` y ya está todo hecho.
+Prem sobre `Add SSH key` i ja està tot fet.
 
 
-# 03 Comprobar que la operación se ha realizado bien #
+# 03 Comprovar que l'operació s'ha realitzat bé #
 
-Ejecuta el siguiente comando desde la terminal
+Executa el següent comando des de la terminal
 
 ```
 ssh -T git@github.com
 ```
 
-# 04 Configurar nombre y correo
+# 04 Configurar nom i correu
 
 ```
 $ git config --global user.name "John Doe"
@@ -72,19 +72,19 @@ $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 ```
 
-# 05 Guardar contraseña en local
+# 05 Guardar contrasenya en local
 
-Para que no nos pida contraseña cada vez que enviamos cambios a GitHub:
+Perquè no ens demane contrasenya cada vegada que enviem canvis a GitHub:
 
 ```
 $ git config --global credential.helper store
 ```
 
-La contraseña del repositorio remoto queda almacenada en el fichero `.git-credentials`
+La contrasenya del repositori remot queda emmagatzemada en el fitxer `.git-credentials`
 
-Si no queremos que quede guardada:
+Si no volem que quede guardada:
 
 ```
 $ git config --global credential.helper 'cache --timeout=3600'
 ```
-Cuando transcurra una hora nos volverá a pedir la contraseña.
+Quan transcórrega una hora ens tornarà a demanar la contrasenya.
