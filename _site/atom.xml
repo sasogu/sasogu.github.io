@@ -4,13 +4,129 @@
  <title>sasogu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-01T22:31:10+02:00</updated>
+ <updated>2017-05-02T16:05:48+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>sasogu</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Markdown</title>
+   <link href="http://localhost:4000/apunts/2017/05/02/markdown/"/>
+   <updated>2017-05-02T07:15:26+02:00</updated>
+   <id>http://localhost:4000/apunts/2017/05/02/markdown</id>
+   <content type="html">&lt;h2 id=&quot;taula-de-contingut&quot;&gt;Taula de contingut&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#inserir-hn&quot;&gt;Inserir HN&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cursives&quot;&gt;Cursives&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#negreta&quot;&gt;Fredolic&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#vinyetes&quot;&gt;Vinyetes per a taules de contingut&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#inserir-imatges&quot;&gt;Inserir imatges&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#inserir-enllaços&quot;&gt;Inserir enllaços&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#fer-ancoratge&quot;&gt;Fer ancoratge&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#inserir-una-línia-de-codi&quot;&gt;Inserir una línia de codi&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#inserir-un-bloc-de-codi&quot;&gt;Inserir un bloc de codi&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ressaltar-el-codi&quot;&gt;Ressaltar el codi&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#inserir-taules&quot;&gt;Inserir taules&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#altres-referències-sobre-markdown&quot;&gt;Altres referències sobre Markdown&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;inserir-hn&quot;&gt;Inserir HN&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Plain&quot;&gt;# Això és un H1
+## Això és un H2
+### Això és 1 H3
+#### Això és 1 H4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;cursives&quot;&gt;Cursives&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;* Això és cursiva *&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;negreta&quot;&gt;Negreta&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;** Això és negreta **&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;vinyetes&quot;&gt;Vinyetes&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Plain&quot;&gt;
+- Això és vinyeta 1.
+  - Vinyeta 1.1 amb sangria.
+  - Vinyeta N.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;inserir-imatges&quot;&gt;Inserir imatges&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[Text qualsevol per si no carrega la imatge](URL completa de la imatge)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;inserir-enllaços&quot;&gt;Inserir enllaços&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[Text a mostrar](URL completa)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;fer-ancoratge&quot;&gt;Fer ancoratge&lt;/h3&gt;
+
+&lt;p&gt;Utilitza els títols amb el coixinet &lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt; i per ancorar el títol a una taula de contingut, posem el següent:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[Text a mostrar](#mi-titulo-a-ancorar)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;en minúscules i espais separats per guions&lt;/p&gt;
+
+&lt;h3 id=&quot;inserir-una-línia-de-codi&quot;&gt;Inserir una línia de codi&lt;/h3&gt;
+
+&lt;p&gt;Tancar la línia de codi entre la titlla l’inrevés Codi en ASCII: alt96&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; `la seua linia de codi` &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;inserir-un-bloc-de-codi&quot;&gt;Inserir un bloc de codi&lt;/h3&gt;
+
+&lt;p&gt;Tancar el bloc de codi entre tres accents a l’inrevés Codi en ASCII: alt96&lt;/p&gt;
+
+&lt;pre&gt;
+```
+// bloc de codi ...
+
+```
+&lt;/pre&gt;
+
+&lt;h3 id=&quot;ressaltar-el-codi&quot;&gt;Ressaltar el codi&lt;/h3&gt;
+
+&lt;p&gt;Tanquem el bloc de codi amb les tres accents a l’inrevés i li posem al costat el llenguatge que s’està fent servir, exemple:&lt;/p&gt;
+
+&lt;pre&gt;
+```Java
+// bloc de codi ...
+
+```
+&lt;/pre&gt;
+
+&lt;h3 id=&quot;inserir-taules&quot;&gt;Inserir taules&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Plain&quot;&gt;
+| TITOL1 | TITOL2 |
+| ----- | ---- |
+| CONTINGUT COLUMNA 1 | CONTINGUT COLUMNA 2 |
+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;altres-referències-sobre-markdown&quot;&gt;Altres referències sobre Markdown:&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.genbeta.com/guia-de-inicio/que-es-markdown-para-que-sirve-y-como-usarlo&quot;&gt;http://www.genbeta.com/guia-de-inicio/que-es-markdown-para-que-sirve-y-como-usarlo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://help.github.com/articles/markdown-basics&quot;&gt;https://help.github.com/articles/markdown-basics&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;https://guides.github.com/features/mastering-markdown/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bitelia.com/2013/04/que-es-markdown&quot;&gt;http://bitelia.com/2013/04/que-es-markdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://es.wikipedia.org/wiki/Markdown&quot;&gt;http://es.wikipedia.org/wiki/Markdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/victorhtorres/Markdown/blob/master/README.md&quot;&gt;https://github.com/victorhtorres/Markdown/blob/master/README.md&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Gestionar usuaris des de terminal</title>
@@ -166,8 +282,6 @@
 
     &lt;p&gt;-&lt;a href=&quot;#editant-l'ultim-commit-i-l'ultima-confirmacio&quot;&gt;Editant l’últim commit i l’última confirmació&lt;/a&gt;&lt;/p&gt;
 
-    &lt;p&gt;-&lt;a href=&quot;#desfer-el-que-tenim-al-git-local-i-baixar-el-que-hi-ha-al-server&quot;&gt;Desfer el que tenim al GIT local i baixar el que hi ha al server&lt;/a&gt;&lt;/p&gt;
-
     &lt;p&gt;-&lt;a href=&quot;#si-fallem-podem-tornar-enrere&quot;&gt;Si fallem podem tornar enrere&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -205,6 +319,12 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config --global user.name &quot;John Doe&quot;
 
 $ git config --global user.email johndoe@example.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;genera-claus-ssh&quot;&gt;Genera claus ssh&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ssh-keygen
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -273,12 +393,6 @@ $ git config --global user.email johndoe@example.com
 &lt;/div&gt;
 
 &lt;p&gt;La instantània és la mateixa, sols pots canviar el que has posat com a missatge del commit&lt;/p&gt;
-
-&lt;h2 id=&quot;desfer-el-que-tenim-al-git-local-i-baixar-el-que-hi-ha-al-server&quot;&gt;Desfer el que tenim al GIT local i baixar el que hi ha al server&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git fetch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;si-fallem-podem-tornar-enrere&quot;&gt;Si fallem podem tornar enrere&lt;/h2&gt;
 

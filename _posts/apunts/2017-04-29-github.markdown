@@ -69,6 +69,10 @@ tags: [git, github]
 
     $ git config --global user.email johndoe@example.com
 
+##  Genera claus ssh
+
+    $ ssh-keygen
+
 ##  Evitar que GIT demane usuari i contrasenya
 
     $ git config --global credential.helper store

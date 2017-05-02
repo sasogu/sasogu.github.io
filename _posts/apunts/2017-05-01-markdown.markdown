@@ -1,0 +1,122 @@
+---
+layout: post
+title: "Markdown"
+date: 2017.05.02 07:15:26
+description:
+enllaç permanent: /:year/:month/:day/:title.html
+category: apunts
+tags: [markdown]
+---
+
+## Taula de contingut
+
+- [Inserir HN](#inserir-hn).
+- [Cursives](#cursives).
+- [Fredolic](#negreta).
+- [Vinyetes per a taules de contingut](#vinyetes).
+- [Inserir imatges](#inserir-imatges).
+- [Inserir enllaços](#inserir-enllaços).
+- [Fer ancoratge](#fer-ancoratge).
+- [Inserir una línia de codi](#inserir-una-línia-de-codi).
+- [Inserir un bloc de codi](#inserir-un-bloc-de-codi).
+- [Ressaltar el codi](#ressaltar-el-codi).
+- [Inserir taules](#inserir-taules).
+- [Altres referències sobre Markdown](#altres-referències-sobre-markdown).
+
+### Inserir HN
+
+```Plain
+# Això és un H1
+## Això és un H2
+### Això és 1 H3
+#### Això és 1 H4
+```
+
+### Cursives
+
+`* Això és cursiva *`
+
+### Negreta
+
+`** Això és negreta **`
+
+### Vinyetes
+
+```Plain
+
+- Això és vinyeta 1.
+  - Vinyeta 1.1 amb sangria.
+  - Vinyeta N.
+```
+
+### Inserir imatges
+
+`[Text qualsevol per si no carrega la imatge](URL completa de la imatge)`
+
+### Inserir enllaços
+
+`[Text a mostrar](URL completa)`
+
+### Fer ancoratge
+
+Utilitza els títols amb el coixinet `#` i per ancorar el títol a una taula de contingut, posem el següent:
+
+`[Text a mostrar](#mi-titulo-a-ancorar)`
+
+en minúscules i espais separats per guions
+
+### Inserir una línia de codi
+
+Tancar la línia de codi entre la titlla l'inrevés Codi en ASCII: alt96
+
+
+
+<pre><code> `la seua linia de codi` </code></pre>
+
+### Inserir un bloc de codi
+
+Tancar el bloc de codi entre tres accents a l'inrevés Codi en ASCII: alt96
+
+<pre>
+```
+// bloc de codi ...
+
+```
+</pre>
+
+
+### Ressaltar el codi
+
+Tanquem el bloc de codi amb les tres accents a l'inrevés i li posem al costat el llenguatge que s'està fent servir, exemple:
+
+<pre>
+```Java
+// bloc de codi ...
+
+```
+</pre>
+
+### Inserir taules
+
+```Plain
+
+| TITOL1 | TITOL2 |
+| ----- | ---- |
+| CONTINGUT COLUMNA 1 | CONTINGUT COLUMNA 2 |
+
+
+```
+
+### Altres referències sobre Markdown:
+
+[http://www.genbeta.com/guia-de-inicio/que-es-markdown-para-que-sirve-y-como-usarlo](http://www.genbeta.com/guia-de-inicio/que-es-markdown-para-que-sirve-y-como-usarlo)
+
+[https://help.github.com/articles/markdown-basics](https://help.github.com/articles/markdown-basics)
+
+[https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/)
+
+[http://bitelia.com/2013/04/que-es-markdown](http://bitelia.com/2013/04/que-es-markdown)
+
+[http://es.wikipedia.org/wiki/Markdown](http://es.wikipedia.org/wiki/Markdown)
+
+[https://github.com/victorhtorres/Markdown/blob/master/README.md](https://github.com/victorhtorres/Markdown/blob/master/README.md)
