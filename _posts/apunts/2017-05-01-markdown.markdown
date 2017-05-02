@@ -120,3 +120,5 @@ Tanquem el bloc de codi amb les tres accents a l'inrevés i li posem al costat e
 [http://es.wikipedia.org/wiki/Markdown](http://es.wikipedia.org/wiki/Markdown)
 
 [https://github.com/victorhtorres/Markdown/blob/master/README.md](https://github.com/victorhtorres/Markdown/blob/master/README.md)
+
+[https://www.atareao.es/ubuntu/utext-mi-editor-markdown-actualizado-y-simplificado/](https://www.atareao.es/ubuntu/utext-mi-editor-markdown-actualizado-y-simplificado/)

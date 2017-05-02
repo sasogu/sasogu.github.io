@@ -4,7 +4,7 @@
  <title>sasogu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-02T16:05:48+02:00</updated>
+ <updated>2017-05-02T16:12:05+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>sasogu</name>
@@ -125,6 +125,8 @@
 &lt;p&gt;&lt;a href=&quot;http://es.wikipedia.org/wiki/Markdown&quot;&gt;http://es.wikipedia.org/wiki/Markdown&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/victorhtorres/Markdown/blob/master/README.md&quot;&gt;https://github.com/victorhtorres/Markdown/blob/master/README.md&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.atareao.es/ubuntu/utext-mi-editor-markdown-actualizado-y-simplificado/&quot;&gt;https://www.atareao.es/ubuntu/utext-mi-editor-markdown-actualizado-y-simplificado/&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
