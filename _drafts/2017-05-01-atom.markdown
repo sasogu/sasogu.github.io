@@ -1,0 +1,57 @@
+---
+layout: post
+title: "Markdown"
+date:   2017-05-01 07:15:26
+description:
+permalink: /:year/:month/:day/:title.html
+category: apunts
+tags: [atom]
+---
+
+# Plugins
+
++ Minimap
+
+Minimap es uno de los paquetes más populares para Atom, este paquete muestra una vista previa en miniatura del archivo, para poder navegar rápidamente por el codigo. Se puede establecer su posicion a la izquierda o derecha, activar o desactivar el destacado del palabras claves (de highlight-selected) y más. Incluso Minimap tiene plugins extras para extender aum ,ás su funcionalidad, como el mostrar los colores de los códigos en la miniatura del minimap.
+
+Atom minimap
+minimap-highlight-selected: Highlight-selected Palabras claves (o resultados de busqueda) aparecen en el minimap.
+minimap-pigments: Muestra los colores de pigments en el minimap.
+
+
++ git-diff
+
++ Highlight-selected
+
+Cuando seleccionas una función o una variable en Sublime Text o Notepad++, todas las otras repeticiones de esa función o variable se destacan en el documento. Highlight Selected realiza esa funcionalidad en Atom.
+
++ Pigments
+
+Pigments es un muy buen paquete para mostrar el color de un algún código en hex, gba, rgba, hsl, hsla. Quizás ya hayas visto antes algún previsualizador de colores hexadecimal, pero pocos llegan al nivel de Pigments. Analiza los colores, entiende las variables de preprocesado y Incluso ejecuta funciones de cambio de color.
+
+Además, puede visualizar la paleta utilizada en el proyecto a través de Pigmentos. Tu puedes mirar la paleta completa e ir rápidamente ir a la definición de cualquier color.
+
++ Color Picker
+
+Usualmente si deseas utilizar un selector de color, lo más probable es que abras Photoshop o GIMP y utilice el selector de color que tienen incorporado. Este paquete le permite seleccionar colores en el editor de Atom y es tan fácil como hacer clic con el botón derecho del ratón y elegir "Color Picker". Alternativamente, puede hacerse presionando `` CMD / CTRL + SHIFT + C``.
+
+El selector de color lee actualmente los colores HEX, HEXa, RGB, RGBa, HSL, HSLa, HSV, HSVa, VEC3 y VEC4.
+
++ Atom Beautify
+
+Beautify transforma tu código desordenado (o Minificado/minify) en algo más organizado y más legible. Soporta varios lenguajes de programación como HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C ++, C #, Objective-C, CoffeeScript, typescript, etc.
+
+Después de instalado, para ejecutarlo, simplemente haz un click con el boton derecho y escoge Beautify editor contents, o alternativamente ve a Packages > Atom Beautify > Beautify.
+
+
++ Linter
+
+Atom Linter es la base para usar los distintos paquetes de linter para los diversos lenguajes de programación (un linter es un programa/script que busca errores en el código), en otras palabras provee la API para los distintos linters dentro de Atom. Luego de intalar el paquete "base" necesitas instalar los linter específicos para el lenguaje que vas a usar.
+
+# Python
+
++ script
+
+¡Ejecuta codigo/scripts en Atom!, en base a la extensión del archivo, a una seleccion de codigo, o por el numero de linea. Soporta Python, Ruby, Ruby on Rails, Perl, php, java, C/C++, Haskell, Shell Script y un gran etc.
+
+https://www.pythonmania.net/es/2017/02/27/paquetes-recomendados-para-atom/
