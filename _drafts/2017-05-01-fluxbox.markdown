@@ -7,3 +7,9 @@ permalink: /:year/:month/:day/:title.html
 category: tips
 tags: [apunts]
 ---
++ synapse: programari per a llançar aplicacions
++ Per vorer quina codificació té cada tecla `xev`
++ conky-manager
+    sudo apt-add-repository -y ppa:teejee2008/ppa
+    sudo apt-get update
+    sudo apt-get install conky-manager
