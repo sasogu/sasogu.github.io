@@ -18,8 +18,12 @@ Atom minimap
 minimap-highlight-selected: Highlight-selected Palabras claves (o resultados de busqueda) aparecen en el minimap.
 minimap-pigments: Muestra los colores de pigments en el minimap.
 
++ Languagetool
+http://languagetool.org/
 
 + git-diff
++ markdown-folder
++ markdown-toc
 
 + Highlight-selected
 
