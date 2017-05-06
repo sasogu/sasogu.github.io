@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 The goal of this repository is talk about tecnology than I use.
@@ -7,3 +8,6 @@ The goal of this repository is talk about tecnology than I use.
 [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
 [http://sasogu.github.io](http://sasogu.github.io)
+=======
+# sasogu.github.io
+>>>>>>> ddcb0ddf9cc0f0b055e968270ed74be1af948076
