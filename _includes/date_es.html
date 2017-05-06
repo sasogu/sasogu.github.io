@@ -1,0 +1,42 @@
+
+<time datetime="{{ post.date }}">
+
+  {{  post.date | date: '%-d' }} de
+
+    {% assign m = post.date | date: '%-m' %}
+
+    {% case m %}post
+
+     {% when '1' %}gener
+
+       {% when '2' %}febrer
+
+       {% when '3' %}març
+
+       {% when '4' %}abril
+
+       {% when '5' %}maig
+
+       {% when '6' %}juny
+
+       {% when '7' %}juliol
+
+       {% when '8' %}agost
+
+       {% when '9' %}setembre
+
+       {% when '10' %}octubre
+
+       {% when '11' %}novembre
+
+       {% when '12' %}dicembre
+
+    {% endcase %}
+
+
+    del
+
+
+    {{  post.date | date: '%Y' }}
+
+</time>
