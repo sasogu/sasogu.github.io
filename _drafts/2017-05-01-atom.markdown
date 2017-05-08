@@ -24,6 +24,9 @@ http://languagetool.org/
 + git-diff
 + markdown-folder
 + markdown-toc
++ pandoc
+
+Cal instal·lar pandoc `sudo apt-get install pandoc` i indicar la ruta en la configuració del plugin `/usr/bin/pandoc`
 
 + Highlight-selected
 
