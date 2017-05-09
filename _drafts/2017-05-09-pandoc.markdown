@@ -1,0 +1,63 @@
+---
+layout: post
+title: "Pandoc"
+date:   2017-05-09 07:15:26
+description:
+permalink: /:year/:month/:day/:title.html
+category: apunts
+tags: [pandoc]
+---
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+		- [fragmento de HTML:](#fragmento-de-html)
+		- [archivo HTML independiente:](#archivo-html-independiente)
+		- [formato de texto enriquecido (RTF):](#formato-de-texto-enriquecido-rtf)
+		- [PDF:](#pdf)
+		- [ODT (OpenDocument Text, legible por OpenOffice):](#odt-opendocument-text-legible-por-openoffice)
+		- [MediaWiki marcado:](#mediawiki-marcado)
+		- [EPUB ebook:](#epub-ebook)
+		- [Word docx:](#word-docx)
+		- [MediaWiki a HTML5:](#mediawiki-a-html5)
+		- [EPUB a texto sin formato:](#epub-a-texto-sin-formato)
+
+<!-- /TOC -->
+
+### fragmento de HTML:
+
+pandoc MANUAL.txt -o example1.html
+
+### archivo HTML independiente:
+
+pandoc -s MANUAL.txt -o example2.html
+
+### formato de texto enriquecido (RTF):
+
+pandoc -s MANUAL.txt -o example7.rtf
+
+### PDF:
+
+pandoc MANUAL.txt --latex-engine=xelatex -o example13.pdf
+
+### ODT (OpenDocument Text, legible por OpenOffice):
+
+pandoc MANUAL.txt -o example21.odt
+
+### MediaWiki marcado:
+
+pandoc -s -S -t mediawiki --toc MANUAL.txt -o example22.wiki
+
+### EPUB ebook:
+
+pandoc -S MANUAL.txt -o MANUAL.epub
+
+### Word docx:
+
+pandoc -s -S MANUAL.txt -o example29.docx
+
+### MediaWiki a HTML5:
+
+pandoc -f mediawiki -t html5 -s haskell.wiki -o example32.html
+
+### EPUB a texto sin formato:
+
+pandoc MANUAL.epub -t plain -o example36.text
