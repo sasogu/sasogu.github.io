@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Presentació de Daniel Turienzo Nieto"
+title: "Presentació de Daniel Turienzo"
 date:   2017-05-10 09:12:12
 description: Presentació de Daniel Turienzo Nieto
 permalink: /:year/:month/:day/:title.html
