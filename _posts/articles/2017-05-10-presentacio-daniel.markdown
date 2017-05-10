@@ -11,7 +11,7 @@ tags: [ujilliurex]
 
 > Aquest és el text que havia preparat per a llegir en la presentació de Daniel hui en la [Jornada "LliureX en la Universidad Jaume I" Innovación Educativa utilizando TICs](http://ujilliurex.uji.es/). Al final com era l’última ponència i estaven en família no he llegit el text i he intentat dir més o menys el mateix, com que ja el tinc escrit el comparteix en aquesta bitàcola personal.
 
-Bona vesprada, sóc Samuel Soriano membre d’edutictac i Coordinador TIC provincial en Alacant des d'aquest mes de febrer.
+Bona vesprada, sóc Samuel Soriano membre d’[Edutictac](https://edutictac.es) i Coordinador TIC provincial en Alacant des d'aquest mes de febrer.
 
 Agraeix a Julio Pacheco que m'haja demanat presentar a Daniel, ja que m'ha permés participar en #ujilliurex presencialment per primera vegada, la veritat és que tenia moltes ganes i realment ha sigut una jornada molt enriquidora. Enhorabona Julio.
 
