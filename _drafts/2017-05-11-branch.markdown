@@ -17,8 +17,7 @@ tags: [github]
 
 ## Eliminació d'una branca
 
-En GitHub, aneu a la pàgina principal del repositori.
-
-Branques enllaç a la pàgina visió general Per sobre de la llista de fitxers, feu clic  Branques nombre.
+1. En GitHub, aneu a la pàgina principal del repositori.
+2. Branques enllaç a la pàgina visió general Per sobre de la llista de fitxers, feu clic  Branques nombre.
 
 eliminar la branca Desplaçar-se a la branca que voleu eliminar i feu clic  .
