@@ -59,6 +59,9 @@ collections:
   links:
     output: true
     permalink: /links/:path/
+  drafts:
+    output: true
+    permalink: /drafts/:path/
 
 # Puglins
 mathjax: true # whether support mathjax

@@ -1,9 +1,0 @@
----
-layout: post
-title: "Markdown"
-date:   2017-05-01 07:15:26
-description:
-permalink: /:year/:month/:day/:title.html
-category: tips
-tags: [apunts]
----
