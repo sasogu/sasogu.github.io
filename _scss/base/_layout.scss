@@ -138,7 +138,9 @@ text-align: center;
 vertical-align: middle;
 font-size: $caption_font_size;
 }
-
+/**
+## header modificat per mi
+*/
 .header-bar{
     left: 0px;
     top: 0px;
@@ -147,7 +149,7 @@ font-size: $caption_font_size;
     display: block;
     opacity: 0.75;
     width: 100%;
-    text-align: center;
+    text-align: lefth;
     padding-top: 0px;
     line-height: 3em;
     z-index: 25;
