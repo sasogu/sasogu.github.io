@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Creació i eliminació de branques dins del seu repositori"
+date:   2017-05-09 07:15:26
+description:
+permalink: /:year/:month/:day/:title.html
+category: tips
+tags: [github]
+---
+
+## Podeu crear o eliminar branques directament a GitHub.
+
+1. En GitHub, aneu a la pàgina principal del repositori.
+2. En el menú de selecció branca
+3. feu clic al menú de selecció branca.
+4. Escriu un nom únic per a la seva nova branca i premeu Intro.
+
+## Eliminació d'una branca
+
+En GitHub, aneu a la pàgina principal del repositori.
+
+Branques enllaç a la pàgina visió general Per sobre de la llista de fitxers, feu clic  Branques nombre.
+
+eliminar la branca Desplaçar-se a la branca que voleu eliminar i feu clic  .
