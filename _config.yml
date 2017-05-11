@@ -1,5 +1,6 @@
 # Site Info
 title: dev
+title: TotTicTac
 tagline: ' '
 description: 'Un espai personal per comparTIC'
 baseurl: ""
@@ -43,6 +44,8 @@ nav:
     - { Buscar: '/search/' }
   Enllaços:
     - '/links/'
+  Esborranys:
+    - '/drafts/'
   Feed:
     - '/atom.xml'
   Qui sóc:
