@@ -9,16 +9,16 @@ tags: [pandoc]
 ---
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-		- [fragmento de HTML:](#fragmento-de-html)
-		- [archivo HTML independiente:](#archivo-html-independiente)
-		- [formato de texto enriquecido (RTF):](#formato-de-texto-enriquecido-rtf)
-		- [PDF:](#pdf)
-		- [ODT (OpenDocument Text, legible por OpenOffice):](#odt-opendocument-text-legible-por-openoffice)
-		- [MediaWiki marcado:](#mediawiki-marcado)
-		- [EPUB ebook:](#epub-ebook)
-		- [Word docx:](#word-docx)
-		- [MediaWiki a HTML5:](#mediawiki-a-html5)
-		- [EPUB a texto sin formato:](#epub-a-texto-sin-formato)
+- [fragmento de HTML:](#fragmento-de-html)
+- [archivo HTML independiente:](#archivo-html-independiente)
+- [formato de texto enriquecido (RTF):](#formato-de-texto-enriquecido-rtf)
+- [PDF:](#pdf)
+- [ODT (OpenDocument Text, legible por OpenOffice):](#odt-opendocument-text-legible-por-openoffice)
+- [MediaWiki marcado:](#mediawiki-marcado)
+- [EPUB ebook:](#epub-ebook)
+- [Word docx:](#word-docx)
+- [MediaWiki a HTML5:](#mediawiki-a-html5)
+- [EPUB a texto sin formato:](#epub-a-texto-sin-formato)
 
 <!-- /TOC -->
 
