@@ -1,10 +1,10 @@
 # Site Info
 title: sasogu
-tagline: ' TotTicTac: un espai personal per a compartir'
+tagline: ' '
 description: 'Un espai personal per comparTIC'
 baseurl: ""
 url: http://sasogu.github.io
-logo: '/img/drac.png'
+logo: '/img/home.png'
 
 # Site configurations
 gems:

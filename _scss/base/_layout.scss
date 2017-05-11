@@ -138,3 +138,24 @@ text-align: center;
 vertical-align: middle;
 font-size: $caption_font_size;
 }
+
+.header-bar{
+    left: 0px;
+    top: 0px;
+    position: relative;
+    font-size: 20px;
+    display: block;
+    opacity: 0.75;
+    width: 100%;
+    text-align: center;
+    padding-top: 0px;
+    line-height: 3em;
+    z-index: 25;
+    h1{
+        color: $theme-color;
+        font-size:75px;
+    }
+    h2{
+        font-size:25px;
+    }
+}
