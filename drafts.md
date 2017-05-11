@@ -1,6 +1,6 @@
 ---
 layout: page
-title: borradors
+title: esborranys
 permalink: /drafts/
 ---
 
