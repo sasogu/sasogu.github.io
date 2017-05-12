@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "LaTeX
+title: "LaTeX"
 date:   2017-05-09 07:15:26
 description:
 permalink: /:year/:month/:day/:title.html
 category: tips
-tags: [github]
+tags: [latex]
 ---
 
 # Instal·lar LaTeX
