@@ -1,0 +1,38 @@
+---
+layout: post
+title: "emacs"
+date:   2017-05-15 07:15:26
+description:
+permalink: /:year/:month/:day/:title.html
+category: tips
+tags: [emacs]
+---
+
+# Accés ràpid teclat
+
+    C-t = Control + T (on T és una tecla xD) (exemple: C-x = Control+x)
+
+    M-t = ALT + Tecla o ESC-x (M-x = ALT+x o també ESC+x)
+
+    S-t = Shift+ Tecla (on SHIFT és ls Tecla que està damunt de Control ;-) )
+
+# Edició de textos
+
+    C-Supr     >> Tallar (també amb C-w)
+    C-c        >> Copiar
+    S-Insert   >> Pegar (també  amb C-i)
+    C-_        >> Desacer (Undo) [Control+shift+Guió]
+                  Esborra el caracter anterior al cursor
+    C-d        >> Esborra el següent caracter (equival Supr en
+                   els editors de DOS)
+    M-d        >> Esborra la següent paraula
+    M-         >> Esborra la paraula anterior
+    C-k        >> Esborra del cursor fins a la fi de la linea
+    M-k        >> Esborra del cursor fins al final de la frase
+	             (quan esborres una paraula o una frase, emacs l'emmagatzema
+                  com si l'hagueres tallat, per a recuperar-la (pegar-la) a partir del
+                  cursor pots teclejar shif- o C-i)
+    C-l        >> Recentra el cursor i redibuja la pantalla, posant-ho
+               en el mediode la finestra.
+    M-%	    >> Reemplaçar text amb petició de confirmació
+	       (la combinació de tecles és Alt+shitf+5)
