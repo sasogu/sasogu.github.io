@@ -267,6 +267,30 @@
     
     
 
+    
+    ,{
+        "title": "emacs",
+        "content": "https://inclusa.github.io/emacs/\n\nAccés ràpid teclat\n\nC-t = Control + T (on T és una tecla xD) (exemple: C-x = Control+x)\n\nM-t = ALT + Tecla o ESC-x (M-x = ALT+x o també ESC+x)\n\nS-t = Shift+ Tecla (on SHIFT és ls Tecla que està damunt de Control ;-) )\n\n\n\nEdició de textos\n\nC-Supr     &gt;&gt; Tallar (també amb C-w)\nC-c        &gt;&gt; Copiar\nS-Insert   &gt;&gt; Pegar (també  amb C-i)\nC-_        &gt;&gt; Desacer (Undo) [Control+shift+Guió]\n              Esborra el caracter anterior al cursor\nC-d        &gt;&gt; Esborra el següent caracter (equival Supr en\n               els editors de DOS)\nM-d        &gt;&gt; Esborra la següent paraula\nM-         &gt;&gt; Esborra la paraula anterior\nC-k        &gt;&gt; Esborra del cursor fins a la fi de la linea\nM-k        &gt;&gt; Esborra del cursor fins al final de la frase\n             (quan esborres una paraula o una frase, emacs l'emmagatzema\n              com si l'hagueres tallat, per a recuperar-la (pegar-la) a partir del\n              cursor pots teclejar shif- o C-i)\nC-l        &gt;&gt; Recentra el cursor i redibuja la pantalla, posant-ho\n           en el mediode la finestra.\nM-%\t    &gt;&gt; Reemplaçar text amb petició de confirmació\n       (la combinació de tecles és Alt+shitf+5)\n\n\n\n#Curiositats\n\nM-x dunnet\nM-x tetris\nM-x gomoku\nM-x life\n\n\n",
+        "link": "/2017/05/15/emacs.html",
+        "date": "2017-05-15 09:15:26 +0200",
+        "excerpt": "",
+        "search_omit": ""
+    }
+    
+    
+
+    
+    ,{
+        "title": "Jekyll",
+        "content": "sudo apt-get install ruby-full\n\nsudo gem install jekyll\n\njekyll new idrootblog\n\n\n\nChange to newly created directory idrootblog or the new name which you have given at the time of using command jekyll:\n\ncd idrootblog\n\n\n\nStart the Jekyll application and replace below mentioned ip address with your ip:\n\njekyll server –host 192.168.77.21 &amp;\n",
+        "link": "/2017/05/15/jekyll.html",
+        "date": "2017-05-15 09:15:26 +0200",
+        "excerpt": "",
+        "search_omit": ""
+    }
+    
+    
+
 
 
     

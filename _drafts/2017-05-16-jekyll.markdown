@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Jekyll"
+date:   2017-05-15 07:15:26
+description:
+permalink: /:year/:month/:day/:title.html
+category: tips
+tags: [jekyll]
+---
+
+
+    sudo apt-get install ruby-full
+
+    sudo gem install jekyll
+
+    gem install jekyll-paginate
+
+    sudo jekyll new idrootblog
+
+Change to newly created directory idrootblog or the new name which you have given at the time of using command jekyll:
+
+    cd idrootblog
+
+Start the Jekyll application and replace below mentioned ip address with your ip:
+
+jekyll server --host 192.168.77.21 &
