@@ -8,6 +8,8 @@ category: tips
 tags: [emacs]
 ---
 
+https://inclusa.github.io/emacs/
+
 # Accés ràpid teclat
 
     C-t = Control + T (on T és una tecla xD) (exemple: C-x = Control+x)
