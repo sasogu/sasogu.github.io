@@ -13,3 +13,16 @@ tags: [apunts]
     sudo apt-add-repository -y ppa:teejee2008/ppa
     sudo apt-get update
     sudo apt-get install conky-manager
+
+
+    conky -d -b &
+    calendar.sh &
+    orage &
+    glipper & (clipit &)
+    synapse &
+    nextcloud &
+    nm-applet &
+    mate-power-manager &
+    mate-volume-control-applet &
+    insync start &
+    dropbox start -i &

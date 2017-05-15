@@ -36,3 +36,10 @@ tags: [emacs]
                en el mediode la finestra.
     M-%	    >> Reemplaçar text amb petició de confirmació
 	       (la combinació de tecles és Alt+shitf+5)
+
+#Curiositats
+
+    M-x dunnet
+    M-x tetris
+    M-x gomoku
+    M-x life
