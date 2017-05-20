@@ -1,0 +1,57 @@
+---
+layout: post
+title: "R"
+date:   2017-05-15 07:15:26
+description:
+permalink: /:year/:month/:day/:title.html
+category: tips
+tags: [R]
+---
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+
+    sudo add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'
+
+    sudo apt-get update
+
+    sudo apt-get install r-base
+
+Para instalar `install.packages("slam")``
+
+    sudo apt-get install r-cran-slam
+
+
+Per a crear núvol de paraules
+
+    install.packages("RColorBrewer", dependencies =TRUE)
+    install.packages("wordcloud", dependencies = TRUE)
+
+Ahora si podemos proceder a la generación de la nube de palabras [1]. Para esto se debe tener en un documento de texto la información de la cual queremos extraer las palabras. Me he basado en esta página para el código, con algunas modificaciones y aclaraciones que he realizado:
+
+    # Llamar paquetes
+    require(tm)
+    require(wordcloud)
+    # Leer archivo
+    txt <- readLines("directoriodearchivo:/tuarchivo.txt",encoding="UTF-8conv(txt, to="ASCII//TRANSLIT")
+    corpus <- Corpus(VectorSource(txt))
+    d <- tm_map(corpus, tolower)
+    d <- tm_map(d, stripWhitespace)
+    d <- tm_map(d, removePunctuation)
+    # Remueve palabras vacías genéricas
+    d <- tm_map(d, removeWords, stopwords("spanish"))
+    # Se crea matriz de términos
+    tdm <- TermDocumentMatrix(d)
+    # Mostrar la matriz con términos definidos
+    findFreqTerms(tdm, lowfreq=20)
+    # Si se quieren eliminar palabras no deseadas de la matriz
+    d <- tm_map(d, removeWords, c("palabra1","palabran"))
+    tdm <- TermDocumentMatrix(d)
+    # Generar la nube
+    m <- as.matrix(tdm)
+    v <- sort(rowSums(m),decreasing=TRUE)
+    df <- data.frame(word = names(v),freq=v)
+    # Se abre una nueva ventana con la nube
+    wordcloud(df$word,df$freq,min.freq=6))
+
+fuente: https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-16-04-2
+
+https://lagrullalibre.wordpress.com/2014/01/15/aplicaciones-libres-para-crear-nubes-de-palabras/
