@@ -344,33 +344,19 @@ rar x file1.rar: descomprimir archivo rar.
 
 unrar x file1.rar: descomprimir archivo rar.
 
-tar -cvf archive.
+tar -cvf archive.tar file1: crear un tarball descomprimido.
 
-tar file1: crear un tarball descomprimido.
+tar -cvf archive.tar file1 file2 dir1: crear un archivo conteniendo ‘file1’, ‘file2′ y’dir1’.
 
-tar -cvf archive.
+tar -tf archive.tar: mostrar los contenidos de un archivo.
 
-tar file1 file2 dir1: crear un archivo conteniendo ‘file1’, ‘file2′ y’dir1’.
+tar -xvf archive.tar: extraer un tarball.
 
-tar -tf archive.
+tar -xvf archive.tar -C /tmp: extraer un tarball en / tmp.
 
-tar: mostrar los contenidos de un archivo.
+tar -cvfj archive.tar.bz2 dir1: crear un tarball comprimido dentro de bzip2.
 
-tar -xvf archive.
-
-tar: extraer un tarball.
-
-tar -xvf archive.
-
-tar -C /tmp: extraer un tarball en / tmp.
-
-tar -cvfj archive.
-
-tar.bz2 dir1: crear un tarball comprimido dentro de bzip2.
-
-tar -xvfj archive.
-
-tar.bz2: descomprimir un archivo tar comprimido en bzip2
+tar -xvfj archive.tar.bz2: descomprimir un archivo tar comprimido en bzip2
 
 tar -cvfz archive.tar.gz dir1: crear un tarball comprimido en gzip.
 
@@ -621,19 +607,19 @@ rsync -az -e ssh –delete ip_addr:/home/public /home/local: sincronizar un dire
 
 rsync -az -e ssh –delete /home/local ip_addr:/home/public: sincronizar un directorio remoto con un directorio local a través de ssh y de compresión.
 
-dd bs=1M if=/dev/hda | gzip | ssh user@ip_addr ‘dd of=hda.gz’: hacer una salva de un disco duro en un host remoto a través de ssh.
+    dd bs=1M if=/dev/hda | gzip | ssh user@ip_addr ‘dd of=hda.gz’: hacer una salva de un disco duro en un host remoto a través de ssh.
 
-dd if=/dev/sda of=/tmp/file1: salvar el contenido de un disco duro a un fichero. (En este caso el disco duro es “sda” y el fichero “file1”).
+    dd if=/dev/sda of=/tmp/file1: salvar el contenido de un disco duro a un fichero. (En este caso el disco duro es “sda” y el fichero “file1”).
 
-tar -Puf backup.tar /home/user: hacer una salva incremental del directorio ‘/home/user’.( cd /tmp/local/ && tar c . ) | ssh -C user@ip_addr ‘cd /home/share/ && tar x -p’: copiar el contenido de un directorio en un directorio remoto a través de ssh.
+    tar -Puf backup.tar /home/user: hacer una salva incremental del directorio ‘/home/user’.( cd /tmp/local/ && tar c . ) | ssh -C user@ip_addr ‘cd /home/share/ && tar x -p’: copiar el contenido de un directorio en un directorio remoto a través de ssh.
 
-( tar c /home ) | ssh -C user@ip_addr ‘cd /home/backup-home && tar x -p’: copiar un directorio local en un directorio remoto a través de ssh.
+    ( tar c /home ) | ssh -C user@ip_addr ‘cd /home/backup-home && tar x -p’: copiar un directorio local en un directorio remoto a través de ssh.
 
-tar cf – .| (cd /tmp/backup ; tar xf – ): copia local conservando las licencias y enlaces desde un directorio a otro.
+    tar cf – .| (cd /tmp/backup ; tar xf – ): copia local conservando las licencias y enlaces desde un directorio a otro.
 
-find /home/user1 -name ‘#.txt’ | xargs cp -av –target-directory=/home/backup/ –parents: encontrar y copiar todos los ficheros con extensión ‘.txt’ de un directorio a otro.
+    find /home/user1 -name ‘#.txt’ | xargs cp -av –target-directory=/home/backup/ –parents: encontrar y copiar todos los ficheros con extensión ‘.txt’ de un directorio a otro.
 
-find /var/log -name ‘#.log’ | tar cv –files-from=- | bzip2 > log.tar.bz2: encontrar todos los ficheros con extensión ‘.log’ y hacer un archivo bzip.
+    find /var/log -name ‘#.log’ | tar cv –files-from=- | bzip2 > log.tar.bz2: encontrar todos los ficheros con extensión ‘.log’ y hacer un archivo bzip.
 
 dd if=/dev/hda of=/dev/fd0 bs=512 count=1: hacer una copia del MRB (Master Boot Record) a un disco floppy.
 
