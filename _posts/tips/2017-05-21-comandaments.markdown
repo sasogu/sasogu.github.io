@@ -805,7 +805,7 @@ wget -r www.example.com: descargar un sitio web completo.
 
 wget -c www.example.com/file.iso: descargar un fichero con la posibilidad de parar la descargar y reanudar más tarde.
 
-echo ‘wget -c www.example.com/files.iso‘ | at 09:00: Comenzar una descarga a cualquier hora. En este caso empezaría a las 9 horas.
+    echo ‘wget -c www.example.com/files.iso‘ | at 09:00: Comenzar una descarga a cualquier hora. En este caso empezaría a las 9 horas.
 
 ldd /usr/bin/ssh: mostrar las bibliotecas compartidas requeridas por el programa ssh.
 
