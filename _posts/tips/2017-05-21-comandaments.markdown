@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Comandaments últils"
-date:   2017-05-15 07:15:26
+date:   2017-05-21 15:15:26
 description:
 permalink: /:year/:month/:day/:title.html
 category: tips
