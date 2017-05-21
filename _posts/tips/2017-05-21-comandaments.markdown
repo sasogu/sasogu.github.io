@@ -79,9 +79,7 @@ tags: [terminal, comandaments]
 
 **cal 07 2011**: mostrar el almanaque para el mes julio de 2011.
 
-**date 041217002011.
-
-00**: colocar (declarar, ajustar) fecha y hora.
+**date 041217002011.00**: colocar (declarar, ajustar) fecha y hora.
 
 **clock -w**: guardar los cambios de fecha en la BIOS.
 
@@ -111,21 +109,9 @@ tags: [terminal, comandaments]
 
 cd /home: entrar en el directorio “home”.
 
-cd .
+cd ..: retroceder un nivel.
 
-.
-
-: retroceder un nivel.
-
-cd .
-
-.
-
-/.
-
-.
-
-: retroceder 2 niveles.
+cd ../..: retroceder 2 niveles.
 
 cd: ir al directorio raíz.
 
@@ -145,12 +131,10 @@ ls -a: mostrar los ficheros ocultos.
 
 ls #[0-9]#: mostrar los ficheros y carpetas que contienen números.
 
-tree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.
+tree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.(1)
 
-(1)
-lstree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.
+lstree: mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.(2)
 
-(2)
 mkdir dir1: crear una carpeta o directorio con nombre ‘dir1’.
 
 mkdir dir1 dir2: crear dos carpetas o directorios simultáneamente (Crear dos directorios a la vez).
@@ -161,9 +145,7 @@ rm -f file1: borrar el fichero llamado ‘file1’.
 
 rmdir dir1: borrar la carpeta llamada ‘dir1’.
 
-rm -rf dir1: eliminar una carpeta llamada ‘dir1’ con su contenido de forma recursiva.
-
- (Si lo borro recursivo estoy diciendo que es con su contenido).
+rm -rf dir1: eliminar una carpeta llamada ‘dir1’ con su contenido de forma recursiva. (Si lo borro recursivo estoy diciendo que es con su contenido).
 
 rm -rf dir1 dir2: borrar dos carpetas (directorios) con su contenido de forma recursiva.
 
@@ -173,13 +155,9 @@ cp file1: copiar un fichero.
 
 cp file1 file2: copiar dos ficheros al unísono.
 
-cp dir /# .
+cp dir /# .: copiar todos los ficheros de un directorio dentro del directorio de trabajo actual.
 
-: copiar todos los ficheros de un directorio dentro del directorio de trabajo actual.
-
-cp -a /tmp/dir1 .
-
-: copiar un directorio dentro del directorio actual de trabajo.
+cp -a /tmp/dir1 .: copiar un directorio dentro del directorio actual de trabajo.
 
 cp -a dir1: copiar un directorio.
 
@@ -197,11 +175,7 @@ iconv -l: listas de cifrados conocidos.
 
 iconv -f fromEncoding -t toEncoding inputFile > outputFile: crea una nueva forma del fichero de entrada asumiendo que está codificado en fromEncoding y convirtiéndolo a ToEncoding.
 
-find .
-
- -maxdepth 1 -name #.
-
-jpg -print -exec convert ”{}” -resize 80×60 “thumbs/{}” \;: agrupar ficheros redimensionados en el directorio actual y enviarlos a directorios en vistas de miniaturas (requiere convertir desde ImagemagicK).
+find .-maxdepth 1 -name #.jpg -print -exec convert ”{}” -resize 80×60 “thumbs/{}” \;: agrupar ficheros redimensionados en el directorio actual y enviarlos a directorios en vistas de miniaturas (requiere convertir desde ImagemagicK).
 
 
 # Encontrar archivos
@@ -210,57 +184,32 @@ find / -name file1: buscar fichero y directorio a partir de la raíz del sistema
 
 find / -user user1: buscar ficheros y directorios pertenecientes al usuario ‘user1’.
 
-find /home/user1 -name \#.
-
-bin: buscar ficheros con extensión ‘.
-
- bin’ dentro del directorio ‘/ home/user1’.
+find /home/user1 -name \#.bin: buscar ficheros con extensión ‘.bin’ dentro del directorio ‘/ home/user1’.
 
 find /usr/bin -type f -atime +100: buscar ficheros binarios no usados en los últimos 100 días.
 
 find /usr/bin -type f -mtime -10: buscar ficheros creados o cambiados dentro de los últimos 10 días.
 
-find / -name \#.
+find / -name \#.rpm -exec chmod 755 ‘{}’ \;: buscar ficheros con extensión ‘.rpm’ y modificar permisos.
 
-rpm -exec chmod 755 ‘{}’ \;: buscar ficheros con extensión ‘.
+find / -xdev -name \#.rpm: Buscar ficheros con extensión ‘.rpm’ ignorando los dispositivos removibles como cdrom, pen-drive, etc.…
 
-rpm’ y modificar permisos.
+locate \#.ps: encuentra ficheros con extensión ‘.ps’ ejecutados primeramente con el command ‘updatedb’.
 
-find / -xdev -name \#.
-
-rpm: Buscar ficheros con extensión ‘.
-
-rpm’ ignorando los dispositivos removibles como cdrom, pen-drive, etc.
-
-…
-locate \#.
-
-ps: encuentra ficheros con extensión ‘.
-
-ps’ ejecutados primeramente con el command ‘updatedb’.
-
-whereis halt: mostrar la ubicación de un fichero binario, de ayuda o fuente.
-
- En este caso pregunta dónde está el comando ‘halt’.
+whereis halt: mostrar la ubicación de un fichero binario, de ayuda o fuente. En este caso pregunta dónde está el comando ‘halt’.
 
 which halt: mostrar la senda completa (el camino completo) a un binario / ejecutable.
 
 
 # Montando un sistema de ficheros
 
-mount /dev/hda2 /mnt/hda2: montar un disco llamado hda2.
+mount /dev/hda2 /mnt/hda2: montar un disco llamado hda2. Verifique primero la existencia del directorio ‘/ mnt/hda2’; si no está, debe crearlo.
 
- Verifique primero la existencia del directorio ‘/ mnt/hda2’; si no está, debe crearlo.
-
-umount /dev/hda2: desmontar un disco llamado hda2.
-
- Salir primero desde el punto ‘/ mnt/hda2.
+umount /dev/hda2: desmontar un disco llamado hda2. Salir primero desde el punto ‘/ mnt/hda2.
 
 fuser -km /mnt/hda2: forzar el desmontaje cuando el dispositivo está ocupado.
 
-umount -n /mnt/hda2: correr el desmontaje sin leer el fichero /etc/mtab.
-
- Útil cuando el fichero es de solo lectura o el disco duro está lleno.
+umount -n /mnt/hda2: correr el desmontaje sin leer el fichero /etc/mtab. Útil cuando el fichero es de solo lectura o el disco duro está lleno.
 
 mount /dev/fd0 /mnt/floppy: montar un disco flexible (floppy).
 
@@ -314,9 +263,7 @@ passwd: cambiar contraseña.
 
 passwd user1: cambiar la contraseña de un usuario (solamente por root).
 
-chage -E 2011-12-31 user1: colocar un plazo para la contraseña del usuario.
-
- En este caso dice que la clave expira el 31 de diciembre de 2011.
+chage -E 2011-12-31 user1: colocar un plazo para la contraseña del usuario. En este caso dice que la clave expira el 31 de diciembre de 2011.
 
 pwck: chequear la sintaxis correcta el formato de fichero de ‘/etc/passwd’ y la existencia de usuarios.
 
@@ -345,9 +292,7 @@ chown user1:group1 file1: cambiar usuario y el grupo propietario de un fichero.
 
 find / -perm -u+s: visualizar todos los ficheros del sistema con SUID configurado.
 
-chmod u+s /bin/file1: colocar el bit SUID en un fichero binario.
-
- El usuario que corriendo ese fichero adquiere los mismos privilegios como dueño.
+chmod u+s /bin/file1: colocar el bit SUID en un fichero binario. El usuario que corriendo ese fichero adquiere los mismos privilegios como dueño.
 
 chmod u-s /bin/file1: deshabilitar el bit SUID en un fichero binario.
 
@@ -355,9 +300,7 @@ chmod g+s /home/public: colocar un bit SGID en un directorio –similar al SUID 
 
 chmod g-s /home/public: desabilitar un bit SGID en un directorio.
 
-chmod o+t /home/public: colocar un bit STIKY en un directorio.
-
- Permite el borrado de ficheros solamente a los dueños legítimos.
+chmod o+t /home/public: colocar un bit STIKY en un directorio. Permite el borrado de ficheros solamente a los dueños legítimos.
 
 chmod o-t /home/public: desabilitar un bit STIKY en un directorio.
 
@@ -383,41 +326,23 @@ lsattr: mostrar atributos especiales.
 
 # Archivos y Ficheros comprimidos
 
-bunzip2 file1.
+bunzip2 file1.bz2: descomprime un fichero llamado ‘file1.
 
-bz2: descomprime in fichero llamado ‘file1.
+bz2’.bzip2 file1: comprime un fichero llamado ‘file1’.
 
-bz2’.
-
-bzip2 file1: comprime un fichero llamado ‘file1’.
-
-gunzip file1.
-
-gz: descomprime un fichero llamado ‘file1.
-
-gz’.
+gunzip file1.gz: descomprime un fichero llamado ‘file1.gz’.
 
 gzip file1: comprime un fichero llamado ‘file1’.
 
 gzip -9 file1: comprime con compresión máxima.
 
-rar a file1.
+rar a file1.rar test_file: crear un fichero rar llamado ‘file1.rar’.
 
-rar test_file: crear un fichero rar llamado ‘file1.
+rar a file1.rar file1 file2 dir1: comprimir ‘file1’, ‘file2’ y ‘dir1’ simultáneamente.
 
-rar’.
+rar x file1.rar: descomprimir archivo rar.
 
-rar a file1.
-
-rar file1 file2 dir1: comprimir ‘file1’, ‘file2’ y ‘dir1’ simultáneamente.
-
-rar x file1.
-
-rar: descomprimir archivo rar.
-
-unrar x file1.
-
-rar: descomprimir archivo rar.
+unrar x file1.rar: descomprimir archivo rar.
 
 tar -cvf archive.
 
@@ -441,63 +366,34 @@ tar -C /tmp: extraer un tarball en / tmp.
 
 tar -cvfj archive.
 
-tar.
-
-bz2 dir1: crear un tarball comprimido dentro de bzip2.
+tar.bz2 dir1: crear un tarball comprimido dentro de bzip2.
 
 tar -xvfj archive.
 
-tar.
+tar.bz2: descomprimir un archivo tar comprimido en bzip2
 
-bz2: descomprimir un archivo tar comprimido en bzip2
-tar -cvfz archive.
+tar -cvfz archive.tar.gz dir1: crear un tarball comprimido en gzip.
 
-tar.
+tar -xvfz archive.tar.gz: descomprimir un archive tar comprimido en gzip.
 
-gz dir1: crear un tarball comprimido en gzip.
+zip file1.zip file1: crear un archivo comprimido en zip.
 
-tar -xvfz archive.
+zip -r file1.zip file1 file2 dir1: comprimir, en zip, varios archivos y directorios de forma simultánea.
 
-tar.
-
-gz: descomprimir un archive tar comprimido en gzip.
-
-zip file1.
-
-zip file1: crear un archivo comprimido en zip.
-
-zip -r file1.
-
-zip file1 file2 dir1: comprimir, en zip, varios archivos y directorios de forma simultánea.
-
-unzip file1.
-
-zip: descomprimir un archivo zip.
+unzip file1.zip: descomprimir un archivo zip.
 
 
 # Paquetes RPM (Red Hat, Fedora y similares)
 
-rpm -ivh package.
+rpm -ivh package.rpm: instalar un paquete rpm.
 
-rpm: instalar un paquete rpm.
+rpm -ivh –nodeeps package.rpm: instalar un paquete rpm ignorando las peticiones de dependencias.
 
-rpm -ivh –nodeeps package.
+rpm -U package.rpm: actualizar un paquete rpm sin cambiar la configuración de los ficheros.
 
-rpm: instalar un paquete rpm ignorando las peticiones de dependencias.
+rpm -F package.rpm: actualizar un paquete rpm solamente si este está instalado.
 
-rpm -U package.
-
-rpm: actualizar un paquete rpm sin cambiar la configuración de los ficheros.
-
-rpm -F package.
-
-rpm: actualizar un paquete rpm solamente si este está instalado.
-
-rpm -e package_name.
-
-rpm: eliminar un paquete rpm.
-
-rpm -qa: mostrar todos los paquetes rpm instalados en el sistema.
+rpm -e package_name.rpm: eliminar un paquete rpm.rpm -qa: mostrar todos los paquetes rpm instalados en el sistema.
 
 rpm -qa | grep httpd: mostrar todos los paquetes rpm con el nombre “httpd”.
 
@@ -517,58 +413,36 @@ rpm -q package_name –scripts: mostrar los scripts comenzados durante la instal
 
 rpm -q package_name –changelog: mostar el historial de revisions de un paquete rpm.
 
-rpm -qf /etc/httpd/conf/httpd.
-
-conf: verificar cuál paquete rpm pertenece a un fichero dado.
-
-rpm -qp package.
+rpm -qf /etc/httpd/conf/httpd.conf: verificar cuál paquete rpm pertenece a un fichero dado.rpm -qp package.
 
 rpm -l: mostrar lista de ficheros dados por un paquete rpm que aún no ha sido instalado.
 
 rpm –import /media/cdrom/RPM-GPG-KEY: importar la firma digital de la llave pública.
 
-rpm –checksig package.
-
-rpm: verificar la integridad de un paquete rpm.
+rpm –checksig package.rpm: verificar la integridad de un paquete rpm.
 
 rpm -qa gpg-pubkey: verificar la integridad de todos los paquetes rpm instalados.
 
 rpm -V package_name: chequear el tamaño del fichero, licencias, tipos, dueño, grupo, chequeo de resumen de MD5 y última modificación.
 
-rpm -Va: chequear todos los paquetes rpm instalados en el sistema.
+rpm -Va: chequear todos los paquetes rpm instalados en el sistema. Usar con cuidado.
 
- Usar con cuidado.
+rpm -Vp package.rpm: verificar un paquete rpm no instalado todavía.
 
-rpm -Vp package.
+rpm2cpio package.rpm | cpio –extract –make-directories #bin#: extraer fichero ejecutable desde un paquete rpm.
 
-rpm: verificar un paquete rpm no instalado todavía.
+rpm -ivh /usr/src/redhat/RPMS/`arch`/package.rpm: instalar un paquete construido desde una fuente rpm.
 
-rpm2cpio package.
-
-rpm | cpio –extract –make-directories #bin#: extraer fichero ejecutable desde un paquete rpm.
-
-rpm -ivh /usr/src/redhat/RPMS/`arch`/package.
-
-rpm: instalar un paquete construido desde una fuente rpm.
-
-rpmbuild –rebuild package_name.
-
-src.
-
-rpm: construir un paquete rpm desde una fuente rpm.
+rpmbuild –rebuild package_name.src.rpm: construir un paquete rpm desde una fuente rpm.
 
 
 # Actualizador de paquetes YUM (Red Hat, Fedora y similares)
 
 yum install package_name: descargar e instalar un paquete rpm.
 
-yum localinstall package_name.
+yum localinstall package_name.rpm: este instalará un RPM y tratará de resolver todas las dependencies para ti, usando tus repositorios.
 
-rpm: este instalará un RPM y tratará de resolver todas las dependencies para ti, usando tus repositorios.
-
-yum update package_name.
-
-rpm: actualizar todos los paquetes rpm instalados en el sistema.
+yum update package_name.rpm: actualizar todos los paquetes rpm instalados en el sistema.
 
 yum update package_name: modernizar / actualizar un paquete rpm.
 
@@ -587,22 +461,19 @@ yum clean all: eliminar desde los paquetes caché y ficheros de encabezado.
 
 # Paquetes Deb (Debian, Ubuntu y derivados)
 
-dpkg -i package.
-
-deb: instalar / actualizar un paquete deb.
+dpkg -i package.deb: instalar / actualizar un paquete deb.
 
 dpkg -r package_name: eliminar un paquete deb del sistema.
 
 dpkg -l: mostrar todos los paquetes deb instalados en el sistema.
 
 dpkg -l | grep httpd: mostrar todos los paquetes deb con el nombre “httpd”
+
 dpkg -s package_name: obtener información en un paquete específico instalado en el sistema.
 
 dpkg -L package_name: mostar lista de ficheros dados por un paquete instalado en el sistema.
 
-dpkg –contents package.
-
-deb: mostrar lista de ficheros dados por un paquete no instalado todavía.
+dpkg –contents package.deb: mostrar lista de ficheros dados por un paquete no instalado todavía.
 
 dpkg -S /bin/ping: verificar cuál paquete pertenece a un fichero dado.
 
@@ -645,79 +516,40 @@ tail -f /var/log/messages: ver en tiempo real qué ha sido añadido al fichero.
 
 # Manipulación de texto
 
-cat file1 file2 .
+cat file1 file2 .. | command <> file1_in.txt_or_file1_out.txt: sintaxis general para la manipulación de texto utilizando PIPE, STDIN y STDOUT.
 
-.
+cat file1 | command( sed, grep, awk, grep, etc…) > result.txt: sintaxis general para manipular un texto de un fichero y escribir el resultado en un fichero nuevo.
 
- | command <> file1_in.
-
-txt_or_file1_out.
-
-txt: sintaxis general para la manipulación de texto utilizando PIPE, STDIN y STDOUT.
-
-cat file1 | command( sed, grep, awk, grep, etc…) > result.
-
-txt: sintaxis general para manipular un texto de un fichero y escribir el resultado en un fichero nuevo.
-
-cat file1 | command( sed, grep, awk, grep, etc…) » result.
-
-txt: sintaxis general para manipular un texto de un fichero y añadir resultado en un fichero existente.
+cat file1 | command( sed, grep, awk, grep, etc…) » result.txt: sintaxis general para manipular un texto de un fichero y añadir resultado en un fichero existente.
 
 grep Aug /var/log/messages: buscar palabras “Aug” en el fichero ‘/var/log/messages’.
 
 grep ^Aug /var/log/messages: buscar palabras que comienzan con “Aug” en fichero ‘/var/log/messages’
+
 grep [0-9] /var/log/messages: seleccionar todas las líneas del fichero ‘/var/log/messages’ que contienen números.
 
 grep Aug -R /var/log/#: buscar la cadena “Aug” en el directorio ‘/var/log’ y debajo.
 
-sed ‘s/stringa1/stringa2/g’ example.
+sed ‘s/stringa1/stringa2/g’ example.txt: reubicar “string1” con “string2” en ejemplo.txt
 
-txt: reubicar “string1” con “string2” en ejemplo.
+sed ‘/^$/d’ example.txt: eliminar todas las líneas en blanco desde el ejemplo.txt
 
-txt
-sed ‘/^$/d’ example.
+sed ‘/ ##/d; /^$/d’ example.txt: eliminar comentarios y líneas en blanco de ejemplo.txt
 
-txt: eliminar todas las líneas en blanco desde el ejemplo.
-
-txt
-sed ‘/ ##/d; /^$/d’ example.
-
-txt: eliminar comentarios y líneas en blanco de ejemplo.
-
-txt
 echo ‘esempio’ | tr ‘[:lower:]’ ‘[:upper:]’: convertir minúsculas en mayúsculas.
 
-sed -e ‘1d’ result.
+sed -e ‘1d’ result.txt: elimina la primera línea del fichero ejemplo.txt
 
-txt: elimina la primera línea del fichero ejemplo.
-
-txt
 sed -n ‘/stringa1/p’: visualizar solamente las líneas que contienen la palabra “string1”.
 
 
 # Establecer caracter y conversión de ficheros
 
-dos2unix filedos.
+dos2unix filedos.txt fileunix.txt: convertir un formato de fichero texto desde MSDOS a UNIX.
 
-txt fileunix.
+unix2dos fileunix.txt filedos.txt: convertir un formato de fichero de texto desde UNIX a MSDOS.
 
-txt: convertir un formato de fichero texto desde MSDOS a UNIX.
-
-unix2dos fileunix.
-
-txt filedos.
-
-txt: convertir un formato de fichero de texto desde UNIX a MSDOS.
-
-recode .
-
-.
-
-HTML < page.
-
-txt > page.
-
-html: convertir un fichero de texto en html.
+recode ..HTML < page.txt > page.html: convertir un fichero de texto en html.
 
 recode -l | more: mostrar todas las conversiones de formato disponibles.
 
@@ -728,25 +560,17 @@ badblocks -v /dev/hda1: Chequear los bloques defectuosos en el disco hda1.
 
 fsck /dev/hda1: reparar / chequear la integridad del fichero del sistema Linux en el disco hda1.
 
-fsck.
-
-ext2 /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 2 en el disco hda1.
+fsck.ext2 /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 2 en el disco hda1.
 
 e2fsck /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 2 en el disco hda1.
 
 e2fsck -j /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 3 en el disco hda1.
 
-fsck.
+fsck.ext3 /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 3 en el disco hda1.
 
-ext3 /dev/hda1: reparar / chequear la integridad del fichero del sistema ext 3 en el disco hda1.
+fsck.vfat /dev/hda1: reparar / chequear la integridad del fichero sistema fat en el disco hda1.
 
-fsck.
-
-vfat /dev/hda1: reparar / chequear la integridad del fichero sistema fat en el disco hda1.
-
-fsck.
-
-msdos /dev/hda1: reparar / chequear la integridad de un fichero del sistema dos en el disco hda1.
+fsck.msdos /dev/hda1: reparar / chequear la integridad de un fichero del sistema dos en el disco hda1.
 
 dosfsck /dev/hda1: reparar / chequear la integridad de un fichero del sistema dos en el disco hda1.
 
@@ -797,43 +621,19 @@ rsync -az -e ssh –delete ip_addr:/home/public /home/local: sincronizar un dire
 
 rsync -az -e ssh –delete /home/local ip_addr:/home/public: sincronizar un directorio remoto con un directorio local a través de ssh y de compresión.
 
-dd bs=1M if=/dev/hda | gzip | ssh user@ip_addr ‘dd of=hda.
+dd bs=1M if=/dev/hda | gzip | ssh user@ip_addr ‘dd of=hda.gz’: hacer una salva de un disco duro en un host remoto a través de ssh.
 
-gz’: hacer una salva de un disco duro en un host remoto a través de ssh.
+dd if=/dev/sda of=/tmp/file1: salvar el contenido de un disco duro a un fichero. (En este caso el disco duro es “sda” y el fichero “file1”).
 
-dd if=/dev/sda of=/tmp/file1: salvar el contenido de un disco duro a un fichero.
-
- (En este caso el disco duro es “sda” y el fichero “file1”).
-
-tar -Puf backup.
-
-tar /home/user: hacer una salva incremental del directorio ‘/home/user’.
-
-( cd /tmp/local/ && tar c .
-
- ) | ssh -C user@ip_addr ‘cd /home/share/ && tar x -p’: copiar el contenido de un directorio en un directorio remoto a través de ssh.
+tar -Puf backup.tar /home/user: hacer una salva incremental del directorio ‘/home/user’.( cd /tmp/local/ && tar c . ) | ssh -C user@ip_addr ‘cd /home/share/ && tar x -p’: copiar el contenido de un directorio en un directorio remoto a través de ssh.
 
 ( tar c /home ) | ssh -C user@ip_addr ‘cd /home/backup-home && tar x -p’: copiar un directorio local en un directorio remoto a través de ssh.
 
-tar cf – .
+tar cf – .| (cd /tmp/backup ; tar xf – ): copia local conservando las licencias y enlaces desde un directorio a otro.
 
- | (cd /tmp/backup ; tar xf – ): copia local conservando las licencias y enlaces desde un directorio a otro.
+find /home/user1 -name ‘#.txt’ | xargs cp -av –target-directory=/home/backup/ –parents: encontrar y copiar todos los ficheros con extensión ‘.txt’ de un directorio a otro.
 
-find /home/user1 -name ‘#.
-
-txt’ | xargs cp -av –target-directory=/home/backup/ –parents: encontrar y copiar todos los ficheros con extensión ‘.
-
-txt’ de un directorio a otro.
-
-find /var/log -name ‘#.
-
-log’ | tar cv –files-from=- | bzip2 > log.
-
-tar.
-
-bz2: encontrar todos los ficheros con extensión ‘.
-
-log’ y hacer un archivo bzip.
+find /var/log -name ‘#.log’ | tar cv –files-from=- | bzip2 > log.tar.bz2: encontrar todos los ficheros con extensión ‘.log’ y hacer un archivo bzip.
 
 dd if=/dev/hda of=/dev/fd0 bs=512 count=1: hacer una copia del MRB (Master Boot Record) a un disco floppy.
 
@@ -844,17 +644,11 @@ dd if=/dev/fd0 of=/dev/hda bs=512 count=1: restaurar la copia del MBR (Master Bo
 
 cdrecord -v gracetime=2 dev=/dev/cdrom -eject blank=fast -force: limpiar o borrar un cd regrabable.
 
-mkisofs /dev/cdrom > cd.
+mkisofs /dev/cdrom > cd.iso: crear una imagen iso de cdrom en disco.
 
-iso: crear una imagen iso de cdrom en disco.
+mkisofs /dev/cdrom | gzip > cd_iso.gz: crear una imagen comprimida iso de cdrom en disco.
 
-mkisofs /dev/cdrom | gzip > cd_iso.
-
-gz: crear una imagen comprimida iso de cdrom en disco.
-
-mkisofs -J -allow-leading-dots -R -V “Label CD” -iso-level 4 -o .
-
-/cd.
+mkisofs -J -allow-leading-dots -R -V “Label CD” -iso-level 4 -o ./cd.
 
 iso data_cd: crear una imagen iso de un directorio.
 
@@ -866,9 +660,7 @@ gzip -dc cd_iso.
 
 gz | cdrecord dev=/dev/cdrom –: quemar una imagen iso comprimida.
 
-mount -o loop cd.
-
-iso /mnt/iso: montar una imagen iso.
+mount -o loop cd.iso /mnt/iso: montar una imagen iso.
 
 cd-paranoia -B: llevar canciones de un cd a ficheros wav.
 
@@ -887,19 +679,7 @@ ifup eth0: activar una interface ‘eth0’.
 
 ifdown eth0: deshabilitar una interface ‘eth0’.
 
-ifconfig eth0 192.
-
-168.
-
-1.
-
-1 netmask 255.
-
-255.
-
-255.
-
-0: configurar una dirección IP.
+ifconfig eth0 192.168.1.1 netmask 255.255.255.0: configurar una dirección IP.
 
 ifconfig eth0 promisc: configurar ‘eth0’en modo común para obtener los paquetes (sniffing).
 
@@ -909,31 +689,7 @@ route -n: mostrar mesa de recorrido.
 
 route add -net 0/0 gw IP_Gateway: configurar entrada predeterminada.
 
-route add -net 192.
-
-168.
-
-0.
-
-0 netmask 255.
-
-255.
-
-0.
-
-0 gw 192.
-
-168.
-
-1.
-
-1: configurar ruta estática para buscar la red ‘192.
-
-168.
-
-0.
-
-0/16’.
+route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1: configurar ruta estática para buscar la red ‘192.168.0.0/16’.
 
 route del 0/0 gw IP_gateway: eliminar la ruta estática.
 
@@ -941,17 +697,9 @@ echo “1” > /proc/sys/net/ipv4/ip_forward: activar el recorrido ip.
 
 hostname: mostrar el nombre del host del sistema.
 
-host www.
+host www.example.com: buscar el nombre del host para resolver el nombre a una dirección ip(1).
 
-example.
-
-com: buscar el nombre del host para resolver el nombre a una dirección ip(1).
-
-nslookup www.
-
-example.
-
-com: buscar el nombre del host para resolver el nombre a una direccióm ip y viceversa(2).
+nslookup www.example.com: buscar el nombre del host para resolver el nombre a una direccióm ip y viceversa(2).
 
 ip link show: mostar el estado de enlace de todas las interfaces.
 
@@ -969,11 +717,7 @@ iwlist scan: mostrar las redes inalámbricas.
 
 iwconfig eth1: mostrar la configuración de una tarjeta de red inalámbrica.
 
-whois www.
-
-example.
-
-com: buscar en base de datos Whois.
+whois www.example.com: buscar en base de datos Whois.
 
 
 # Redes de Microsoft Windows (SAMBA)
@@ -1007,19 +751,7 @@ iptables -t filter -A INPUT -j LOG –log-prefix “DROP INPUT”: registrando u
 
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE: configurar un PAT (Puerto de traducción de dirección) en eth0, ocultando los paquetes de salida forzada.
 
-iptables -t nat -A PREROUTING -d 192.
-
-168.
-
-0.
-
-1 -p tcp -m tcp –dport 22 -j DNAT –to-destination 10.
-
-0.
-
-0.
-
-2:22: redireccionar los paquetes diriguidos de un host a otro.
+iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m tcp –dport 22 -j DNAT –to-destination 10.0.0.2:22: redireccionar los paquetes diriguidos de un host a otro.
 
 
 # Monitoreando y depurando
@@ -1073,33 +805,13 @@ mkbootdisk –device /dev/fd0 `uname -r`: crear un floppy boteable.
 
 gpg -c file1: codificar un fichero con guardia de seguridad GNU.
 
-gpg file1.
+gpg file1.gpg: decodificar un fichero con Guardia de seguridad GNU.
 
-gpg: decodificar un fichero con Guardia de seguridad GNU.
+wget -r www.example.com: descargar un sitio web completo.
 
-wget -r www.
+wget -c www.example.com/file.iso: descargar un fichero con la posibilidad de parar la descargar y reanudar más tarde.
 
-example.
-
-com: descargar un sitio web completo.
-
-wget -c www.
-
-example.
-
-com/file.
-
-iso: descargar un fichero con la posibilidad de parar la descargar y reanudar más tarde.
-
-echo ‘wget -c www.
-
-example.
-
-com/files.
-
-iso‘ | at 09:00: Comenzar una descarga a cualquier hora.
-
- En este caso empezaría a las 9 horas.
+echo ‘wget -c www.example.com/files.iso‘ | at 09:00: Comenzar una descarga a cualquier hora. En este caso empezaría a las 9 horas.
 
 ldd /usr/bin/ssh: mostrar las bibliotecas compartidas requeridas por el programa ssh.
 
@@ -1113,10 +825,4 @@ who -a: mostrar quien está registrado, e imprimir hora del último sistema de i
 
 
 
-http://www.
-
-gnuinos.
-
-com/index.
-
-php/2017/03/17/mes-de-400-ordres-per-la-consola-de-linux/
+http://www.gnuinos.com/index.php/2017/03/17/mes-de-400-ordres-per-la-consola-de-linux/
