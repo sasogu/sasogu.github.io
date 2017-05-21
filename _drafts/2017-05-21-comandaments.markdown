@@ -8,6 +8,9 @@ category: tips
 tags: [terminal, comandaments]
 ---
 
+
+Fuente: http://www.gnuinos.com/index.php/2017/03/17/mes-de-400-ordres-per-la-consola-de-linux/
+
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Información del sistema](#información-del-sistema)
