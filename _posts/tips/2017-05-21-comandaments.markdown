@@ -648,17 +648,11 @@ mkisofs /dev/cdrom > cd.iso: crear una imagen iso de cdrom en disco.
 
 mkisofs /dev/cdrom | gzip > cd_iso.gz: crear una imagen comprimida iso de cdrom en disco.
 
-mkisofs -J -allow-leading-dots -R -V “Label CD” -iso-level 4 -o ./cd.
+mkisofs -J -allow-leading-dots -R -V “Label CD” -iso-level 4 -o ./cd.iso data_cd: crear una imagen iso de un directorio.
 
-iso data_cd: crear una imagen iso de un directorio.
+cdrecord -v dev=/dev/cdrom cd.iso: quemar una imagen iso.
 
-cdrecord -v dev=/dev/cdrom cd.
-
-iso: quemar una imagen iso.
-
-gzip -dc cd_iso.
-
-gz | cdrecord dev=/dev/cdrom –: quemar una imagen iso comprimida.
+gzip -dc cd_iso.gz | cdrecord dev=/dev/cdrom –: quemar una imagen iso comprimida.
 
 mount -o loop cd.iso /mnt/iso: montar una imagen iso.
 
