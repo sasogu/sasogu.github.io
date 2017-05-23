@@ -4,8 +4,8 @@ title: "Programari lliure i educació. Discurs de Richard  Stallman."
 date:   2017-05-21 15:18:26
 description:
 permalink: /:year/:month/:day/:title.html
-category: tips
-tags: [terminal, comandaments]
+category: apunts
+tags: [programari lliure]
 ---
 
 
