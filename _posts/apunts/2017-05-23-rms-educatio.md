@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Progrmari lliure i educació. Discurs de Richard  Stallman."
+title: "Programari lliure i educació. Discurs de Richard  Stallman."
 date:   2017-05-21 15:18:26
 description:
 permalink: /:year/:month/:day/:title.html
