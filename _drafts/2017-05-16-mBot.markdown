@@ -1,0 +1,35 @@
+---
+layout: post
+title: "mBot"
+date:   2017-05-15 07:15:26
+description:
+permalink: /:year/:month/:day/:title.html
+category: tips
+tags: [mBot]
+---
+
+
+Para mBot con enlace Bluetooth se reproducen los problemas de permisos.
+
+He conseguido soslayarlos con las siguientes instrucciones.
+
+Hago setuid a rfcomm
+
+    $ sudo chmod 4755 /usr/bin/rfcomm
+
+Localizo el mBot bluetooth para descubrir la MAC
+
+    $ hcitool scan
+Scanning ...
+  00:0D:19:03:61:93    Makeblock
+
+Me asocio
+
+    $ rfcomm bind /dev/rfcomm0 00:0D:19:03:61:93 1
+
+Opcionalmente confirmo la conexión
+
+    $ rfcomm show /dev/rfcomm0
+rfcomm0: 00:0D:19:03:61:93 channel 1 clean
+
+Y ahora ya puedo conectarme desde la interface del programa MBlock com si se tratara de un puerto serie en /dev/rfcomm0.
