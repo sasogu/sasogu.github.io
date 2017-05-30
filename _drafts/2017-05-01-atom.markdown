@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Markdown"
+title: "Plugins Atom.io"
 date:   2017-05-01 07:15:26
 description:
 permalink: /:year/:month/:day/:title.html
@@ -62,3 +62,12 @@ Atom Linter es la base para usar los distintos paquetes de linter para los diver
 ¡Ejecuta codigo/scripts en Atom!, en base a la extensión del archivo, a una seleccion de codigo, o por el numero de linea. Soporta Python, Ruby, Ruby on Rails, Perl, php, java, C/C++, Haskell, Shell Script y un gran etc.
 
 https://www.pythonmania.net/es/2017/02/27/paquetes-recomendados-para-atom/
+
+# Cambiar idioma
+
+Con pocos pasos podrían tener Atom en castellano, de la siguiente manera:
+
+Lanzamos el command pallete con un [Ctrl] [Shift] [P] y buscamos Installed Packages.
+Dentro de esta buscamos el paquete atom-i18n y lo instalamos. Usando el botón settings de este paquete elegimos nuestro idioma.
+Bueno faltaría recargar y listo.
+Al siguiente inicio ya estaría activado.

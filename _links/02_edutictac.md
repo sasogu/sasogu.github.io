@@ -4,7 +4,7 @@ title: Edutictac
 description: Comunitat on compartir dubtes i experiències
 date:   2017-01-10 12:12:12
 category: enllaços
-img: ..//img/edutictac.png
+img: ..//img/edutictac.jpg
 redirec: http://edutictac.es/
 ---
 

@@ -1,10 +1,10 @@
 # Site Info
-title: sasogu
-tagline: ' TotTicTac: un espai personal per a compartir'
+title: TotTicTac
+tagline: ' '
 description: 'Un espai personal per comparTIC'
 baseurl: ""
 url: http://sasogu.github.io
-logo: '/img/drac.png'
+logo: '/img/home.png'
 
 # Site configurations
 gems:
@@ -43,6 +43,8 @@ nav:
     - { Buscar: '/search/' }
   Enllaços:
     - '/links/'
+  Esborranys:
+    - '/drafts/'
   Feed:
     - '/atom.xml'
   Qui sóc:
@@ -59,6 +61,9 @@ collections:
   links:
     output: true
     permalink: /links/:path/
+  drafts:
+    output: true
+    permalink: /drafts/:path/
 
 # Puglins
 mathjax: true # whether support mathjax

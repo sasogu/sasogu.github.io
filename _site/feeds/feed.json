@@ -3,6 +3,18 @@
 
     
     {
+        "title": "Presentació de Daniel Turienzo",
+        "content": "\n  Aquest és el text que havia preparat per a llegir en la presentació de Daniel hui en la Jornada “LliureX en la Universidad Jaume I” Innovación Educativa utilizando TICs. Al final com era l’última ponència i estaven en família no he llegit el text i he intentat dir més o menys el mateix, com que ja el tinc escrit el comparteix en aquesta bitàcola personal.\n\n\nBona vesprada, sóc Samuel Soriano membre d’Edutictac i Coordinador TIC provincial en Alacant des d’aquest mes de febrer.\n\nAgraeix a Julio Pacheco que m’haja demanat presentar a Daniel, ja que m’ha permés participar en #ujilliurex presencialment per primera vegada, la veritat és que tenia moltes ganes i realment ha sigut una jornada molt enriquidora. Enhorabona Julio.\n\nDaniel Turienzo és llicenciat en Bioquímica per la Universitat de València. Professor de Tecnologia des del 2003. Treballa en l’IES Montserrat Roig d’Elx on també exerceix com a Secretari. Participa en diverses accions de formació del professorat del Cefire d’Elx, Alacant i Oriola sobre Tecnologia i TIC. Des del 2015 és professor de l’assignatura TICs del Màster del professorat de la UMH. És membre de la Comunitat EduTicTac, una xarxa on es comparteixen recursos i experiències entre docents de la C.A. Valenciana i que promou el programari lliure en educació i col·labora amb l’Equip LliureX.\n\nConec a Daniel des de fa més de deu anys, la primera vegada que van coincidir jo impartia un curs d’administració d’aula Lliurex, en terminar el curs vaig llançar una “comunitat” virtual a un servici per a grups en línia que es diu Ning que llavors era gratuït i estava molt de moda, l’objectiu era compartir coneixement sobre què féiem amb Lliurex cadascú al seu centre i resoldre els possibles problemes que anaren sorgint d’una manera àgil… Però sobretot ajudar i recolzar-nos mútuament en les nostres tasques diàries.\n\nDaniel va ser dels primers que es van sumar a aquest projecte. Molt prompte es van unir altres companys, alguns dels quals estan ací i encara continuen a EduTicTac malgrat que ja s’han jubilat. Per nosaltres és molt important que continuen aportant la seua experiència i visió. Entre tots van decidir un nom, un logo, també migrar a Moodle quan Ning va començar a cobrar pels seus servicis… moltes coses han passat aquests deu anys però el més important és que continuem compartint i gaudint d’aprendre amb bona companyia.\n\nDes del principi Daniel va estar animant i propulsant el grup amb el seu agut sentit de l’humor i el compromís amb una educació pública i de qualitat. M’agradaria ressaltar el seu bon ànim per afrontar reptes. Així per exemple quan van necessitar incloure en Lliurex el programari d’edició de vídeo Kdenlive i altres que no venien de sèrie ens ho van proposar com a repte i van crear la nostra pròpia distribució linux que en la seua primera versió vam anomenar Cho Oyu i en una segona edició  Everest.\n\nTot això sempre amb humor, aprenent moltes coses junts i passant-ho molt bé. Durant tot aquest temps el nexe d’unió ha sigut el nostre compromís amb l’educació i el programari lliure. La qual cosa ens ha portat a una relació d’amistat que va molt més enllà de la nostra relació professional, el que em fa valorar tot el viscut com a molt enriquidor també en l’àmbit personal.\n\nI res més per la meua part, us deixe gaudint de Daniel i de la seua presentació.\n",
+        "link": "/2017/05/10/presentacio-daniel.html",
+        "date": "2017-05-10 11:12:12 +0200",
+        "excerpt": "",
+        "search_omit": ""
+    }
+    
+    
+
+    
+    ,{
         "title": "Apunts ràpids sobre Markdown",
         "content": "Taula de contingut\n\n\n  Inserir HN.\n  Cursives.\n  Fredolic.\n  Vinyetes per a taules de contingut.\n  Inserir imatges.\n  Inserir enllaços.\n  Fer ancoratge.\n  Inserir una línia de codi.\n  Inserir un bloc de codi.\n  Ressaltar el codi.\n  Inserir taules.\n  Altres referències sobre Markdown.\n\n\nInserir HN\n\n# Això és un H1\n## Això és un H2\n### Això és 1 H3\n#### Això és 1 H4\n\n\nCursives\n\n* Això és cursiva *\n\nNegreta\n\n** Això és negreta **\n\nVinyetes\n\n\n- Això és vinyeta 1.\n  - Vinyeta 1.1 amb sangria.\n  - Vinyeta N.\n\n\nInserir imatges\n\n[Text qualsevol per si no carrega la imatge](URL completa de la imatge)\n\nInserir enllaços\n\n[Text a mostrar](URL completa)\n\nFer ancoratge\n\nUtilitza els títols amb el coixinet # i per ancorar el títol a una taula de contingut, posem el següent:\n\n[Text a mostrar](#mi-titulo-a-ancorar)\n\nen minúscules i espais separats per guions\n\nInserir una línia de codi\n\nTancar la línia de codi entre la titlla l’inrevés Codi en ASCII: alt96\n\n `la seua linia de codi` \n\nInserir un bloc de codi\n\nTancar el bloc de codi entre tres accents a l’inrevés Codi en ASCII: alt96\n\n\n```\n// bloc de codi ...\n\n```\n\n\nRessaltar el codi\n\nTanquem el bloc de codi amb les tres accents a l’inrevés i li posem al costat el llenguatge que s’està fent servir, exemple:\n\n\n```Java\n// bloc de codi ...\n\n```\n\n\nInserir taules\n\n\n| TITOL1 | TITOL2 |\n| ----- | ---- |\n| CONTINGUT COLUMNA 1 | CONTINGUT COLUMNA 2 |\n\n\n\n\nAltres referències sobre Markdown:\n\nhttp://www.genbeta.com/guia-de-inicio/que-es-markdown-para-que-sirve-y-como-usarlo\n\nhttps://help.github.com/articles/markdown-basics\n\nhttps://guides.github.com/features/mastering-markdown/\n\nhttp://bitelia.com/2013/04/que-es-markdown\n\nhttp://es.wikipedia.org/wiki/Markdown\n\nhttps://github.com/victorhtorres/Markdown/blob/master/README.md\n\nhttps://www.atareao.es/ubuntu/utext-mi-editor-markdown-actualizado-y-simplificado/\n",
         "link": "/apunts/2017/05/02/markdown/",
@@ -31,6 +43,18 @@
         "content": "Els apunts originals són d’@inclusa, aniré modificant i actualitzant al gust amb el que vaja aprenent de GITHub… Gràcies!!\n\n\n  \n    Comandaments fonamentals.\n\n    -Iniciar un repositori git\n\n    -Configurar-lo\n\n    -Evitar que GIT demane usuari i contrasenya\n\n    -Seguir els canvis\n\n    -Afegir arxius de rastreig\n\n    -Clonar repositori remot\n\n    -Sincronitzar des del repositori remot al local\n\n    -Sincronitzar des del repositori local al remot\n  \n  \n    Si entrem en pànic\n\n    -Desfer últim commit\n\n    -Desfer fins arribar a 5 commits abans\n\n    -Editant l’últim commit i l’última confirmació\n\n    -Si fallem podem tornar enrere\n  \n  \n    Treballant amb branques\n\n    -Crear branca\n\n    -Canviar de branca\n\n    -Mirar en quina branca estem\n\n    -Canviar tot el contingut d’una branca\n\n    -Borrar branca i borrar-la del server\n\n    -Branques en GIT\n\n    -Línies de treball amb branques\n  \n  \n    Altres comandaments\n  \n\n\nComandaments fonamentals\n\nIniciar un repositori git\n\n$ git init\n\n\n\nConfigurar-lo\n\n$ git config --global user.name \"John Doe\"\n\n$ git config --global user.email johndoe@example.com\n\n\n\nGenera claus ssh\n\n$ ssh-keygen\n\n\n\nEvitar que GIT demane usuari i contrasenya\n\n$ git config --global credential.helper store\n\n\n\nLa contrasenya del repositori remot queda magatzemada al fitxer .git-credentials\n\nSeguir els canvis\n\n$ git status\n\n\n\nAfegir arxius de rastreig\n\nCada vegada que modifiquem alguna cosa cal dir-li a GIT que ho tinga en compte.\n\n$ git add .\n\n\n\nClonar repositori remot\n\n$ git clone https://github.com/sasogu/sasogu\n\n\n\nSincronitzar des del repositori remot al local\n\n$ git pull\n\n\n\nSincronitzar des del repositori local al remot\n\n$ git push\n\n\n\nOpcional afegir la ruta htpps per apuntar a un repositori concret.\n\nSi entrem en pànic\n\nDesfer últim commit\n\n$ git reset --hard HEAD~1\n\n\n\nDesfer fins arribar a 5 commits abans\n\n$ git reset --hard HEAD~5\n\n\n\nConsulta la font\n\nEditant l’últim commit i l’última confirmació\n\n$ git commit --amend\n\n\n\nLa instantània és la mateixa, sols pots canviar el que has posat com a missatge del commit\n\nSi fallem podem tornar enrere\n\n$ git checkout --fitxer\n\n\n\nInclús podem dir “tot el que hem fet fins ara no val per a res”\n\n$ git fetch origin &amp;&amp; git reset --hard origin/master\n\n\n\nTreballant amb branques\n\nCrear branca\n\n$ git checkout -b gh-pages\n\n\n\ncheckout → canvia de branca\n\n-b → crea la branca\n\nCanviar de branca\n\n$ git checkout master\n\n\n\nMirar en quina branca estem\n\n$ git branch\n\n\n\nCanviar tot el contingut d’una branca\n\nSobreescrivim una branca a altra:\n\n  git branch -m master old-master\n  git branch -m gh-pages master\n  git push -f origin master\n\n\n\n-m renomena\n\n-f força\n\nBorrar branca i borrar-la del server\n\nObjectiu: volem borrar la branca gh-pages\n\n$ git branch -d gh-pages           ##  elimina branca local\n\n$ git push origin :gh-pages        ##  elimina branca remota\n\n\n\nBranques en GIT\n\nTots els projectes, per defecte, tenen la branca MASTER on, al final, acaben tots els desenvolupaments que fem.\n\nPodem definir altra branca, per exemple, DEVELOP on anar fent tots els xicotets canvis que necessitem fer.\n\nQuan arribem a un punt on tots els canvis que hem anat fent son estables i ens interessa que apareguen en la branca MASTER farem un merge.\n\nPrimer ens situem en la branca MASTER\n\n$ git checkout master\n\n\n\nAra li diguem que porte els canvis que hem fet a DEVELOP\n\n$ git merge develop\n\n\n\nAra tindrem una nova versió a la branca MASTER\n\nPot passar que hi hagen problemes al fer el merge, en cas que GIT no sàpiga distingir quines són les línies bones ens ho preguntarà.\n\nLínies de treball amb branques\n\nLes branques són línies de treball que tenen un objectiu. Posem un exemple de diferents branques amb diferents objectius de fases del treball.\n\nMASTER: branca principal on aniran tots els canvis finals, així que, en aquest cas podríem etiquetar diverses versions explicitant les fases V0.1, v0.2, v0.3, etc.\n\nDEVELOP: branca on es realitzen canvis més xicotets, però també es proven. Pot tenir diverses subbranques.\n\nRELEASE: branca on podem agrupar certs passos endavant, quan está provada podrem incorporar-ho a MASTER.\n\n\tMASTER\t\tRELEASE\t\tDEVELOP\n\tX\n\t|\n\t|\\\n\t| \\ __→__→__→__→__→__→__→__→__→__→__ X\n\t|                                    ↓\n\t|                                    |\n\t|                                    |\n\t|                 X __←__←__←__←__ ← X\n\t|                /\n\t|               /\n\t|__←__←__←__←_ X\n\tX          \n\n\n\nAltres comandaments\n\nPublicar a un repositori existent a GITHub des de la línia de comandaments amb el protocol https://\n\ngit remote add origin https://github.com/usuari/repositori.git\n\ngit push -u origin master\n\n\n\nEtiquetes en GIT\n\nPodem definir etiquetes per a gestionar versions del nostre codi o punts importants de desenvolupament, de forma que després ens siga fàcil identificar les fases de desenvolupament\n\n  $ git tag -a v1.0 -m 'Versió 1.0'     \n\n\n\nCustomitzar els colors\n\nConfigurem un alias.\n\nAra el cridarem git lg\n\ngit config --global alias.lg \"log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit\"\n\n\n\nNo guardar la contrasenya en disc\n\n$ git config --global credential.helper 'cache --timeout=3600'\n\n\n\nTranscorreguda un hora tornarà a demanar la contrasenya.\n\nGITHub\n\n\n  Iniciar repositori\n\n\nFonts\n\n\n  git - la guia sencilla\n  Become a git guru\n  Pro Git\n  Cheat Sheets\n  GIT - Tutorials Point\n  Documentació base\n  Documentació base en espanyol\n  Guia ràpida de GIT\n  GIT Màgic\n\n\nVideo\n\n  GITHub en Camon - Murcia\n  Introduction to GIT with Scott Chacon of GITHub\n\n",
         "link": "/2017/04/29/github.html",
         "date": "2017-04-29 12:15:26 +0200",
+        "excerpt": "",
+        "search_omit": ""
+    }
+    
+    
+
+    
+    ,{
+        "title": "Eliminar filtre de Lliurex",
+        "content": "Si necessites instal·lar un programa i Lliurex no et deixa executa:\n\nsudo rm /etc/apt/preferences.d/lliurex-pinning\n\n\n\nAçò esborrarà el filtre que impedeix que coses alienes a LliureX desbaraten el sistema.\n\nDesprés sudo apt-get update\n",
+        "link": "/2017/04/24/lliurex-update.html",
+        "date": "2017-04-24 09:15:26 +0200",
         "excerpt": "",
         "search_omit": ""
     }
@@ -170,6 +194,102 @@
     
 
 
+
+    
+    ,{
+        "title": "Plugins Atom.io",
+        "content": "Plugins\n\n\n  Minimap\n\n\nMinimap es uno de los paquetes más populares para Atom, este paquete muestra una vista previa en miniatura del archivo, para poder navegar rápidamente por el codigo. Se puede establecer su posicion a la izquierda o derecha, activar o desactivar el destacado del palabras claves (de highlight-selected) y más. Incluso Minimap tiene plugins extras para extender aum ,ás su funcionalidad, como el mostrar los colores de los códigos en la miniatura del minimap.\n\nAtom minimap\nminimap-highlight-selected: Highlight-selected Palabras claves (o resultados de busqueda) aparecen en el minimap.\nminimap-pigments: Muestra los colores de pigments en el minimap.\n\n\n  \n    Languagetool\nhttp://languagetool.org/\n  \n  git-diff\n  markdown-folder\n  markdown-toc\n  pandoc\n\n\nCal instal·lar pandoc sudo apt-get install pandoc i indicar la ruta en la configuració del plugin /usr/bin/pandoc\n\n\n  Highlight-selected\n\n\nCuando seleccionas una función o una variable en Sublime Text o Notepad++, todas las otras repeticiones de esa función o variable se destacan en el documento. Highlight Selected realiza esa funcionalidad en Atom.\n\n\n  Pigments\n\n\nPigments es un muy buen paquete para mostrar el color de un algún código en hex, gba, rgba, hsl, hsla. Quizás ya hayas visto antes algún previsualizador de colores hexadecimal, pero pocos llegan al nivel de Pigments. Analiza los colores, entiende las variables de preprocesado y Incluso ejecuta funciones de cambio de color.\n\nAdemás, puede visualizar la paleta utilizada en el proyecto a través de Pigmentos. Tu puedes mirar la paleta completa e ir rápidamente ir a la definición de cualquier color.\n\n\n  Color Picker\n\n\nUsualmente si deseas utilizar un selector de color, lo más probable es que abras Photoshop o GIMP y utilice el selector de color que tienen incorporado. Este paquete le permite seleccionar colores en el editor de Atom y es tan fácil como hacer clic con el botón derecho del ratón y elegir “Color Picker”. Alternativamente, puede hacerse presionando CMD / CTRL + SHIFT + C.\n\nEl selector de color lee actualmente los colores HEX, HEXa, RGB, RGBa, HSL, HSLa, HSV, HSVa, VEC3 y VEC4.\n\n\n  Atom Beautify\n\n\nBeautify transforma tu código desordenado (o Minificado/minify) en algo más organizado y más legible. Soporta varios lenguajes de programación como HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C ++, C #, Objective-C, CoffeeScript, typescript, etc.\n\nDespués de instalado, para ejecutarlo, simplemente haz un click con el boton derecho y escoge Beautify editor contents, o alternativamente ve a Packages &gt; Atom Beautify &gt; Beautify.\n\n\n  Linter\n\n\nAtom Linter es la base para usar los distintos paquetes de linter para los diversos lenguajes de programación (un linter es un programa/script que busca errores en el código), en otras palabras provee la API para los distintos linters dentro de Atom. Luego de intalar el paquete “base” necesitas instalar los linter específicos para el lenguaje que vas a usar.\n\nPython\n\n\n  script\n\n\n¡Ejecuta codigo/scripts en Atom!, en base a la extensión del archivo, a una seleccion de codigo, o por el numero de linea. Soporta Python, Ruby, Ruby on Rails, Perl, php, java, C/C++, Haskell, Shell Script y un gran etc.\n\nhttps://www.pythonmania.net/es/2017/02/27/paquetes-recomendados-para-atom/\n",
+        "link": "/2017/05/01/atom.html",
+        "date": "2017-05-01 09:15:26 +0200",
+        "excerpt": "",
+        "search_omit": ""
+    }
+    
+    
+
+    
+    ,{
+        "title": "Connexió amb GitHub",
+        "content": "01 Generar claus SSH\n\nComprova si tens alguna *clau SSH** generada:\n\nls -l ~/.ssh\n\n\n\nLes claus SSH es guarden en parells (una clau privada i una pública). Les dues han de tenir el mateix nom, solament que la pública ha d’acabar en .pub.\n\nSi en executar el comando anterior comproves que ja tens una clau creada, pots saltar-te el que queda d’aquesta secció i passar a afegir aquesta clau al teu compte de Github.\n\nSi no tens alguna clau creada pots crear una executant aquest comando:\n\nssh-keygen\n\n\n\nEn aquest moment et demanarà una sèrie de dades, que pots ometre perquè prenga uns valors per defecte si prems enter en cada pregunta.\n\nPer a comprovar que les claus s’han generat correctament pots executar:\n\nls -l ~/.ssh\n\n\n\no si has guardat les claus en un altre directori:\n\nls -l /path/directori/claus\n\n\n\ni podràs veure els dos fitxers de les claus.\n\n02 Assignar les claus SSH al teu compte de Github\n\nAccedeix al teu compte de Github i entra en la configuracción (settings)\n\nEn el menú de l’esquerra, entra en SSH and GPG keys\n\nAra prem sobre New SSH key\n\nEn el formulari que se t’ha obert, escriu un títol per a la clau, i en l’apartat key has de pegar el contingut del fitxer .pub que vas generar en l’apartat anterior. Per a açò pots obrir el fitxer amb qualsevol editor de text i copiar el contingut.\n\nPrem sobre Add SSH key i ja està tot fet.\n\n03 Comprovar que l’operació s’ha realitzat bé\n\nExecuta el següent comando des de la terminal\n\nssh -T git@github.com\n\n\n\n04 Configurar nom i correu\n\n$ git config --global user.name \"John Doe\"\n\n$ git config --global user.email johndoe@example.com\n\n\n\n05 Guardar contrasenya en local\n\nPerquè no ens demane contrasenya cada vegada que enviem canvis a GitHub:\n\n$ git config --global credential.helper store\n\n\n\nLa contrasenya del repositori remot queda emmagatzemada en el fitxer .git-credentials\n\nSi no volem que quede guardada:\n\n$ git config --global credential.helper 'cache --timeout=3600'\n\n\nQuan transcórrega una hora ens tornarà a demanar la contrasenya.\n",
+        "link": "/2017/05/01/conexio-github.html",
+        "date": "2017-05-01 09:15:26 +0200",
+        "excerpt": "",
+        "search_omit": ""
+    }
+    
+    
+
+    
+    ,{
+        "title": "Fluxbox",
+        "content": "\n  synapse: programari per a llançar aplicacions\n  Per vorer quina codificació té cada tecla xev\n  \n    conky-manage\n  sudo apt-add-repository -y ppa:teejee2008/ppa\n  sudo apt-get update\n  sudo apt-get install conky-manager\n\n    conky -d -b &amp;\n  calendar.sh &amp;\n  orage &amp;\n  glipper &amp; (clipit &amp;)\n  synapse &amp;\n  nextcloud &amp;\n  nm-applet &amp;\n  mate-power-manager &amp;\n  mate-volume-control-applet &amp;\n  insync start &amp;\n  dropbox start -i &amp;\n  \n\n",
+        "link": "/2017/05/01/fluxbox.html",
+        "date": "2017-05-01 09:15:26 +0200",
+        "excerpt": "",
+        "search_omit": ""
+    }
+    
+    
+
+    
+    ,{
+        "title": "Pandoc",
+        "content": "\n\n\n  fragmento de HTML:\n  archivo HTML independiente:\n  formato de texto enriquecido (RTF):\n  PDF:\n  ODT (OpenDocument Text, legible por OpenOffice):\n  MediaWiki marcado:\n  EPUB ebook:\n  Word docx:\n  MediaWiki a HTML5:\n  EPUB a texto sin formato:\n\n\n\n\nfragmento de HTML:\n\npandoc MANUAL.txt -o example1.html\n\narchivo HTML independiente:\n\npandoc -s MANUAL.txt -o example2.html\n\nformato de texto enriquecido (RTF):\n\npandoc -s MANUAL.txt -o example7.rtf\n\nPDF:\n\npandoc MANUAL.txt –latex-engine=xelatex -o example13.pdf\n\nODT (OpenDocument Text, legible por OpenOffice):\n\npandoc MANUAL.txt -o example21.odt\n\nMediaWiki marcado:\n\npandoc -s -S -t mediawiki –toc MANUAL.txt -o example22.wiki\n\nEPUB ebook:\n\npandoc -S MANUAL.txt -o MANUAL.epub\n\nWord docx:\n\npandoc -s -S MANUAL.txt -o example29.docx\n\nMediaWiki a HTML5:\n\npandoc -f mediawiki -t html5 -s haskell.wiki -o example32.html\n\nEPUB a texto sin formato:\n\npandoc MANUAL.epub -t plain -o example36.text\n",
+        "link": "/2017/05/09/pandoc.html",
+        "date": "2017-05-09 09:15:26 +0200",
+        "excerpt": "",
+        "search_omit": ""
+    }
+    
+    
+
+    
+    ,{
+        "title": "Creació i eliminació de branques dins del seu repositori",
+        "content": "Podeu crear o eliminar branques directament a GitHub.\n\n\n  En GitHub, aneu a la pàgina principal del repositori.\n  En el menú de selecció branca\n  feu clic al menú de selecció branca.\n  Escriu un nom únic per a la seva nova branca i premeu Intro.\n\n\nEliminació d’una branca\n\n\n  En GitHub, aneu a la pàgina principal del repositori.\n  Branques enllaç a la pàgina visió general Per sobre de la llista de fitxers, feu clic  Branques nombre.\n\n\neliminar la branca Desplaçar-se a la branca que voleu eliminar i feu clic  .\n",
+        "link": "/2017/05/09/branch.html",
+        "date": "2017-05-09 09:15:26 +0200",
+        "excerpt": "",
+        "search_omit": ""
+    }
+    
+    
+
+    
+    ,{
+        "title": "LaTeX",
+        "content": "Instal·lar LaTeX\n\nsudo apt-get install texlive-full\n\nsudo apt-get install texmaker\n\n\n",
+        "link": "/2017/05/09/latex.html",
+        "date": "2017-05-09 09:15:26 +0200",
+        "excerpt": "",
+        "search_omit": ""
+    }
+    
+    
+
+    
+    ,{
+        "title": "emacs",
+        "content": "https://inclusa.github.io/emacs/\n\nAccés ràpid teclat\n\nC-t = Control + T (on T és una tecla xD) (exemple: C-x = Control+x)\n\nM-t = ALT + Tecla o ESC-x (M-x = ALT+x o també ESC+x)\n\nS-t = Shift+ Tecla (on SHIFT és ls Tecla que està damunt de Control ;-) )\n\n\n\nEdició de textos\n\nC-Supr     &gt;&gt; Tallar (també amb C-w)\nC-c        &gt;&gt; Copiar\nS-Insert   &gt;&gt; Pegar (també  amb C-i)\nC-_        &gt;&gt; Desacer (Undo) [Control+shift+Guió]\n              Esborra el caracter anterior al cursor\nC-d        &gt;&gt; Esborra el següent caracter (equival Supr en\n               els editors de DOS)\nM-d        &gt;&gt; Esborra la següent paraula\nM-         &gt;&gt; Esborra la paraula anterior\nC-k        &gt;&gt; Esborra del cursor fins a la fi de la linea\nM-k        &gt;&gt; Esborra del cursor fins al final de la frase\n             (quan esborres una paraula o una frase, emacs l'emmagatzema\n              com si l'hagueres tallat, per a recuperar-la (pegar-la) a partir del\n              cursor pots teclejar shif- o C-i)\nC-l        &gt;&gt; Recentra el cursor i redibuja la pantalla, posant-ho\n           en el mediode la finestra.\nM-%\t    &gt;&gt; Reemplaçar text amb petició de confirmació\n       (la combinació de tecles és Alt+shitf+5)\n\n\n\n#Curiositats\n\nM-x dunnet\nM-x tetris\nM-x gomoku\nM-x life\n\n\n",
+        "link": "/2017/05/15/emacs.html",
+        "date": "2017-05-15 09:15:26 +0200",
+        "excerpt": "",
+        "search_omit": ""
+    }
+    
+    
+
+    
+    ,{
+        "title": "Jekyll",
+        "content": "sudo apt-get install ruby-full\n\nsudo gem install jekyll\n\njekyll new idrootblog\n\n\n\nChange to newly created directory idrootblog or the new name which you have given at the time of using command jekyll:\n\ncd idrootblog\n\n\n\nStart the Jekyll application and replace below mentioned ip address with your ip:\n\njekyll server –host 192.168.77.21 &amp;\n",
+        "link": "/2017/05/15/jekyll.html",
+        "date": "2017-05-15 09:15:26 +0200",
+        "excerpt": "",
+        "search_omit": ""
+    }
+    
+    
 
 
 
