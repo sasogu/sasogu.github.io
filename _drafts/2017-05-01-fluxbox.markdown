@@ -13,3 +13,60 @@ tags: [apunts]
     sudo apt-add-repository -y ppa:teejee2008/ppa
     sudo apt-get update
     sudo apt-get install conky-manager
+
+# startup
+
+  configuració d'arranc de fluxbox
+  
+    #!/bin/sh
+    #
+    # fluxbox startup-script:
+    #
+    # Lines starting with a '#' are ignored.
+
+    # Change your keymap:
+    xmodmap "/home/sasogu/.Xmodmap"
+
+    # Applications you want to run with fluxbox.
+    # MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
+    #
+    # unclutter -idle 2 &
+    # wmnd &
+    # wmsmixer -w &
+    # idesk &
+    #
+    # Debian-local change:
+    #   - fbautostart has been added with a quick hack to check to see if it
+    #     exists. If it does, we'll start it up by default.
+    which fbautostart > /dev/null
+    if [ $? -eq 0 ]; then
+        fbautostart
+    fi
+
+    # Iniciar aplicacions en iniciar sessió
+    # firefox &
+    # chromium-browser
+    thunderbird &
+    synapse & #per a cercar documents i aplicacions
+    # /usr/bin/conky-manager  /home/alfons/conky-manager/themes/Conky MIUI/config/miui &
+    conky -d -b &
+    # calendar.sh &
+    orage & #calendari
+    glipper &
+    alarmclock &
+    arandr & #configurar varies pantalles
+    # nextcloud &
+    mate-volume-control-applet &
+    mate-power-manager &
+    nm-applet &
+    insync start &
+    dropbox start &
+    Exec=env XMODIFIERS="" LC_ALL=ca_ES.UTF-8 emacs %F &
+    # And last but not least we start fluxbox.
+    # Because it is the last app you have to run it with ''exec'' before it.
+
+    exec fluxbox
+
+    # or if you want to keep a log:
+    # exec fluxbox -log "/home/alfons/.fluxbox/log"
+    #fbsetbg -f /home/sasogu/Nextcloud/Photos/Coast.jpg
