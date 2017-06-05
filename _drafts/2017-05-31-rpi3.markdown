@@ -17,7 +17,7 @@ tags: [rpi3]
 
 # Instal·lació
 
-+ Descarregar imatge de la versió [Server](https://ubuntu-pi-flavour-maker.org/download/) o [Mate](https://ubuntu-mate.org/blog/ubuntu-mate-for-raspberry-pi-3/)
++ Descarregar imatge de la versiógeni [Server](https://ubuntu-pi-flavour-maker.org/download/) o [Mate](https://ubuntu-mate.org/blog/ubuntu-mate-for-raspberry-pi-3/)
 + Grabar imatge en la targeta microSD amb  [etcher.io/](https://etcher.io/)
 + Redimensionar la imatge amb `$ sudo gparted` per a utilitzar tot l'espai de la targeta.
 
