@@ -56,8 +56,8 @@ tags: [apunts]
     glipper &
     alarmclock &
     arandr & #configurar varies pantalles
-    # nextcloud &
-    mate-volume-control-applet &
+    nextcloud &
+    mate-volume-control-applet & # sudo apt-get install mate-media
     mate-power-manager &
     nm-applet &
     insync start &
@@ -71,4 +71,3 @@ tags: [apunts]
 
     # or if you want to keep a log:
     # exec fluxbox -log "/home/sasogu/.fluxbox/log"
-  
