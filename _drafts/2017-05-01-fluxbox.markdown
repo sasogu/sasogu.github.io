@@ -26,3 +26,4 @@ tags: [apunts]
     mate-volume-control-applet &
     insync start &
     dropbox start -i &
+    blueman-applet &
