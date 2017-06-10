@@ -1,0 +1,38 @@
+---
+layout: post
+title: "R"
+date:   2017-05-31 09:15:26
+description:
+permalink: /:year/:month/:day/:title.html
+category: tips
+tags: [rpi3]
+---
+
+# Requisits
+
++ Raspberry Pi 3 Model B
++ microSD de 64GB. Recomanat classe 10
++ Carregador de 2.5A.
++ Carcassa i disipadors
+
+# Instal·lació
+
++ Descarregar imatge de la versiógeni [Server](https://ubuntu-pi-flavour-maker.org/download/) o [Mate](https://ubuntu-mate.org/blog/ubuntu-mate-for-raspberry-pi-3/)
++ Grabar imatge en la targeta microSD amb  
+  + [etcher.io/](https://etcher.io/)
+  + `sudo dd bs=1M if=2014-01-07-wheezy-raspbian.img of=/dev/sdb`
+
++ Redimensionar la imatge amb `$ sudo gparted` per a utilitzar tot l'espai de la targeta.
+
+# Usuaris
+
+Canviar contrasenya per defecte ubuntu
+
+    $ sudo passwd
+
+Per afegir Usuaris administradors
+
+    $ sudo adduser
+    $ sudo adduser usuari sudo
+
+canvia usuari pel nom que vulgues
