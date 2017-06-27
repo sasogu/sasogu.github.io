@@ -56,12 +56,13 @@ tags: [apunts]
     glipper &
     alarmclock &
     arandr & #configurar varies pantalles
-    # nextcloud &
-    mate-volume-control-applet &
+    nextcloud &
+    mate-volume-control-applet & # sudo apt-get install mate-media
     mate-power-manager &
     nm-applet &
     insync start &
-    dropbox start &
+    dropbox start -i &
+    blueman-applet &
     Exec=env XMODIFIERS="" LC_ALL=ca_ES.UTF-8 emacs %F &
     # And last but not least we start fluxbox.
     # Because it is the last app you have to run it with ''exec'' before it.
@@ -69,5 +70,4 @@ tags: [apunts]
     exec fluxbox
 
     # or if you want to keep a log:
-    # exec fluxbox -log "/home/alfons/.fluxbox/log"
-    #fbsetbg -f /home/sasogu/Nextcloud/Photos/Coast.jpg
+    # exec fluxbox -log "/home/sasogu/.fluxbox/log"
