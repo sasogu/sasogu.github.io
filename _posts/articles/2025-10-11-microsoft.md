@@ -17,7 +17,7 @@ Aquesta setmana, l’Autoritat de Protecció de Dades d’Àustria ha determinat
 
 La resolució arriba després d’una denúncia presentada l’any 2024 en nom d’una menor d’edat, i posa en evidència un problema estructural en la manera com les grans corporacions tecnològiques gestionen la informació dels usuaris, especialment quan es tracta de menors i contextos educatius. Segons Noyb, Microsoft no només va incomplir el Reglament General de Protecció de Dades (RGPD), sinó que també va intentar traslladar la responsabilitat a les escoles i institucions locals, una pràctica que complica encara més la transparència.
 
-I a casa nostra?
+**I a casa nostra?**
 
 A la Comunitat Valenciana, l’ús de Microsoft 365 com a entorn de treball digital està àmpliament estès en els centres educatius públics. Des de fa anys, el professorat i l’alumnat utilitzen eines com Teams, OneDrive o Outlook sota el paraigua institucional de la Conselleria d’Educació. Aquesta decisió va nàixer amb la intenció d’oferir una plataforma integrada i d’ús senzill, però la notícia d’Àustria ens pot fer repensar fins a quin punt deleguem la gestió de dades educatives a empreses privades amb interessos comercials.
 
