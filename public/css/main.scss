@@ -42,6 +42,11 @@
     transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
       transform 0.2s ease-in-out;
 
+    i {
+      margin-right: 0.5rem;
+      font-size: 1.1em;
+    }
+
     &:hover,
     &:focus {
       background: $theme-color-dark;
