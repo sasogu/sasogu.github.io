@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recuperar Conillet amagat</title>
+  <style>
+    body { font: 1.1rem/1.5 system-ui, sans-serif; max-width: 38rem; margin: 3rem auto; padding: 0 1.25rem; color: #173f37; background: #fffcf6; }
+    h1 { line-height: 1.2; }
+    button, a.action { display: inline-block; border: 0; border-radius: 0.8rem; padding: 0.8rem 1rem; margin: 0.4rem 0.5rem 0.4rem 0; background: #2f7a6b; color: white; font: inherit; text-decoration: none; cursor: pointer; }
+    a.action { background: #e1eee9; color: #173f37; }
+    #message { min-height: 1.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Recuperar Conillet amagat</h1>
+  <p>El joc ara és en una adreça nova. Si jugaves en este navegador o en esta app instal·lada, pots descarregar el progrés guardat ací.</p>
+  <button id="export" type="button">Descarrega el progrés antic</button>
+  <a class="action" href="https://sasogu.github.io/conillet-amagat/">Obri el joc nou</a>
+  <p id="message" role="status"></p>
+  <script>
+    const prefix = 'flutter.';
+    const message = document.getElementById('message');
+
+    function stored(key) {
+      const raw = localStorage.getItem(prefix + key);
+      return raw === null ? null : JSON.parse(raw);
+    }
+
+    function storedObject(key) {
+      const value = stored(key);
+      return typeof value === 'string' ? JSON.parse(value) : value;
+    }
+
+    document.getElementById('export').addEventListener('click', () => {
+      try {
+        const stats = storedObject('ronron.stats.v1');
+        if (!stats) {
+          message.textContent = 'No hi ha cap partida guardada en este navegador. Prova-ho des de l’app instal·lada o el navegador on jugaves.';
+          return;
+        }
+        const completedLevels = {};
+        for (const size of [6, 7, 8, 9]) {
+          completedLevels[String(size)] = stored('ronron.level.' + size) || 0;
+        }
+        const payload = {
+          format: 'conillet-amagat.progress',
+          version: 1,
+          exportedAt: new Date().toISOString(),
+          appVersion: 'recovery',
+          data: {
+            settings: storedObject('ronron.settings.v1') || {},
+            stats,
+            campaignStage: stored('ronron.campaign.stage') || 1,
+            tutorialSeen: stored('ronron.tutorial.v1') === true,
+            unlockedSkins: stored('ronron.skins.unlocked') || ['white'],
+            selectedSkin: stored('ronron.skins.selected') || 'white',
+            playerId: stored('ronron.player.id') || '',
+            completedLevels,
+            savedGame: storedObject('ronron.game.v1'),
+          },
+        };
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'conillet-amagat-progres-antic.json';
+        link.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+        message.textContent = 'Còpia descarregada. Conserva el fitxer abans d’importar-lo en el joc nou.';
+      } catch (_) {
+        message.textContent = 'No s’ha pogut llegir el progrés antic en este navegador.';
+      }
+    });
+  </script>
+</body>
+</html>
