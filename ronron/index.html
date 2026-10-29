@@ -3,21 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Recuperar Conillet amagat</title>
+  <title>Conillet amagat · transició de Ronron</title>
   <style>
     body { font: 1.1rem/1.5 system-ui, sans-serif; max-width: 38rem; margin: 3rem auto; padding: 0 1.25rem; color: #173f37; background: #fffcf6; }
     h1 { line-height: 1.2; }
     button, a.action { display: inline-block; border: 0; border-radius: 0.8rem; padding: 0.8rem 1rem; margin: 0.4rem 0.5rem 0.4rem 0; background: #2f7a6b; color: white; font: inherit; text-decoration: none; cursor: pointer; }
     a.action { background: #e1eee9; color: #173f37; }
     #message { min-height: 1.5rem; }
+    #game, #back { display: none; }
+    body.playing { margin: 0; padding: 0; max-width: none; overflow: hidden; }
+    body.playing #game { display: block; position: fixed; inset: 0; width: 100%; height: 100%; border: 0; z-index: 10; }
+    body.playing #back { display: block; position: fixed; top: 0.5rem; right: 0.5rem; z-index: 11; padding: 0.45rem 0.7rem; font-size: 0.85rem; box-shadow: 0 2px 12px #0003; }
   </style>
 </head>
 <body>
-  <h1>Recuperar Conillet amagat</h1>
-  <p>El joc ara és en una adreça nova. Si jugaves en este navegador o en esta app instal·lada, pots descarregar el progrés guardat ací.</p>
+  <h1>Conillet amagat continua ací</h1>
+  <p>L’adreça antiga de Ronron continuarà disponible durant la transició, almenys fins al 30 d’abril de 2027. El joc ara també és a <a href="https://sasogu.github.io/conillet-amagat/">l’adreça nova</a>.</p>
+  <p>Abans de canviar de navegador o d’app instal·lada, descarrega una còpia del progrés. Així podràs importar-la en el joc nou si no apareixen les teues dades.</p>
   <button id="export" type="button">Descarrega el progrés antic</button>
+  <button id="play" type="button">Continua jugant ací</button>
   <a class="action" href="https://sasogu.github.io/conillet-amagat/">Obri el joc nou</a>
   <p id="message" role="status"></p>
+  <iframe id="game" title="Conillet amagat"></iframe>
+  <button id="back" type="button">Torna a la recuperació</button>
   <script>
     const prefix = 'flutter.';
     const message = document.getElementById('message');
@@ -31,6 +39,25 @@
       const value = stored(key);
       return typeof value === 'string' ? JSON.parse(value) : value;
     }
+
+    try {
+      const stats = storedObject('ronron.stats.v1');
+      message.textContent = stats
+        ? `Hem trobat el progrés d’este navegador: ${Number(stats.points || 0).toLocaleString('ca-ES')} punts. Descarrega’n una còpia.`
+        : 'No hi ha progrés guardat en este navegador. Prova l’app instal·lada o el navegador on jugaves.';
+    } catch (_) {
+      message.textContent = 'No s’ha pogut llegir el progrés antic en este navegador.';
+    }
+
+    document.getElementById('play').addEventListener('click', () => {
+      document.getElementById('game').src = 'https://sasogu.github.io/conillet-amagat/';
+      document.body.classList.add('playing');
+    });
+
+    document.getElementById('back').addEventListener('click', () => {
+      document.body.classList.remove('playing');
+      document.getElementById('game').src = 'about:blank';
+    });
 
     document.getElementById('export').addEventListener('click', () => {
       try {
